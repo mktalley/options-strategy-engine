@@ -161,7 +161,7 @@ def run_backtest(
     df = pd.DataFrame(records)
     if df.empty:
         logging.info("No orders were generated during backtest.")
-        return
+        return df
 
     # Print summary metrics
     total_trades = len(df)
@@ -175,6 +175,7 @@ def run_backtest(
     out_csv = "backtest_results.csv"
     df.to_csv(out_csv, index=False)
     print(f"Detailed results written to {out_csv}")
+    return df
 
 
 if __name__ == '__main__':
