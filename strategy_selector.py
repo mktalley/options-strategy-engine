@@ -7,6 +7,7 @@ class StrategySelector:
     """
     Dynamically selects an options trading strategy based on market metrics.
 
+    """
     def __init__(self, iv_threshold: float = 0.25):
         """Initialize selector with an IV threshold for scoring."""
         self.iv_threshold = iv_threshold
