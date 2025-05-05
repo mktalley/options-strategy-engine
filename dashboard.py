@@ -49,7 +49,7 @@ def fetch_positions():
             'Avg Entry': float(p.avg_entry_price),
             'Market Value': float(p.market_value),
             'Unrealized P/L': float(p.unrealized_pl),
-            'Realized P/L': float(p.realized_pl)
+            'Realized P/L': float(getattr(p, 'realized_pl', 0.0)),  # fallback if attribute missing
         })
     return pd.DataFrame(rows)
 
