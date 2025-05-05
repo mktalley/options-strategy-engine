@@ -20,12 +20,18 @@ API_KEY = os.getenv('ALPACA_API_KEY')
 SECRET_KEY = os.getenv('ALPACA_SECRET_KEY')
 BASE_URL = os.getenv('ALPACA_API_BASE_URL')
 
-if not all([API_KEY, SECRET_KEY, BASE_URL]):
-    st.error('Missing ALPACA_API_KEY, ALPACA_SECRET_KEY or ALPACA_API_BASE_URL in .env')
-    sys.exit(1)
+# Check for required credentials
+has_creds = all([API_KEY, SECRET_KEY, BASE_URL])
+if not has_creds:
+    st.warning('Missing ALPACA_API_KEY, ALPACA_SECRET_KEY or ALPACA_API_BASE_URL in .env. Dashboard will display empty data.')
 
-# Initialize Alpaca client
-client = TradingClient(API_KEY, SECRET_KEY, paper=True, base_url=BASE_URL)
+# Initialize Alpaca client if credentials are present
+if has_creds:
+    client = TradingClient(API_KEY, SECRET_KEY, paper=True, base_url=BASE_URL)
+else:
+    client = None
+
+# Strategy selector (independent of credentials)
 selector = StrategySelector()
 
 def fetch_positions():
