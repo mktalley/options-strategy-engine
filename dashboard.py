@@ -27,7 +27,7 @@ if not has_creds:
 
 # Initialize Alpaca client if credentials are present
 if has_creds:
-    client = TradingClient(API_KEY, SECRET_KEY, paper=True, base_url=BASE_URL)
+    client = TradingClient(API_KEY, SECRET_KEY, paper=True, url_override=BASE_URL)
 else:
     client = None
 
