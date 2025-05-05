@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  options-bot:
+    build: .
+    container_name: options-strategy-engine
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    # To override the default behavior (scheduler), you can run:
+    # docker-compose run --rm options-bot python main.py --once --dry-run
