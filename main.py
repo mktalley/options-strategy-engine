@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from utils import get_market_data, get_iv, get_trend, get_momentum, get_next_friday
+from alpaca.trading.client import TradingClient
 from strategy_selector import StrategySelector
 from trade_executor import TradeExecutor
 from alpaca.trading.stream import TradingStream

@@ -11,10 +11,58 @@ import pandas as pd
 from dotenv import load_dotenv
 from alpaca.trading.client import TradingClient
 from zoneinfo import ZoneInfo
+
 from utils import get_market_data, get_iv, get_trend, get_momentum, get_next_friday
 from strategy_selector import StrategySelector
 
-# Load environment variables
+import threading
+import time
+import logging
+from alpaca.trading.requests import OrderRequest
+logging.basicConfig(level=logging.INFO)
+# Automation state
+last_strategies = {}
+# Interval in seconds between automatic scans (env AUTO_INTERVAL)
+AUTOMATION_INTERVAL = int(os.getenv('AUTO_INTERVAL', '60'))
+
+def monitor_loop():
+    """Background loop: fetch data, select strategy, deploy on change."""
+    logging.info("Background monitor loop starting")
+    while True:
+        try:
+            env_tix = os.getenv('TICKERS', '')
+            ticker_list = [t.strip().upper() for t in env_tix.split(',') if t.strip()]
+            if not has_creds or not ticker_list:
+                logging.info(f"Automation paused: has_creds={has_creds}, tickers={ticker_list}")
+                time.sleep(AUTOMATION_INTERVAL)
+                continue
+            data = get_market_data(ticker_list, API_KEY, SECRET_KEY, BASE_URL)
+            for symbol, d in data.items():
+                d['ticker'] = symbol
+                d['expiration'] = get_next_friday()
+                iv = get_iv(d)
+                trend = get_trend(d)
+                momentum = get_momentum(d)
+                strat = selector.select(trend, iv, momentum)
+                strat_name = type(strat).__name__
+                prev = last_strategies.get(symbol)
+                if strat_name != prev:
+                    logging.info(f"Strategy changed for {symbol}: {prev} -> {strat_name}. Deploying...")
+                    orders = strat.run(d)
+                    for order in orders:
+                        try:
+                            req = OrderRequest(**order)
+                            resp = client.submit_order(req)
+                            logging.info(f"Auto submitted {order['side']} {order['qty']} {order['symbol']}: {resp.status}")
+                        except Exception as err:
+                            logging.error(f"Error auto submitting {order}: {err}")
+                    last_strategies[symbol] = strat_name
+                else:
+                    logging.info(f"No change for {symbol}: still {strat_name}")
+            time.sleep(AUTOMATION_INTERVAL)
+        except Exception as e:
+            logging.exception(f"Unexpected error in monitor_loop: {e}")
+            time.sleep(AUTOMATION_INTERVAL)
 load_dotenv('.env')
 API_KEY = os.getenv('ALPACA_API_KEY')
 SECRET_KEY = os.getenv('ALPACA_SECRET_KEY')
@@ -33,6 +81,10 @@ else:
 
 # Strategy selector (independent of credentials)
 selector = StrategySelector()
+# Start background automation monitor
+threading.Thread(target=monitor_loop, daemon=True).start()
+logging.info(f"Automation monitor started: scanning every {AUTOMATION_INTERVAL} seconds")
+
 
 def fetch_positions():
     """Fetch current positions from Alpaca."""
@@ -52,6 +104,8 @@ def fetch_positions():
             'Realized P/L': float(getattr(p, 'realized_pl', 0.0)),  # fallback if attribute missing
         })
     return pd.DataFrame(rows)
+
+
 
 
 def fetch_strategies(tickers):
@@ -102,3 +156,34 @@ if not ticker_list:
 else:
     df_strat = fetch_strategies(ticker_list)
     st.dataframe(df_strat)
+
+# Section: Deploy Strategies
+st.header('Deploy Selected Strategies')
+if st.button('Deploy Strategies'):
+    if not has_creds:
+        st.error('Missing Alpaca credentials. Cannot deploy orders.')
+    elif not ticker_list:
+        st.warning('No tickers configured.')
+    else:
+        with st.spinner('Deploying strategies...'):
+            try:
+                market_data = get_market_data(ticker_list, API_KEY, SECRET_KEY, BASE_URL)
+            except Exception as e:
+                st.error(f'Error fetching market data for deployment: {e}')
+            else:
+                for symbol, d in market_data.items():
+                    d['ticker'] = symbol
+                    d['expiration'] = get_next_friday()
+                    iv = get_iv(d)
+                    trend = get_trend(d)
+                    momentum = get_momentum(d)
+                    strat = selector.select(trend, iv, momentum)
+                    orders = strat.run(d)
+                    for order in orders:
+                        try:
+                            req = OrderRequest(**order)
+                            resp = client.submit_order(req)
+                            st.success(f"Submitted {order['side']} {order['qty']} of {order['symbol']}")
+                        except Exception as e:
+                            st.error(f"Error submitting order {order}: {e}")
+
