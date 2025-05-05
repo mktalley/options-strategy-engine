@@ -6,10 +6,6 @@ from strategies import Strategy as _Strategy
 class StrategySelector:
     """
     Dynamically selects an options trading strategy based on market metrics.
-    It introspects all Strategy subclasses and picks the one with the highest score().
-
-    To extend: add new Strategy subclasses in strategies.py with a @classmethod score(data) -> float.
-    """
 
     def __init__(self, iv_threshold: float = 0.25):
         """Initialize selector with an IV threshold for scoring."""
