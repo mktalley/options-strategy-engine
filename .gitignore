@@ -11,3 +11,4 @@ test.env
 institutional_grade_bot_roadmap.txt
 # VSCode settings
 .vscode/
+“.venv/”
