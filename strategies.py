@@ -196,3 +196,80 @@ class VerticalSpread(Strategy):
             orders.append(order)
             logging.info(f"VerticalSpread leg {opt_type} {side}: {order}")
         return orders
+
+# Phase-2 strategy stubs
+
+def _default_score(data: Dict[str, Any]) -> float:
+    """Baseline scoring: no tilt in either direction."""
+    return 0.0
+
+class BullCallSpread(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Bull Call Spread logic
+        logging.info("BullCallSpread is not yet implemented; returning no orders.")
+        return []
+
+class BearPutSpread(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Bear Put Spread logic
+        logging.info("BearPutSpread is not yet implemented; returning no orders.")
+        return []
+
+class CalendarSpread(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Calendar Spread logic
+        logging.info("CalendarSpread is not yet implemented; returning no orders.")
+        return []
+
+class IronButterfly(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Iron Butterfly logic
+        logging.info("IronButterfly is not yet implemented; returning no orders.")
+        return []
+
+class GammaScalping(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Gamma Scalping logic
+        logging.info("GammaScalping is not yet implemented; returning no orders.")
+        return []
+
+class Wheel(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Wheel strategy logic
+        logging.info("Wheel is not yet implemented; returning no orders.")
+        return []
+
+class ZeroDTE(Strategy):
+    @classmethod
+    def score(cls, data: Dict[str, Any]) -> float:
+        return _default_score(data)
+
+    def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # TODO: implement Zero-Day-To-Expiration logic
+        logging.info("ZeroDTE is not yet implemented; returning no orders.")
+        return []
+
