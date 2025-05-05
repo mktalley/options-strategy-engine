@@ -36,9 +36,13 @@ class StrategySelector:
             'iv_threshold': self.iv_threshold,
         }
         # Discover all Strategy subclasses
+        # Discover all Strategy subclasses from phase 1 only
         strategy_classes = [
             obj for obj in vars(strategies).values()
-            if inspect.isclass(obj) and issubclass(obj, _Strategy) and obj is not _Strategy
+            if inspect.isclass(obj)
+            and issubclass(obj, _Strategy)
+            and obj is not _Strategy
+            and getattr(obj, 'phase', 1) == 1
         ]
         # Compute scores
         scores = {}

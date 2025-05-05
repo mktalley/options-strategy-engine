@@ -1,9 +1,10 @@
 import logging
 from typing import List, Dict, Any
 from utils import format_option_symbol
-from datetime import date
+from datetime import date, timedelta
 
 class Strategy:
+    phase = 1
     """
     Base class for options trading strategies.
     """
@@ -204,44 +205,220 @@ def _default_score(data: Dict[str, Any]) -> float:
     return 0.0
 
 class BullCallSpread(Strategy):
+    phase = 2
     @classmethod
     def score(cls, data: Dict[str, Any]) -> float:
-        return _default_score(data)
+        """
+        Score Bull Call Spread: bullish trend (+2) and low IV (+1).
+        """
+        trend = data.get('trend')
+        momentum = data.get('momentum')
+        iv = data.get('iv', 0.0)
+        iv_th = data.get('iv_threshold', 0.25)
+        score = 0.0
+        if trend == 'bullish' and momentum == 'positive':
+            score += 2.0
+        if iv < iv_th:
+            score += 1.0
+        return score
 
     def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        # TODO: implement Bull Call Spread logic
-        logging.info("BullCallSpread is not yet implemented; returning no orders.")
-        return []
+        """
+        Execute Bull Call Spread: buy ATM call, sell OTM call (width=2) when bullish.
+        """
+        trend = data.get('trend')
+        if trend != 'bullish':
+            logging.info(f"BullCallSpread: trend not bullish ({trend}); no orders.")
+            return []
+        ticker = data['ticker']
+        price = data['price']
+        expiration = data['expiration']  # type: date
+        atm = round(price)
+        width = 2
+        buy_strike = atm
+        sell_strike = atm + width
+        orders: List[Dict[str, Any]] = []
+        legs = [
+            (buy_strike, 'call', 'buy'),
+            (sell_strike, 'call', 'sell'),
+        ]
+        for strike, opt_type, side in legs:
+            if strike <= 0:
+                logging.error("Invalid strike for BullCallSpread: %s", strike)
+                continue
+            symbol = format_option_symbol(ticker, expiration, strike, opt_type)
+            order = {
+                'symbol': symbol,
+                'qty': 1,
+                'side': side,
+                'type': 'market',
+                'time_in_force': 'day'
+            }
+            orders.append(order)
+            logging.info(f"BullCallSpread leg {opt_type} {side}: {order}")
+        return orders
 
 class BearPutSpread(Strategy):
     @classmethod
     def score(cls, data: Dict[str, Any]) -> float:
-        return _default_score(data)
+        """
+        Score Bear Put Spread: bearish trend (+2) and low IV (+1).
+        """
+        trend = data.get('trend')
+        momentum = data.get('momentum')
+        iv = data.get('iv', 0.0)
+        iv_th = data.get('iv_threshold', 0.25)
+        score = 0.0
+        if trend == 'bearish' and momentum == 'negative':
+            score += 2.0
+        if iv < iv_th:
+            score += 1.0
+        return score
 
     def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        # TODO: implement Bear Put Spread logic
-        logging.info("BearPutSpread is not yet implemented; returning no orders.")
-        return []
+        """
+        Execute Bear Put Spread: buy ATM put, sell OTM put (width=2) when bearish.
+        """
+        trend = data.get('trend')
+        if trend != 'bearish':
+            logging.info(f"BearPutSpread: trend not bearish ({trend}); no orders.")
+            return []
+        ticker = data['ticker']
+        price = data['price']
+        expiration = data['expiration']  # type: date
+        atm = round(price)
+        width = 2
+        buy_strike = atm
+        sell_strike = atm - width
+        orders: List[Dict[str, Any]] = []
+        legs = [
+            (buy_strike, 'put', 'buy'),
+            (sell_strike, 'put', 'sell'),
+        ]
+        for strike, opt_type, side in legs:
+            if strike <= 0:
+                logging.error("Invalid strike for BearPutSpread: %s", strike)
+                continue
+            symbol = format_option_symbol(ticker, expiration, strike, opt_type)
+            order = {
+                'symbol': symbol,
+                'qty': 1,
+                'side': side,
+                'type': 'market',
+                'time_in_force': 'day'
+            }
+            orders.append(order)
+            logging.info(f"BearPutSpread leg {opt_type} {side}: {order}")
+        return orders
 
+    phase = 2
+    phase = 2
 class CalendarSpread(Strategy):
     @classmethod
     def score(cls, data: Dict[str, Any]) -> float:
-        return _default_score(data)
+        """
+        Score Calendar Spread: neutral trend (+2); add +1 for low IV or (for bearish) high IV.
+        """
+        trend = data.get('trend')
+        iv = data.get('iv', 0.0)
+        iv_th = data.get('iv_threshold', 0.25)
+        score = 0.0
+        # Trend bias
+        if trend == 'neutral':
+            score += 2.0
+        # IV bias: low IV always +1; high IV favorable if bearish
+        if iv < iv_th or (trend == 'bearish' and iv >= iv_th):
+            score += 1.0
+        return score
 
     def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        # TODO: implement Calendar Spread logic
-        logging.info("CalendarSpread is not yet implemented; returning no orders.")
-        return []
+        """
+        Execute Calendar Spread: buy far-term ATM call, sell near-term ATM call when neutral.
+        """
+        trend = data.get('trend')
+        if trend != 'neutral':
+            logging.info(f"CalendarSpread: trend not neutral ({trend}); no orders.")
+            return []
+        ticker = data['ticker']
+        price = data['price']
+        near_exp = data['expiration']  # type: date
+        far_exp = near_exp + timedelta(days=7)
+        atm = round(price)
+        orders: List[Dict[str, Any]] = []
+        legs = [
+            (atm, 'call', 'buy', far_exp),
+            (atm, 'call', 'sell', near_exp),
+        ]
+        for strike, opt_type, side, exp in legs:
+            if strike <= 0:
+                logging.error("Invalid strike for CalendarSpread: %s", strike)
+                continue
+            symbol = format_option_symbol(ticker, exp, strike, opt_type)
+            order = {
+                'symbol': symbol,
+                'qty': 1,
+                'side': side,
+                'type': 'market',
+                'time_in_force': 'day'
+            }
+            orders.append(order)
+            logging.info(f"CalendarSpread leg {opt_type} {side} exp={exp}: {order}")
+        return orders
 
 class IronButterfly(Strategy):
     @classmethod
     def score(cls, data: Dict[str, Any]) -> float:
-        return _default_score(data)
+        """
+        Score Iron Butterfly: neutral trend (+2); +1 for IV alignment (high for bullish/neutral, low for bearish).
+        """
+        trend = data.get('trend')
+        iv = data.get('iv', 0.0)
+        iv_th = data.get('iv_threshold', 0.25)
+        score = 0.0
+        # Trend bias
+        if trend == 'neutral':
+            score += 2.0
+        # IV bias: high IV benefits bullish/neutral, low IV benefits bearish
+        if (trend != 'bearish' and iv >= iv_th) or (trend == 'bearish' and iv < iv_th):
+            score += 1.0
+        return score
 
     def run(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        # TODO: implement Iron Butterfly logic
-        logging.info("IronButterfly is not yet implemented; returning no orders.")
-        return []
+        """
+        Execute Iron Butterfly: buy wings and sell wings at ATM when neutral.
+        Legs: buy put at ATM-width, sell put at ATM, sell call at ATM, buy call at ATM+width.
+        """
+        trend = data.get('trend')
+        if trend != 'neutral':
+            logging.info(f"IronButterfly: trend not neutral ({trend}); no orders.")
+            return []
+        ticker = data['ticker']
+        price = data['price']
+        expiration = data['expiration']  # type: date
+        atm = round(price)
+        width = 2
+        legs = [
+            (atm - width, 'put', 'buy'),
+            (atm, 'put', 'sell'),
+            (atm, 'call', 'sell'),
+            (atm + width, 'call', 'buy'),
+        ]
+        orders: List[Dict[str, Any]] = []
+        for strike, opt_type, side in legs:
+            if strike <= 0:
+                logging.error("Invalid strike for IronButterfly: %s", strike)
+                continue
+            symbol = format_option_symbol(ticker, expiration, strike, opt_type)
+            order = {
+                'symbol': symbol,
+                'qty': 1,
+                'side': side,
+                'type': 'market',
+                'time_in_force': 'day'
+            }
+            orders.append(order)
+            logging.info(f"IronButterfly leg {opt_type} {side}: {order}")
+        return orders
 
 class GammaScalping(Strategy):
     @classmethod
