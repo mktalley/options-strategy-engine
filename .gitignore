@@ -1,0 +1,13 @@
+## Ignore environment and compiled files
+.env
+.env.local
+*.pyc
+__pycache__/
+# Backtest outputs
+backtest_results.csv
+# Ignore test env file
+test.env
+# Ignore roadmap and miscellaneous docs
+institutional_grade_bot_roadmap.txt
+# VSCode settings
+.vscode/

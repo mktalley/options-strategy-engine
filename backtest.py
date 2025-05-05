@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import pandas as pd
 
+import numpy as np
 from utils import get_iv, get_trend, get_momentum, get_next_friday
 from strategy_selector import StrategySelector
 from trade_executor import TradeExecutor
@@ -140,6 +141,57 @@ def run_backtest(
             if orders:
                 # Simulated dry-run, record each individual order for P/L simulation
                 for order in orders:
+                    # Fetch entry mid-price
+                    try:
+                        entry_req = OptionBarsRequest(
+                            symbol_or_symbols=order['symbol'],
+                            timeframe=TimeFrame.Day,
+                            start=bar_date.isoformat(),
+                            end=bar_date.isoformat()
+                        )
+                        entry_resp = option_client.get_option_bars(entry_req)
+                        if hasattr(entry_resp, 'data'):
+                            entry_map = entry_resp.data
+                        elif isinstance(entry_resp, dict):
+                            entry_map = entry_resp
+                        else:
+                            entry_map = {}
+                        entry_bars = entry_map.get(order['symbol'], [])
+                        entry_price = getattr(entry_bars[0], 'c', None) if entry_bars else None
+                    except Exception as e:
+                        logging.warning(f"Failed to fetch entry price for {order['symbol']} on {bar_date}: {e}")
+                        entry_price = None
+                    # Fetch exit mid-price
+                    try:
+                        exit_date = data['expiration']
+                        exit_req = OptionBarsRequest(
+                            symbol_or_symbols=order['symbol'],
+                            timeframe=TimeFrame.Day,
+                            start=exit_date.isoformat(),
+                            end=exit_date.isoformat()
+                        )
+                        exit_resp = option_client.get_option_bars(exit_req)
+                        if hasattr(exit_resp, 'data'):
+                            exit_map = exit_resp.data
+                        elif isinstance(exit_resp, dict):
+                            exit_map = exit_resp
+                        else:
+                            exit_map = {}
+                        exit_bars = exit_map.get(order['symbol'], [])
+                        exit_price = getattr(exit_bars[-1], 'c', None) if exit_bars else None
+                    except Exception as e:
+                        logging.warning(f"Failed to fetch exit price for {order['symbol']} on {exit_date}: {e}")
+                        exit_price = None
+                    # Compute P/L (contracts multiplier=100)
+                    pl = None
+                    if entry_price is not None and exit_price is not None:
+                        multiplier = 100
+                        qty = order.get('qty', 0)
+                        side = order.get('side', '').lower()
+                        if side == 'buy':
+                            pl = (exit_price - entry_price) * qty * multiplier
+                        else:
+                            pl = (entry_price - exit_price) * qty * multiplier
                     records.append({
                         'entry_date': bar_date,
                         'ticker': ticker,
@@ -147,8 +199,12 @@ def run_backtest(
                         'side': order['side'],
                         'qty': order['qty'],
                         'strategy': strategy.__class__.__name__,
-                        'expiration': data['expiration']
+                        'expiration': data['expiration'],
+                        'entry_price': entry_price,
+                        'exit_price': exit_price,
+                        'pl': pl
                     })
+
 
             records.append({
                 'date': bar_date,
