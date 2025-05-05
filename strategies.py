@@ -311,9 +311,9 @@ class BearPutSpread(Strategy):
             logging.info(f"BearPutSpread leg {opt_type} {side}: {order}")
         return orders
 
-    phase = 2
-    phase = 2
 class CalendarSpread(Strategy):
+    phase = 2
+
     @classmethod
     def score(cls, data: Dict[str, Any]) -> float:
         """
