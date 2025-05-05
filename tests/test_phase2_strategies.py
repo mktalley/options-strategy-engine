@@ -1,5 +1,12 @@
 import pytest
 from strategies import (
+    
+    Strangle,
+    ShortStraddle,
+    CoveredCall,
+    ProtectivePut,
+    RatioBackspread,
+    Collar,
     BullCallSpread,
     BearPutSpread,
     CalendarSpread,
