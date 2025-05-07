@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 options-strategy-engine main: event-driven strategy engine with AsyncIO scheduler and Alpaca WebSocket streaming.
+
 """
 import os
 import sys
@@ -9,6 +10,7 @@ import logging
 import argparse
 from dotenv import load_dotenv
 from pythonjsonlogger import jsonlogger
+from logging.handlers import RotatingFileHandler
 from zoneinfo import ZoneInfo
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
@@ -21,13 +23,32 @@ from alpaca.trading.stream import TradingStream
 
 def configure_logging():
     """
-    Configure root logger to output JSON-formatted logs to stdout.
+    Configure root logger to output JSON-formatted logs to stdout and to a rotating file.
     """
     root = logging.getLogger()
-    handler = logging.StreamHandler()
     fmt = '%(asctime)s %(levelname)s %(name)s %(message)s'
-    handler.setFormatter(jsonlogger.JsonFormatter(fmt))
-    root.addHandler(handler)
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    # set log timestamps to Pacific (America/Los_Angeles) timezone
+    local_tz = ZoneInfo('America/Los_Angeles')
+    class LocalTimeJsonFormatter(jsonlogger.JsonFormatter):
+        def formatTime(self, record, datefmt=None):
+            dt = datetime.fromtimestamp(record.created, tz=local_tz)
+            if datefmt:
+                return dt.strftime(datefmt)
+            return dt.isoformat()
+    json_fmt = LocalTimeJsonFormatter(fmt)
+
+    # console handler
+    sh = logging.StreamHandler()
+    sh.setFormatter(json_fmt)
+    root.addHandler(sh)
+
+    # rotating file handler
+    fh = RotatingFileHandler('server.log', maxBytes=10*1024*1024, backupCount=5)
+    fh.setFormatter(json_fmt)
+    root.addHandler(fh)
+
     root.setLevel(logging.INFO)
 
 
@@ -68,8 +89,7 @@ async def stream_listener(selector, executor, api_key, secret_key, base_url, tic
         api_key,
         secret_key,
         paper=True,
-        raw_data=False,
-        url_override=base_url
+        raw_data=False
     )
 
     @stream.subscribe_trade_updates
@@ -130,13 +150,15 @@ def validate_env(api_key, secret_key, base_url, tickers):
 
 
 def main():
-    """Parse args, validate env, and start event loop or one-off run."""
     configure_logging()
+    """Parse args, validate env, and start event loop or one-off run."""
+
     load_dotenv('.env')
 
     parser = argparse.ArgumentParser(description='Options Strategy Engine (event-driven)')
     parser.add_argument('--once', action='store_true', help='Run once and exit')
     parser.add_argument('--dry-run', action='store_true', help='Dry-run mode (no real orders)')
+    parser.add_argument('--phase', type=int, default=1, help='Strategy phase to include (default 1)')
     args = parser.parse_args()
 
     api_key = os.getenv('ALPACA_API_KEY')
@@ -148,7 +170,7 @@ def main():
     if not validate_env(api_key, secret_key, base_url, tickers):
         sys.exit(1)
 
-    selector = StrategySelector()
+    selector = StrategySelector(phase=args.phase)
     executor = TradeExecutor(dry_run=args.dry_run)
 
     if args.once:

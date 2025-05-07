@@ -51,6 +51,11 @@ All commands assume you are in the project directory containing `docker-compose.
   docker-compose run --rm options-bot python main.py --once --dry-run
   ```
 
+- Dry-run Phase 2 strategies (no real orders, include Phase 2 classes):
+  ```bash
+  docker-compose run --rm options-bot python main.py --once --dry-run --phase 2
+  ```
+
 - Run the scheduled bot (runs during market hours):
   ```bash
   docker-compose up -d
