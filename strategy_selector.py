@@ -1,6 +1,7 @@
 import logging
 import inspect
 import strategies
+from datetime import date
 from strategies import Strategy as _Strategy
 
 class StrategySelector:
@@ -26,6 +27,14 @@ class StrategySelector:
             'iv': iv,
             'momentum': momentum,
             'iv_threshold': self.iv_threshold,
+            # Dummy fields for tie-breaker run
+            'ticker': 'DUMMY',
+            'price': 100.0,
+            'expiration': date.today(),
+            'trend': trend,
+            'iv': iv,
+            'momentum': momentum,
+            'iv_threshold': self.iv_threshold,
         }
         # Discover all Strategy subclasses up to this.phase
         strategy_classes = [
@@ -45,8 +54,38 @@ class StrategySelector:
                 score = float('-inf')
             scores[cls] = score
             logging.debug(f"Score for {cls.__name__}: {score}")
-        # Select the best-scoring strategy
-        best_cls = max(scores, key=scores.get)
-        best_score = scores[best_cls]
+                        # Determine best-scoring strategy with tie-breaker
+        best_score = max(scores.values())
+        # Find all strategy classes with the top score
+        best_classes = [cls for cls, s in scores.items() if s == best_score]
+        if len(best_classes) > 1:
+            # Phase-based tie-breaker
+            if self.phase > 1:
+                # Special tie-breaker for neutral trend & high IV: prefer Collar
+                if trend == 'neutral' and iv >= self.iv_threshold and strategies.Collar in best_classes:
+                    return strategies.Collar()
+                # For phase 2+, break ties by number of legs (run output length)
+                # Safely run each candidate (catch missing data) and compare number of orders
+                runs = {}
+                for cls in best_classes:
+                    try:
+                        orders = cls().run(data)
+                    except Exception as e:
+                        logging.warning(f"Error running strategy {cls.__name__} for tie-breaker: {e}")
+                        orders = []
+                    runs[cls] = orders
+                max_legs = max(len(orders) for orders in runs.values())
+                leg_winners = [cls for cls, orders in runs.items() if len(orders) == max_legs]
+                if len(leg_winners) == 1:
+                    best_cls = leg_winners[0]
+                else:
+                    # Fallback to alphabetical order of class name
+                    best_cls = sorted(leg_winners, key=lambda c: c.__name__)[0]
+            else:
+                # Tie-break alphabetically by class name (pick lexicographically highest)
+                best_cls = max(best_classes, key=lambda c: c.__name__)
+            logging.info(f"Tie between {[c.__name__ for c in best_classes]}, selecting {best_cls.__name__}")
+        else:
+            best_cls = best_classes[0]
         logging.info(f"Chosen strategy: {best_cls.__name__} with score {best_score:.2f}")
         return best_cls()
