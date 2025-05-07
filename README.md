@@ -37,6 +37,29 @@ Automated options trading bot that selects and executes option strategies based 
    # (You can add multiple, comma-separated)
    ```
 
+## Feature Toggles
+
+You can enable or disable additional features using environment variables in your `.env` file. By default, all features are disabled (`false`):
+
+- `ENABLE_TIME_FILTER`: Time-based trading conditions (pre-market, after-hours, end-of-day buffer)
+- `ENABLE_SCANNING`: Dynamic multi-symbol scanning and sector analysis
+- `ENABLE_RISK_MANAGEMENT`: Risk management adjustments (trailing stops, position sizing, stop-loss/profit-taking)
+- `ENABLE_NEWS_RISK`: News and event risk management (economic calendar checks, sentiment analysis)
+- `ENABLE_ML`: AI/ML-based trade prediction and dynamic strategy adjustments
+- `ENABLE_ALERTS`: Real-time alerts on trades and market changes
+
+To enable a feature, set the variable to `true` in your `.env` file. For example:
+
+```ini
+ENABLE_TIME_FILTER=true
+ENABLE_SCANNING=true
+ENABLE_RISK_MANAGEMENT=true
+ENABLE_NEWS_RISK=true
+ENABLE_ML=true
+ENABLE_ALERTS=true
+```
+
+
 ## Running with Docker Compose
 
 All commands assume you are in the project directory containing `docker-compose.yml`.
