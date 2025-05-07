@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 options-strategy-engine main: event-driven strategy engine with AsyncIO scheduler and Alpaca WebSocket streaming.
+
 """
 import os
 import sys
@@ -9,6 +10,7 @@ import logging
 import argparse
 from dotenv import load_dotenv
 from pythonjsonlogger import jsonlogger
+from logging.handlers import RotatingFileHandler
 from zoneinfo import ZoneInfo
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
@@ -21,13 +23,32 @@ from alpaca.trading.stream import TradingStream
 
 def configure_logging():
     """
-    Configure root logger to output JSON-formatted logs to stdout.
+    Configure root logger to output JSON-formatted logs to stdout and to a rotating file.
     """
     root = logging.getLogger()
-    handler = logging.StreamHandler()
     fmt = '%(asctime)s %(levelname)s %(name)s %(message)s'
-    handler.setFormatter(jsonlogger.JsonFormatter(fmt))
-    root.addHandler(handler)
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    # set log timestamps to Pacific (America/Los_Angeles) timezone
+    local_tz = ZoneInfo('America/Los_Angeles')
+    class LocalTimeJsonFormatter(jsonlogger.JsonFormatter):
+        def formatTime(self, record, datefmt=None):
+            dt = datetime.fromtimestamp(record.created, tz=local_tz)
+            if datefmt:
+                return dt.strftime(datefmt)
+            return dt.isoformat()
+    json_fmt = LocalTimeJsonFormatter(fmt)
+
+    # console handler
+    sh = logging.StreamHandler()
+    sh.setFormatter(json_fmt)
+    root.addHandler(sh)
+
+    # rotating file handler
+    fh = RotatingFileHandler('server.log', maxBytes=10*1024*1024, backupCount=5)
+    fh.setFormatter(json_fmt)
+    root.addHandler(fh)
+
     root.setLevel(logging.INFO)
 
 
@@ -129,8 +150,9 @@ def validate_env(api_key, secret_key, base_url, tickers):
 
 
 def main():
-    """Parse args, validate env, and start event loop or one-off run."""
     configure_logging()
+    """Parse args, validate env, and start event loop or one-off run."""
+
     load_dotenv('.env')
 
     parser = argparse.ArgumentParser(description='Options Strategy Engine (event-driven)')
