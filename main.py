@@ -68,8 +68,7 @@ async def stream_listener(selector, executor, api_key, secret_key, base_url, tic
         api_key,
         secret_key,
         paper=True,
-        raw_data=False,
-        url_override=base_url
+        raw_data=False
     )
 
     @stream.subscribe_trade_updates
@@ -137,6 +136,7 @@ def main():
     parser = argparse.ArgumentParser(description='Options Strategy Engine (event-driven)')
     parser.add_argument('--once', action='store_true', help='Run once and exit')
     parser.add_argument('--dry-run', action='store_true', help='Dry-run mode (no real orders)')
+    parser.add_argument('--phase', type=int, default=1, help='Strategy phase to include (default 1)')
     args = parser.parse_args()
 
     api_key = os.getenv('ALPACA_API_KEY')
@@ -148,7 +148,7 @@ def main():
     if not validate_env(api_key, secret_key, base_url, tickers):
         sys.exit(1)
 
-    selector = StrategySelector()
+    selector = StrategySelector(phase=args.phase)
     executor = TradeExecutor(dry_run=args.dry_run)
 
     if args.once:
