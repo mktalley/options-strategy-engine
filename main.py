@@ -83,6 +83,14 @@ def configure_logging():
 
 async def scheduled_run(selector, executor, api_key, secret_key, base_url, tickers):
     """Fetch market data, compute metrics, select strategies, and execute orders."""
+    import time
+    # Metrics for performance monitoring
+    start_time = time.monotonic()
+    trades_before = len(summary_manager.trades)
+    symbols_processed = 0
+    orders_attempted = 0
+    orders_executed = 0
+    total_notional = 0.0
     # Time-based filter: skip run if market is closed
     if time_filter and not time_filter.is_market_open():
         logging.info("Market closed. Skipping scheduled run")
@@ -94,9 +102,11 @@ async def scheduled_run(selector, executor, api_key, secret_key, base_url, ticke
 
     except Exception as e:
         logging.error(f"Failed to fetch market data: {e}")
-        return
+        market_data = {}
+
 
     for symbol, data in market_data.items():
+        symbols_processed += 1
         try:
             data['ticker'] = symbol
             data['expiration'] = get_next_friday()
@@ -123,8 +133,19 @@ async def scheduled_run(selector, executor, api_key, secret_key, base_url, ticke
             if not orders:
                 logging.info(f"No orders remaining after adjustments for {symbol}")
                 continue
+            orders_attempted += len(orders)
             logging.info(f"Executing {len(orders)} orders for {symbol}: {orders}")
             results = executor.execute(orders)
+            # Update executed orders and notional
+            orders_executed += len(results)
+            for r in results:
+                price = getattr(r, 'filled_avg_price', None)
+                qty = getattr(r, 'filled_qty', None)
+                if price is not None and qty is not None:
+                    try:
+                        total_notional += float(price) * float(qty)
+                    except Exception:
+                        pass
             logging.info(f"Execution results for {symbol}: {results}")
             # Record trade for summary
             summary_manager.record_trade(symbol, strategy.__class__.__name__, orders, results, data)
@@ -135,6 +156,20 @@ async def scheduled_run(selector, executor, api_key, secret_key, base_url, ticke
             logging.exception(f"Error processing {symbol}")
 
     logging.info("Batch processing complete")
+    # Metrics logging
+    batch_latency = time.monotonic() - start_time
+    try:
+        # Emit structured metrics for monitoring
+        logging.info("Batch metrics", extra={
+            "trades_before": trades_before,
+            "symbols_processed": symbols_processed,
+            "orders_attempted": orders_attempted,
+            "orders_executed": orders_executed,
+            "total_notional": total_notional,
+            "batch_latency": batch_latency
+        })
+    except Exception:
+        logging.exception("Failed to log batch metrics")
 
 
 async def stream_listener(selector, executor, api_key, secret_key, base_url, tickers):
