@@ -202,6 +202,11 @@ def run_backtest(
                         'expiration': data['expiration'],
                         'entry_price': entry_price,
                         'exit_price': exit_price,
+                        'iv': iv,
+                        'trend': trend,
+                        'momentum': momentum,
+                        'price': price,
+                        'days_to_exp': (data['expiration'] - bar_date).days,
                         'pl': pl
                     })
 

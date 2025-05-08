@@ -37,7 +37,7 @@ Automated options trading bot that selects and executes option strategies based 
    # (You can add multiple, comma-separated)
    ```
 
-## Feature Toggles
+## Feature Toggles and Email Summary Configuration
 
 You can enable or disable additional features using environment variables in your `.env` file. By default, all features are disabled (`false`):
 
@@ -59,7 +59,74 @@ ENABLE_ML=true
 ENABLE_ALERTS=true
 ```
 
+## Fetching Historical Data
 
+Use the `scripts/fetch_data.py` script to pull daily OHLCV CSV data from Alpaca for one or more tickers:
+
+```bash
+# Install dependencies (if not already installed)
+pip install -r requirements.txt
+
+# Fetch data for SPY and QQQ from 2020-01-01 to 2025-01-01
+eval "$(which python3) scripts/fetch_data.py \
+  --tickers SPY,QQQ \
+  --start 2020-01-01 \
+  --end 2025-01-01 \
+  --outdir data"
+```
+
+This will save CSV files (e.g., `data/SPY.csv`, `data/QQQ.csv`) containing `Date,Open,High,Low,Close,Volume` columns, ready to feed into the Backtrader engine or any other backtest.
+
+
+
+## Backtesting with Backtrader
+
+Use the `scripts/backtrader_engine.py` script to run backtests on your CSV data:
+
+```bash
+# Ensure dependencies are installed
+pip install -r requirements.txt
+
+# Backtest using SPY and QQQ data
+python scripts/backtrader_engine.py \
+  --csv data/SPY.csv data/QQQ.csv \
+  --iv-threshold 0.25 \
+  --cash 100000
+```
+
+This will output starting and final portfolio values and generate a plot of equity over time.
+
+## Training the ML Model
+
+Once you have a `backtest_results.csv` from `backtest.py`, train the ML model:
+
+```bash
+python scripts/train_model.py \
+  --input backtest_results.csv \
+  --output model.joblib
+```
+
+The trained model will be saved as `model.joblib` and can be used in production (set `ENABLE_ML=true` in `.env`).
+
+## End-to-End Pipeline Example
+
+```bash
+# 1. Fetch historical OHLCV data
+python scripts/fetch_data.py \
+  --tickers SPY,QQQ \
+  --start 2020-01-01 \
+  --end 2025-01-01 \
+  --outdir data
+
+# 2. Run backtest and export features
+python backtest.py --tickers SPY,QQQ \
+  --start 2020-01-01 --end 2025-01-01
+
+# 3. Train ML model
+python scripts/train_model.py --input backtest_results.csv --output model.joblib
+```
+
+After training, point your production bot at `model.joblib` (or update `ML_MODEL_PATH` in `.env`) and enable ML via `ENABLE_ML=true`.
 ## Running with Docker Compose
 
 All commands assume you are in the project directory containing `docker-compose.yml`.

@@ -8,3 +8,5 @@ tenacity>=8.0.0
 apscheduler>=3.9.1 # for scheduling live runs
 python-json-logger>=2.0.0
 joblib>=1.0.0
+backtrader>=1.9.74.123
+scikit-learn>=1.0.0
