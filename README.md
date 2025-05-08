@@ -60,6 +60,17 @@ ENABLE_ALERTS=true
 ```
 ## News & Calendar Risk Management
 
+## Time-based Trading Conditions
+
+When `ENABLE_TIME_FILTER` is enabled, the bot will only initiate trades during the configured trading window, excluding pre-market, after-hours, and an end-of-day buffer. Configure these parameters in your `.env` file:
+
+- `MARKET_OPEN_TIME`: Market open time in `HH:MM` (America/New_York), default `09:30`
+- `MARKET_CLOSE_TIME`: Market close time in `HH:MM` (America/New_York), default `16:00`
+- `TIME_FILTER_END_BUFFER_MINUTES`: Minutes before market close to stop new trades, default `10`
+- `PRE_MARKET_START`: Optional pre-market session start time in `HH:MM`, default `04:00`
+- `AFTER_HOURS_END`: Optional after-hours session end time in `HH:MM`, default `20:00`
+
+
 When `ENABLE_NEWS_RISK` is enabled, ensure the following environment variables are set in your `.env` file (defaults shown in `.env.example`):
 
 - `ECONOMIC_CALENDAR_API_KEY`: FinancialModelingPrep API key for economic calendar (required).

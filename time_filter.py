@@ -1,4 +1,5 @@
 from datetime import datetime, time
+import os
 from zoneinfo import ZoneInfo
 
 
@@ -7,13 +8,36 @@ class TimeFilter:
     Time-based filter to allow trading only during regular market hours,
     excluding pre-market, after-hours, and end-of-day buffer.
     """
-    def __init__(self, tz_name: str = 'America/New_York', end_buffer_minutes: int = 10):
+    def __init__(self, tz_name: str = 'America/New_York'):
         self.tz = ZoneInfo(tz_name)
-        # Regular session: 9:30 to 16:00 local time
-        self.start_time = time(9, 30)
-        self.end_time = time(16, 0)
-        # Minutes to exclude before market close
-        self.end_buffer_minutes = end_buffer_minutes
+        # Load trading window times from environment variables
+        open_str = os.getenv('MARKET_OPEN_TIME', '09:30')
+        close_str = os.getenv('MARKET_CLOSE_TIME', '16:00')
+        # Parse market open/close times
+        try:
+            self.start_time = datetime.strptime(open_str, '%H:%M').time()
+        except ValueError:
+            raise ValueError(f"Invalid MARKET_OPEN_TIME: {open_str}")
+        try:
+            self.end_time = datetime.strptime(close_str, '%H:%M').time()
+        except ValueError:
+            raise ValueError(f"Invalid MARKET_CLOSE_TIME: {close_str}")
+        # Minutes before market close to stop new trades
+        try:
+            self.end_buffer_minutes = int(os.getenv('TIME_FILTER_END_BUFFER_MINUTES', '10'))
+        except ValueError:
+            self.end_buffer_minutes = 10
+        # Optional pre-market and after-hours for future flexibility
+        pm_str = os.getenv('PRE_MARKET_START')
+        try:
+            self.pre_market_start = datetime.strptime(pm_str, '%H:%M').time() if pm_str else None
+        except ValueError:
+            self.pre_market_start = None
+        ah_str = os.getenv('AFTER_HOURS_END')
+        try:
+            self.after_hours_end = datetime.strptime(ah_str, '%H:%M').time() if ah_str else None
+        except ValueError:
+            self.after_hours_end = None
 
     def is_market_open(self, current_time: datetime = None) -> bool:
         """
