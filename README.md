@@ -58,6 +58,17 @@ ENABLE_NEWS_RISK=true
 ENABLE_ML=true
 ENABLE_ALERTS=true
 ```
+## News & Calendar Risk Management
+
+When `ENABLE_NEWS_RISK` is enabled, ensure the following environment variables are set in your `.env` file (defaults shown in `.env.example`):
+
+- `ECONOMIC_CALENDAR_API_KEY`: FinancialModelingPrep API key for economic calendar (required).
+- `FINNHUB_API_KEY`: Finnhub API key for company news (required).
+- `ECONOMIC_CALENDAR_LOOKAHEAD_DAYS`: Number of days ahead to fetch calendar events (integer, default 2).
+- `NEWS_SENTIMENT_WINDOW_DAYS`: Number of days back to fetch news for sentiment analysis (integer, default 1).
+- `NEWS_SENTIMENT_THRESHOLD`: Average sentiment threshold; trades blocked if average sentiment is below this value (float, default -0.3).
+- `NEWS_RISK_KEYWORDS`: Comma-separated list of keywords; trades blocked if headlines contain any of these (default: fomc, non farm, nfp, fed, layoffs, bankruptcy, ceo change, merger, acquisition, geopolitical, earthquake, hurricane, scandal).
+
 
 ## Fetching Historical Data
 

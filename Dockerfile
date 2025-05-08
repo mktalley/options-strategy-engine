@@ -10,6 +10,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        build-essential \
+
+# Download TextBlob corpora for sentiment analysis
+RUN python -m textblob.download_corpora --quiet
+
        tzdata \
     && rm -rf /var/lib/apt/lists/*
 
