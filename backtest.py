@@ -4,8 +4,20 @@ import logging
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import pandas as pd
+load_dotenv()
+
+from simulate_equity import simulate_equity  # integrate equity simulation
+
 
 import numpy as np
+import os
+import logging
+from time_filter import TimeFilter
+from scanner import Scanner
+from risk_manager import RiskManager
+from news_manager import NewsManager
+from model_manager import ModelManager
+from alert_manager import AlertManager
 from utils import get_iv, get_trend, get_momentum, get_next_friday
 from strategy_selector import StrategySelector
 from trade_executor import TradeExecutor
@@ -15,6 +27,16 @@ from alpaca.data.historical.stock import StockHistoricalDataClient, StockBarsReq
 from alpaca.data.historical.option import OptionHistoricalDataClient, OptionBarsRequest
 from alpaca.data.timeframe import TimeFrame
 
+# Configure logging to write to file and console
+log_file = os.getenv('BACKTEST_LOG', 'backtest.log')
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    handlers=[
+        logging.FileHandler(log_file, mode='w'),
+        logging.StreamHandler()
+    ]
+)
 
 def get_bars(client, ticker: str, start: datetime, end: datetime):
     """
@@ -51,7 +73,8 @@ def run_backtest(
     secret_key: str,
     base_url: str,
     data_url: str,
-    iv_threshold: float
+    iv_threshold: float,
+    results_file: str = "backtest_results.csv"
 ):
     """
     Run a backtest dry-run over the given date range.
@@ -73,11 +96,32 @@ def run_backtest(
         url_override=url_override
     )
 
+    # Feature toggles via environment
+    ENABLE_TIME_FILTER = os.getenv('ENABLE_TIME_FILTER', 'false').lower() in ('true', '1')
+    ENABLE_SCANNING = os.getenv('ENABLE_SCANNING', 'false').lower() in ('true', '1')
+    ENABLE_RISK_MANAGEMENT = os.getenv('ENABLE_RISK_MANAGEMENT', 'false').lower() in ('true', '1')
+    ENABLE_NEWS_RISK = os.getenv('ENABLE_NEWS_RISK', 'false').lower() in ('true', '1')
+    ENABLE_ML = os.getenv('ENABLE_ML', 'false').lower() in ('true', '1')
+    ENABLE_ALERTS = os.getenv('ENABLE_ALERTS', 'false').lower() in ('true', '1')
+
+    # Instantiate modules based on toggles
+    # Global skip flag for option P/L simulation (avoid hitting rate limits)
+    SKIP_OPTION_PRICES = os.getenv('SKIP_OPTION_PRICES', 'false').lower() in ('true', '1')
+    # Instantiate modules based on toggles
+    time_filter = TimeFilter() if ENABLE_TIME_FILTER else None
+    scanner_mod = Scanner() if ENABLE_SCANNING else None
+    risk_manager = RiskManager() if ENABLE_RISK_MANAGEMENT else None
+    news_manager = NewsManager() if ENABLE_NEWS_RISK else None
+    model_manager = ModelManager() if ENABLE_ML else None
+    alert_manager = AlertManager() if ENABLE_ALERTS else None
+
+    # Determine tickers for backtest
+    run_tickers = scanner_mod.scan() if scanner_mod else tickers
     selector = StrategySelector(iv_threshold=iv_threshold)
     executor = TradeExecutor(dry_run=True)
 
     records = []
-    for ticker in tickers:
+    for ticker in run_tickers:
         logging.info(f"Fetching bars for {ticker} from {start_date.date()} to {end_date.date()}")
         bars = get_bars(data_client, ticker, start_date, end_date)
         if len(bars) < 21:
@@ -131,83 +175,117 @@ def run_backtest(
                 'expiration': get_next_friday(bar_date)
             }
 
+            
+            # Time filter: skip bar if market closed
+            if time_filter and not time_filter.is_market_open():
+                logging.info(f"Market closed on {bar_date}. Skipping trade generation for {ticker}")
+                continue
+
+            # Strategy selection and order generation
             strategy = selector.select(trend, iv, momentum)
             orders = strategy.run(data)
             if not orders:
                 continue
+
+            # Risk management adjustments
+            if risk_manager:
+                orders = risk_manager.adjust_orders(orders, data)
+            # News risk management: skip if not allowed
+            if news_manager and not news_manager.is_trade_allowed(ticker, data):
+                logging.info(f"Trade for {ticker} on {bar_date} blocked by news risk manager")
+                continue
+
+            # ML model adjustments
+            if model_manager:
+                orders = model_manager.adjust_orders(orders, data)
+            if not orders:
+                continue
+
             # Dry-run execution (requests are returned)
             reqs = executor.execute(orders)
+
+            # Alerts
+            if alert_manager:
+                alert_manager.send_trade_alert(ticker, orders, reqs, data)
             # Record each trade detail
             if orders:
-                # Simulated dry-run, record each individual order for P/L simulation
-                for order in orders:
-                    # Fetch entry mid-price
-                    try:
-                        entry_req = OptionBarsRequest(
-                            symbol_or_symbols=order['symbol'],
-                            timeframe=TimeFrame.Day,
-                            start=bar_date.isoformat(),
-                            end=bar_date.isoformat()
-                        )
-                        entry_resp = option_client.get_option_bars(entry_req)
-                        if hasattr(entry_resp, 'data'):
-                            entry_map = entry_resp.data
-                        elif isinstance(entry_resp, dict):
-                            entry_map = entry_resp
-                        else:
-                            entry_map = {}
-                        entry_bars = entry_map.get(order['symbol'], [])
-                        entry_price = getattr(entry_bars[0], 'c', None) if entry_bars else None
-                    except Exception as e:
-                        logging.warning(f"Failed to fetch entry price for {order['symbol']} on {bar_date}: {e}")
-                        entry_price = None
-                    # Fetch exit mid-price
-                    try:
-                        exit_date = data['expiration']
-                        exit_req = OptionBarsRequest(
-                            symbol_or_symbols=order['symbol'],
-                            timeframe=TimeFrame.Day,
-                            start=exit_date.isoformat(),
-                            end=exit_date.isoformat()
-                        )
-                        exit_resp = option_client.get_option_bars(exit_req)
-                        if hasattr(exit_resp, 'data'):
-                            exit_map = exit_resp.data
-                        elif isinstance(exit_resp, dict):
-                            exit_map = exit_resp
-                        else:
-                            exit_map = {}
-                        exit_bars = exit_map.get(order['symbol'], [])
-                        exit_price = getattr(exit_bars[-1], 'c', None) if exit_bars else None
-                    except Exception as e:
-                        logging.warning(f"Failed to fetch exit price for {order['symbol']} on {exit_date}: {e}")
-                        exit_price = None
-                    # Compute P/L (contracts multiplier=100)
-                    pl = None
-                    if entry_price is not None and exit_price is not None:
-                        multiplier = 100
-                        qty = order.get('qty', 0)
-                        side = order.get('side', '').lower()
-                        if side == 'buy':
-                            pl = (exit_price - entry_price) * qty * multiplier
-                        else:
-                            pl = (entry_price - exit_price) * qty * multiplier
-                    records.append({
-                        'entry_date': bar_date,
-                        'ticker': ticker,
-                        'symbol': order['symbol'],
-                        'side': order['side'],
-                        'qty': order['qty'],
-                        'strategy': strategy.__class__.__name__,
-                        'expiration': data['expiration'],
-                        'entry_price': entry_price,
-                        'exit_price': exit_price,
-                        'pl': pl
-                    })
+                if SKIP_OPTION_PRICES:
+                    logging.info("Skipping option price fetches due to SKIP_OPTION_PRICES flag")
+                else:
+                    # Simulated dry-run, record each individual order for P/L simulation
+                    for order in orders:
+                        # Fetch entry mid-price
+                        try:
+                            entry_req = OptionBarsRequest(
+                                symbol_or_symbols=[order['symbol']],
+                                timeframe=TimeFrame.Day,
+                                start=bar_date.isoformat(),
+                                end=bar_date.isoformat()
+                            )
+                            entry_resp = option_client.get_option_bars(entry_req)
+                            if hasattr(entry_resp, 'data'):
+                                entry_map = entry_resp.data
+                            elif isinstance(entry_resp, dict):
+                                entry_map = entry_resp
+                            else:
+                                entry_map = {}
+                            entry_bars = entry_map.get(order['symbol'], [])
+                            entry_price = getattr(entry_bars[0], 'c', None) if entry_bars else None
+                        except Exception as e:
+                            logging.warning(f"Failed to fetch entry price for {order['symbol']} on {bar_date}: {e}")
+                            entry_price = None
+                        # Fetch exit mid-price
+                        try:
+                            exit_date = data['expiration']
+                            exit_req = OptionBarsRequest(
+                                symbol_or_symbols=[order['symbol']],
+                                timeframe=TimeFrame.Day,
+                                start=exit_date.isoformat(),
+                                end=exit_date.isoformat()
+                            )
+                            exit_resp = option_client.get_option_bars(exit_req)
+                            if hasattr(exit_resp, 'data'):
+                                exit_map = exit_resp.data
+                            elif isinstance(exit_resp, dict):
+                                exit_map = exit_resp
+                            else:
+                                exit_map = {}
+                            exit_bars = exit_map.get(order['symbol'], [])
+                            exit_price = getattr(exit_bars[-1], 'c', None) if exit_bars else None
+                        except Exception as e:
+                            logging.warning(f"Failed to fetch exit price for {order['symbol']} on {exit_date}: {e}")
+                            exit_price = None
+                        # Compute P/L (contracts multiplier=100)
+                        pl = None
+                        if entry_price is not None and exit_price is not None:
+                            multiplier = 100
+                            qty = order.get('qty', 0)
+                            side = order.get('side', '').lower()
+                            if side == 'buy':
+                                pl = (exit_price - entry_price) * qty * multiplier
+                            else:
+                                pl = (entry_price - exit_price) * qty * multiplier
+                        records.append({
+                            'entry_date': bar_date,
+                            'ticker': ticker,
+                            'symbol': order['symbol'],
+                            'side': order['side'],
+                            'qty': order['qty'],
+                            'strategy': strategy.__class__.__name__,
+                            'expiration': data['expiration'],
+                            'entry_price': entry_price,
+                            'exit_price': exit_price,
+                            'iv': iv,
+                            'trend': trend,
+                            'momentum': momentum,
+                            'price': price,
+                            'days_to_exp': (data['expiration'] - bar_date).days,
+                            'pl': pl
+                        })
 
 
             records.append({
-                'date': bar_date,
+                'entry_date': bar_date,
                 'ticker': ticker,
                 'strategy': strategy.__class__.__name__,
                 'order_count': len(orders)
@@ -228,7 +306,7 @@ def run_backtest(
     print(trades_by_strategy)
 
     # Save to CSV
-    out_csv = "backtest_results.csv"
+    out_csv = results_file
     df.to_csv(out_csv, index=False)
     print(f"Detailed results written to {out_csv}")
     return df
@@ -244,6 +322,10 @@ if __name__ == '__main__':
                         help="End date YYYY-MM-DD")
     parser.add_argument("--iv-threshold", type=float, default=0.25,
                         help="IV threshold for high/low decision in StrategySelector")
+    parser.add_argument("--initial-capital", type=float, default=100000.0, help="Starting capital for equity simulation")
+    parser.add_argument("--results-file", default="backtest_results.csv", help="Path to write backtest results CSV")
+
+
     args = parser.parse_args()
 
     # Load environment
@@ -261,7 +343,7 @@ if __name__ == '__main__':
         logging.error("Invalid date format. Use YYYY-MM-DD.")
         exit(1)
 
-    run_backtest(
+    df = run_backtest(
         tickers=tickers,
         start_date=start_date,
         end_date=end_date,
@@ -269,5 +351,8 @@ if __name__ == '__main__':
         secret_key=secret_key,
         base_url=base_url,
         data_url=data_url,
-        iv_threshold=args.iv_threshold
+        iv_threshold=args.iv_threshold, results_file=args.results_file
     )
+    # Simulate equity curve from results
+    if df is not None and not df.empty:
+        simulate_equity(args.results_file, args.start, args.end, args.initial_capital)

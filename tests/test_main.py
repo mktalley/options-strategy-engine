@@ -50,9 +50,27 @@ async def test_scheduled_run_success(monkeypatch, caplog):
     assert isinstance(orders, list)
     assert orders[0]['symbol'] == 'ABC'
     assert 'Batch processing complete' in caplog.text
+    # Ensure metrics log is emitted with correct fields
+    records = caplog.records
+    metric_record = next((r for r in records if r.getMessage() == 'Batch metrics'), None)
+    assert metric_record is not None, 'Batch metrics record not found'
+    assert hasattr(metric_record, 'trades_before')
+    assert hasattr(metric_record, 'symbols_processed')
+    assert hasattr(metric_record, 'orders_attempted')
+    assert hasattr(metric_record, 'orders_executed')
+    assert hasattr(metric_record, 'total_notional')
+    assert hasattr(metric_record, 'batch_latency')
+    # Validate metric values
+    assert metric_record.trades_before == 0
+    assert metric_record.symbols_processed == 1
+    assert metric_record.orders_attempted == 1
+    assert metric_record.orders_executed == 1
+    assert metric_record.total_notional == 0.0
+
 
 @pytest.mark.asyncio
 async def test_scheduled_run_no_orders(monkeypatch, caplog):
+
     # Simulate no market data returned
     monkeypatch.setenv('ALPACA_API_KEY', 'key')
     monkeypatch.setenv('ALPACA_SECRET_KEY', 'secret')
@@ -65,6 +83,23 @@ async def test_scheduled_run_no_orders(monkeypatch, caplog):
 
     # Run scheduled_run with empty data
     await main.scheduled_run(selector, executor, 'key', 'secret', 'url', ['XYZ'])
+    # Ensure metrics log is emitted with correct fields
+    records = caplog.records
+    metric_record = next((r for r in records if r.getMessage() == 'Batch metrics'), None)
+    assert metric_record is not None, 'Batch metrics record not found'
+    assert hasattr(metric_record, 'trades_before')
+    assert hasattr(metric_record, 'symbols_processed')
+    assert hasattr(metric_record, 'orders_attempted')
+    assert hasattr(metric_record, 'orders_executed')
+    assert hasattr(metric_record, 'total_notional')
+    assert hasattr(metric_record, 'batch_latency')
+    # Validate metric values
+    assert metric_record.trades_before == 0
+    assert metric_record.symbols_processed == 0
+    assert metric_record.orders_attempted == 0
+    assert metric_record.orders_executed == 0
+    assert metric_record.total_notional == 0.0
+
 
     # Should finish without calling executor
     assert executor.calls == []
@@ -83,15 +118,36 @@ async def test_scheduled_run_fetch_error(monkeypatch, caplog):
 
     selector = DummySelector()
     executor = DummyExecutor()
-    caplog.set_level(logging.ERROR)
+    caplog.set_level(logging.INFO)
 
     # Run scheduled_run and expect it to return early
+
     await main.scheduled_run(selector, executor, 'key', 'secret', 'url', ['ERR'])
 
     # No executor calls
     assert executor.calls == []
     # Should log the fetch error
     assert 'Failed to fetch market data: fetch failed' in caplog.text
+
+    # Ensure metrics log is emitted with correct fields
+    records = caplog.records
+    metric_record = next((r for r in records if r.getMessage() == 'Batch metrics'), None)
+    assert metric_record is not None, 'Batch metrics record not found'
+    assert hasattr(metric_record, 'trades_before')
+    assert hasattr(metric_record, 'symbols_processed')
+    assert hasattr(metric_record, 'orders_attempted')
+    assert hasattr(metric_record, 'orders_executed')
+    assert hasattr(metric_record, 'total_notional')
+    assert hasattr(metric_record, 'batch_latency')
+    # Validate metric values
+    assert metric_record.trades_before == 0
+    assert metric_record.symbols_processed == 0
+    assert metric_record.orders_attempted == 0
+    assert metric_record.orders_executed == 0
+    assert metric_record.total_notional == 0.0
+    # Should still log completion
+    assert 'Batch processing complete' in caplog.text
+
 
 
 def test_validate_env():
