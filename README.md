@@ -48,6 +48,22 @@ You can enable or disable additional features using environment variables in you
 - `ENABLE_ML`: AI/ML-based trade prediction and dynamic strategy adjustments
 - `ENABLE_ALERTS`: Real-time alerts on trades and market changes
 
+## Backtest Pipeline Behavior
+When running `backtest.py`, the engine applies the following steps in order, driven by feature toggles:
+
+1. **Scanning** (`ENABLE_SCANNING`): Determine the list of tickers dynamically via `Scanner.scan()` when enabled.
+2. **Time Filter** (`ENABLE_TIME_FILTER`): Skip bars outside regular market hours, including pre-market, after-hours, and end-of-day buffer.
+3. **Strategy Selection**: Select a strategy based on IV, trend, and momentum metrics.
+4. **Order Generation**: Generate orders via the selected strategy.
+5. **Risk Management** (`ENABLE_RISK_MANAGEMENT`): Adjust orders for position sizing, stop-loss, take-profit, and trailing stops.
+6. **News Risk** (`ENABLE_NEWS_RISK`): Block trades around high-impact events or negative sentiment.
+7. **ML Adjustments** (`ENABLE_ML`): Filter or adjust orders using the trained ML model.
+8. **Dry-Run Execution**: Execute orders in dry-run mode to return simulated responses.
+9. **Alerts** (`ENABLE_ALERTS`): Send trade alerts with execution details and notional thresholds.
+10. **Record P/L**: Simulate entry/exit prices for P/L calculation and output results to CSV.
+11. **Equity Curve Generation**: Simulate and save an equity curve PNG using the specified starting capital via `--initial-capital`.
+
+
 To enable a feature, set the variable to `true` in your `.env` file. For example:
 
 ```ini
@@ -58,6 +74,17 @@ ENABLE_NEWS_RISK=true
 ENABLE_ML=true
 ENABLE_ALERTS=true
 ```
+## Alert Manager Configuration
+
+When `ENABLE_ALERTS` is enabled, configure the Alert Manager's external alert channels, notional threshold, and rate limiting using the following environment variables in your `.env` file (defaults shown in `.env.example`):
+
+- `ALERT_WEBHOOK_URL`: Slack/Webhook URL for external alerts (default: None)
+- `ALERT_TELEGRAM_BOT_TOKEN`: Telegram Bot API token for external alerts (default: None)
+- `ALERT_TELEGRAM_CHAT_ID`: Telegram chat ID for external alerts (default: None)
+- `ALERT_MIN_NOTIONAL`: Minimum trade notional (price × quantity) to trigger external alerts; trades below this notional are suppressed (default: 0)
+- `ALERT_RATE_LIMIT_PER_MIN`: Maximum number of external alerts allowed within the rate limit window (default: 60)
+- `ALERT_RATE_LIMIT_WINDOW`: Rate limit window in seconds over which `ALERT_RATE_LIMIT_PER_MIN` applies (default: 60)
+
 ## News & Calendar Risk Management
 
 ## Time-based Trading Conditions
@@ -140,9 +167,12 @@ python scripts/fetch_data.py \
   --end 2025-01-01 \
   --outdir data
 
-# 2. Run backtest and export features
+# 2. Run backtest, export features, and generate equity curve
 python backtest.py --tickers SPY,QQQ \
-  --start 2020-01-01 --end 2025-01-01
+  --start 2020-01-01 --end 2025-01-01 --initial-capital 100000
+
+
+
 
 # 3. Train ML model
 python scripts/train_model.py --input backtest_results.csv --output model.joblib
