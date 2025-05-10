@@ -3,12 +3,39 @@
 Fetch historical daily OHLCV data for given tickers from Alpaca and save as CSV files.
 """
 import os
+import sys
 import argparse
 from datetime import datetime
 import pandas as pd
 from dotenv import load_dotenv
 from alpaca.data.historical.stock import StockHistoricalDataClient, StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
+
+
+def get_cli_args(argv=None):
+    parser = argparse.ArgumentParser(description='Fetch OHLCV CSV data from Alpaca')
+    parser.add_argument(
+        '--tickers', required=True,
+        help='Comma-separated list of ticker symbols (e.g. SPY,QQQ)'
+    )
+    parser.add_argument(
+        '--start', required=True,
+        help='Start date in YYYY-MM-DD'
+    )
+    parser.add_argument(
+        '--end', required=True,
+        help='End date in YYYY-MM-DD'
+    )
+    parser.add_argument(
+        '--outdir',
+        default=os.getenv('FETCH_DATA_OUTDIR', 'data/csv'),
+        help='Output directory for CSV files [env: FETCH_DATA_OUTDIR]'
+    )
+    parser.add_argument(
+        '--url-override', default=None,
+        help='Optional override for Alpaca data API URL'
+    )
+    return parser.parse_args(argv)
 
 
 def fetch_and_save(tickers, start_date, end_date, outdir, url_override=None):
@@ -50,16 +77,15 @@ def fetch_and_save(tickers, start_date, end_date, outdir, url_override=None):
             print(f"No data returned for {ticker}")
             continue
 
-        # Build DataFrame
         rows = []
         for bar in bars:
             rows.append({
-                'Date': bar.t.strftime('%Y-%m-%d'),
-                'Open': bar.o,
-                'High': bar.h,
-                'Low': bar.l,
-                'Close': bar.c,
-                'Volume': bar.v
+                'Date': bar.timestamp.strftime('%Y-%m-%d'),
+                'Open': bar.open,
+                'High': bar.high,
+                'Low': bar.low,
+                'Close': bar.close,
+                'Volume': bar.volume
             })
         df = pd.DataFrame(rows)
         df.set_index('Date', inplace=True)
@@ -70,35 +96,17 @@ def fetch_and_save(tickers, start_date, end_date, outdir, url_override=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Fetch OHLCV CSV data from Alpaca')
-    parser.add_argument(
-        '--tickers', required=True,
-        help='Comma-separated list of ticker symbols (e.g. SPY,QQQ)'
-    )
-    parser.add_argument(
-        '--start', required=True,
-        help='Start date in YYYY-MM-DD'
-    )
-    parser.add_argument(
-        '--end', required=True,
-        help='End date in YYYY-MM-DD'
-    )
-    parser.add_argument(
-        '--outdir', default='data',
-        help='Output directory for CSV files'
-    )
-    parser.add_argument(
-        '--url-override', default=None,
-        help='Optional override for Alpaca data API URL'
-    )
-    args = parser.parse_args()
+    args = get_cli_args()
+    # Debug: print parsed CLI args for testing defaults and env overrides
+    print(f"CLI_ARGS: {vars(args)}")
 
-    tickers = [t.strip().upper() for t in args.tickers.split(',') if t.strip()]
     try:
+        tickers = [t.strip().upper() for t in args.tickers.split(',') if t.strip()]
         start_date = datetime.fromisoformat(args.start)
         end_date = datetime.fromisoformat(args.end)
     except ValueError as e:
-        parser.error(f"Invalid date format: {e}")
+        print(f"Invalid date format: {e}", file=sys.stderr)
+        sys.exit(1)
 
     fetch_and_save(tickers, start_date, end_date, args.outdir, args.url_override)
 
