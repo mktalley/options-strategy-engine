@@ -331,19 +331,19 @@
 2025-05-10 11:22:29,159 INFO Chosen strategy: LongCall with score 3.00
 2025-05-10 11:22:29,159 INFO LongCall: {'symbol': 'SPY240517C00523000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
 2025-05-10 11:22:29,355 INFO DRY RUN: Single order request: symbol='SPY240517C00523000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-2025-05-10 11:21:58,094 INFO Selecting strategy: trend=bullish, iv=0.12, momentum=positive
-2025-05-10 11:21:58,094 INFO Chosen strategy: LongCall with score 3.00
-2025-05-10 11:21:58,094 INFO LongCall: {'symbol': 'SPY240517C00530000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:21:58,244 INFO DRY RUN: Single order request: symbol='SPY240517C00530000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-2025-05-10 11:22:01,548 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=negative
-2025-05-10 11:22:01,548 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
-2025-05-10 11:22:01,548 INFO Chosen strategy: LongCall with score 1.00
-2025-05-10 11:22:01,548 INFO LongCall: {'symbol': 'SPY240517C00529000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:22:01,706 INFO DRY RUN: Single order request: symbol='SPY240517C00529000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-2025-05-10 11:22:08,162 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=positive
-2025-05-10 11:22:08,163 INFO Chosen strategy: LongCall with score 3.00
-2025-05-10 11:22:08,163 INFO LongCall: {'symbol': 'SPY240524C00529000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:22:13,182 INFO DRY RUN: Single order request: symbol='SPY240524C00529000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:32,666 INFO Selecting strategy: trend=bullish, iv=0.12, momentum=positive
+2025-05-10 11:22:32,666 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:32,666 INFO LongCall: {'symbol': 'SPY240517C00530000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:32,828 INFO DRY RUN: Single order request: symbol='SPY240517C00530000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:36,151 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=negative
+2025-05-10 11:22:36,151 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 11:22:36,151 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 11:22:36,151 INFO LongCall: {'symbol': 'SPY240517C00529000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:36,326 INFO DRY RUN: Single order request: symbol='SPY240517C00529000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:39,651 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=positive
+2025-05-10 11:22:39,651 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:39,652 INFO LongCall: {'symbol': 'SPY240524C00529000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:39,839 INFO DRY RUN: Single order request: symbol='SPY240524C00529000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
 2025-05-10 11:22:13,426 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=positive
 2025-05-10 11:22:13,426 INFO Chosen strategy: LongCall with score 3.00
 2025-05-10 11:22:13,426 INFO LongCall: {'symbol': 'SPY240524C00530000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
@@ -366,20 +366,20 @@
 2025-05-10 11:22:29,245 INFO Chosen strategy: LongCall with score 3.00
 2025-05-10 11:22:29,245 INFO LongCall: {'symbol': 'SPY240531C00529000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
 2025-05-10 11:22:29,400 INFO DRY RUN: Single order request: symbol='SPY240531C00529000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-2025-05-10 11:20:21,815 INFO Selecting strategy: trend=bullish, iv=0.08, momentum=positive
-2025-05-10 11:20:21,815 INFO Chosen strategy: LongCall with score 3.00
-2025-05-10 11:20:21,815 INFO LongCall: {'symbol': 'SPY240531C00530000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:20:21,815 INFO DRY RUN: Single order request: symbol='SPY240531C00530000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-2025-05-10 11:20:25,073 INFO Selecting strategy: trend=bullish, iv=0.09, momentum=negative
-2025-05-10 11:20:25,073 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
-2025-05-10 11:20:25,073 INFO Chosen strategy: LongCall with score 1.00
-2025-05-10 11:20:25,074 INFO LongCall: {'symbol': 'SPY240531C00526000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:20:25,074 INFO DRY RUN: Single order request: symbol='SPY240531C00526000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-2025-05-10 11:20:25,246 INFO Selecting strategy: trend=bearish, iv=0.09, momentum=negative
-2025-05-10 11:20:25,246 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
-2025-05-10 11:20:25,246 INFO Chosen strategy: LongPut with score 3.00
-2025-05-10 11:20:25,246 INFO LongPut: {'symbol': 'SPY240531P00523000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:20:25,246 INFO DRY RUN: Single order request: symbol='SPY240531P00523000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:32,642 INFO Selecting strategy: trend=bullish, iv=0.08, momentum=positive
+2025-05-10 11:22:32,642 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:32,642 INFO LongCall: {'symbol': 'SPY240531C00530000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:32,802 INFO DRY RUN: Single order request: symbol='SPY240531C00530000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:36,073 INFO Selecting strategy: trend=bullish, iv=0.09, momentum=negative
+2025-05-10 11:22:36,073 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 11:22:36,073 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 11:22:36,073 INFO LongCall: {'symbol': 'SPY240531C00526000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:36,239 INFO DRY RUN: Single order request: symbol='SPY240531C00526000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:39,550 INFO Selecting strategy: trend=bearish, iv=0.09, momentum=negative
+2025-05-10 11:22:39,550 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 11:22:39,550 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 11:22:39,550 INFO LongPut: {'symbol': 'SPY240531P00523000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:39,718 INFO DRY RUN: Single order request: symbol='SPY240531P00523000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
 2025-05-10 11:20:28,579 INFO Selecting strategy: trend=bullish, iv=0.09, momentum=positive
 2025-05-10 11:20:28,580 INFO Chosen strategy: LongCall with score 3.00
 2025-05-10 11:20:28,580 INFO LongCall: {'symbol': 'SPY240607C00527000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
@@ -707,7 +707,31 @@
 2025-05-10 11:22:29,409 INFO Chosen strategy: LongCall with score 1.00
 2025-05-10 11:22:29,409 INFO LongCall: {'symbol': 'SPY240913C00549000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
 2025-05-10 11:22:29,409 INFO DRY RUN: Single order request: symbol='SPY240913C00549000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
-gCall
-2025-05-10 11:22:29,324 INFO Chosen strategy: LongCall with score 1.00
-2025-05-10 11:22:29,324 INFO LongCall: {'symbol': 'SPY240913C00554000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
-2025-05-10 11:22:29,324 INFO DRY RUN: Single order request: symbol='SPY240913C00554000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:32,641 INFO Selecting strategy: trend=bearish, iv=0.15, momentum=positive
+2025-05-10 11:22:32,641 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 11:22:32,641 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 11:22:32,641 INFO LongCall: {'symbol': 'SPY240913C00554000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:32,641 INFO DRY RUN: Single order request: symbol='SPY240913C00554000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:32,803 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=positive
+2025-05-10 11:22:32,803 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:32,803 INFO LongCall: {'symbol': 'SPY240913C00559000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:32,803 INFO DRY RUN: Single order request: symbol='SPY240913C00559000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:36,159 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=positive
+2025-05-10 11:22:36,159 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:36,159 INFO LongCall: {'symbol': 'SPY240920C00562000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:36,159 INFO DRY RUN: Single order request: symbol='SPY240920C00562000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:39,411 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=positive
+2025-05-10 11:22:39,412 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:39,412 INFO LongCall: {'symbol': 'SPY240920C00563000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:39,412 INFO DRY RUN: Single order request: symbol='SPY240920C00563000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:39,583 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=positive
+2025-05-10 11:22:39,583 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:39,583 INFO LongCall: {'symbol': 'SPY240920C00563000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:39,583 INFO DRY RUN: Single order request: symbol='SPY240920C00563000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+11:22:39,486 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 11:22:39,486 INFO LongCall: {'symbol': 'SPY240920C00561000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:39,486 INFO DRY RUN: Single order request: symbol='SPY240920C00561000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-10 11:22:39,648 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=positive
+2025-05-10 11:22:39,649 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 11:22:39,649 INFO LongCall: {'symbol': 'SPY240920C00571000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 11:22:39,649 INFO DRY RUN: Single order request: symbol='SPY240920C00571000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
