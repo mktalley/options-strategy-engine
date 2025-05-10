@@ -110,6 +110,8 @@ When `ENABLE_NEWS_RISK` is enabled, ensure the following environment variables a
 
 ## Fetching Historical Data
 
+By default, the output directory is taken from the FETCH_DATA_OUTDIR environment variable (default: data/csv).
+
 Use the `scripts/fetch_data.py` script to pull daily OHLCV CSV data from Alpaca for one or more tickers:
 
 ```bash
@@ -147,6 +149,8 @@ This will output starting and final portfolio values and generate a plot of equi
 
 ## Training the ML Model
 
+By default, the output path is taken from the ML_MODEL_PATH environment variable (default: model.joblib).
+
 Once you have a `backtest_results.csv` from `backtest.py`, train the ML model:
 
 ```bash
@@ -168,6 +172,11 @@ python scripts/fetch_data.py \
   --outdir data
 
 # 2. Run backtest, export features, and generate equity curve
+
+# Include optional output directory via --output-dir
+# Example: specify base output directory 'my_runs'
+# Results CSV will be written to my_runs/results/<start>_to_<end>_<tickers>/backtest_<start>_to_<end>.csv
+# Equity curves will be saved to my_runs/equity_curves/<start>_to_<end>_<tickers>/equity_curve_<start>_to_<end>.png
 python backtest.py --tickers SPY,QQQ \
   --start 2020-01-01 --end 2025-01-01 --initial-capital 100000
 
