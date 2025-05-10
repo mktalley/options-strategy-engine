@@ -129,6 +129,16 @@ def run_backtest(
     ENABLE_NEWS_RISK = os.getenv('ENABLE_NEWS_RISK', 'false').lower() in ('true', '1')
     ENABLE_ML = os.getenv('ENABLE_ML', 'false').lower() in ('true', '1')
     ENABLE_ALERTS = os.getenv('ENABLE_ALERTS', 'false').lower() in ('true', '1')
+    # Override feature toggles from CLI flags (tri-state override)
+    if enable_scanning is not None:
+        ENABLE_SCANNING = enable_scanning
+    if enable_ml is not None:
+        ENABLE_ML = enable_ml
+    if enable_risk_management is not None:
+        ENABLE_RISK_MANAGEMENT = enable_risk_management
+    if enable_news_risk is not None:
+        ENABLE_NEWS_RISK = enable_news_risk
+
 
     # Instantiate modules based on toggles
     # Global skip flag for option P/L simulation (avoid hitting rate limits)
@@ -218,7 +228,7 @@ def run_backtest(
 
             
             # Time filter: skip bar if market closed
-            if time_filter and not time_filter.is_market_open():
+            if time_filter and not time_filter.is_market_open(datetime.combine(bar_date, time(12, 0))):
                 logging.info(f"Market closed on {bar_date}. Skipping trade generation for {ticker}")
                 continue
 
@@ -385,7 +395,7 @@ if __name__ == '__main__':
                         help="Market open time HH:MM, overrides env MARKET_OPEN_TIME")
     parser.add_argument("--time-close", type=str, default=None,
                         help="Market close time HH:MM, overrides env MARKET_CLOSE_TIME")
-    parser.add_argument("--tz-name", type=str, default=None,
+    parser.add_argument("--tz-name", type=str, default="America/New_York",
                         help="Timezone name for time filter, overrides default America/New_York")
     parser.add_argument("--end-buffer-minutes", type=int, default=None,
                         help="Minutes before market close to stop new trades, overrides env TIME_FILTER_END_BUFFER_MINUTES")
@@ -404,8 +414,26 @@ if __name__ == '__main__':
                         help="Number of top symbols for Scanner, overrides env SCANNER_TOP_N")
     parser.add_argument("--scanner-cache-ttl", type=int, default=None,
                         help="Cache TTL in seconds for Scanner, overrides env SCANNER_CACHE_TTL")
-    parser.add_argument("--scanner-cache-file", type=str, default=None,
+    parser.add_argument("--scanner-cache-file", type=str, default=None,\
                         help="Cache file path for Scanner, overrides env SCANNER_CACHE_FILE")
+    # CLI feature toggles: override env settings
+    parser.add_argument("--enable-scanning", action="store_true",
+                        help="Override env, force enable Scanner")
+    parser.add_argument("--disable-scanning", action="store_true",
+                        help="Override env, force disable Scanner")
+    parser.add_argument("--enable-ml", action="store_true",
+                        help="Override env, force enable ML filtering")
+    parser.add_argument("--disable-ml", action="store_true",
+                        help="Override env, force disable ML filtering")
+    parser.add_argument("--enable-risk-management", action="store_true",
+                        help="Override env, force enable risk management")
+    parser.add_argument("--disable-risk-management", action="store_true",
+                        help="Override env, force disable risk management")
+    parser.add_argument("--enable-news-risk", action="store_true",
+                        help="Override env, force enable news risk")
+    parser.add_argument("--disable-news-risk", action="store_true",
+                        help="Override env, force disable news risk")
+
     parser.add_argument("--scanner-tickers-override", type=str, default=None,
                         help="Override tickers for Scanner, comma-separated or list, overrides env TICKERS")
 
@@ -415,12 +443,81 @@ if __name__ == '__main__':
                         help="IV threshold for high/low decision in StrategySelector")
     parser.add_argument("--initial-capital", type=float, default=100000.0, help="Starting capital for equity simulation")
     parser.add_argument("--results-file", default="backtest_results.csv", help="Path to write backtest results CSV")
+    parser.add_argument("--output-dir", default=os.getenv('BACKTEST_OUTPUT_DIR', 'outputs/backtests'), help="Base directory for backtest outputs (results and equity_curves subdirectories) [env: BACKTEST_OUTPUT_DIR]")
     # Strategy and feature flags
 
 
     args = parser.parse_args()
     # Debug: print parsed CLI args for integration testing
+    
     print(f"CLI_ARGS: {vars(args)}")
+
+    # Organize output directories
+    # Determine base output directory (CLI flag or default)
+    base_output = args.output_dir
+    # Create run-specific directory under base output
+    run_id = f"{args.start}_to_{args.end}_{args.tickers.replace(',', '_')}"
+    run_folder = os.path.join(base_output, run_id)
+    # Subdirectories for CSV results and equity curves
+    results_dir = os.path.join(run_folder, "results_csv")
+    equity_dir = os.path.join(run_folder, "equity_curves")
+    os.makedirs(results_dir, exist_ok=True)
+    os.makedirs(equity_dir, exist_ok=True)
+    # Override results_file to write in organized folder with descriptive filename
+    csv_filename = f"backtest_{run_id}.csv"
+    args.results_file = os.path.join(results_dir, csv_filename)
+    # Set equity output directory for simulate_equity
+    os.environ["EQUITY_OUTPUT_DIR"] = equity_dir
+    # Redirect log file into the run-specific output folder
+    # Remove default file handlers (from initial basicConfig)
+    for handler in logging.root.handlers[:]:
+        if isinstance(handler, logging.FileHandler):
+            logging.root.removeHandler(handler)
+    # Add new file handler pointing to the run folder
+    run_log = os.path.join(run_folder, 'backtest.log')
+    fh = logging.FileHandler(run_log, mode='w')
+    fh.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+    logging.root.addHandler(fh)
+    logging.info(f"Backtest logs will be written to {run_log}")
+
+    # Determine CLI overrides for feature toggles (tri-state): scanning and ML and risk and news risk
+    if args.enable_scanning and args.disable_scanning:
+        parser.error("Cannot specify both --enable-scanning and --disable-scanning")
+    if args.enable_scanning:
+        scanning_override = True
+    elif args.disable_scanning:
+        scanning_override = False
+    else:
+        scanning_override = None
+    
+    if args.enable_ml and args.disable_ml:
+        parser.error("Cannot specify both --enable-ml and --disable-ml")
+    if args.enable_ml:
+        ml_override = True
+    elif args.disable_ml:
+        ml_override = False
+    else:
+        ml_override = None
+
+    # Determine CLI overrides for risk management toggle
+    if args.enable_risk_management and args.disable_risk_management:
+        parser.error("Cannot specify both --enable-risk-management and --disable-risk-management")
+    if args.enable_risk_management:
+        risk_override = True
+    elif args.disable_risk_management:
+        risk_override = False
+    else:
+        risk_override = None
+
+    # Determine CLI overrides for news risk toggle
+    if args.enable_news_risk and args.disable_news_risk:
+        parser.error("Cannot specify both --enable-news-risk and --disable-news-risk")
+    if args.enable_news_risk:
+        news_override = True
+    elif args.disable_news_risk:
+        news_override = False
+    else:
+        news_override = None
 
     # Load environment
     load_dotenv()  # loads .env in cwd
@@ -438,7 +535,7 @@ if __name__ == '__main__':
         exit(1)
 
     df = run_backtest(
-        tickers=tickers,
+        tickers,
         start_date=start_date,
         end_date=end_date,
         api_key=api_key,
@@ -460,6 +557,10 @@ if __name__ == '__main__':
         scanner_cache_ttl=args.scanner_cache_ttl,
         scanner_cache_file=args.scanner_cache_file,
         scanner_tickers_override=args.scanner_tickers_override,
+        enable_scanning=scanning_override,
+        enable_ml=ml_override,
+        enable_risk_management=risk_override,
+        enable_news_risk=news_override,
     )
 
     # Simulate equity curve from results

@@ -15,6 +15,37 @@ def test_override_tickers(monkeypatch):
     assert result == ['AAA', 'BBB', 'CCC']
 
 
+
+
+def test_constructor_override_list(monkeypatch):
+    # Explicit list override should take precedence over environment and parse correctly
+    monkeypatch.setenv('ALPACA_API_KEY', 'key')
+    monkeypatch.setenv('ALPACA_SECRET_KEY', 'sec')
+    monkeypatch.delenv('TICKERS', raising=False)
+    s = scanner.Scanner(tickers_override=['aa', 'Bb', 'cc'])
+    result = s.scan()
+    assert result == ['AA', 'BB', 'CC']
+
+
+def test_constructor_override_string(monkeypatch):
+    # Explicit comma-separated string override should parse and normalize tickers
+    monkeypatch.setenv('ALPACA_API_KEY', 'key')
+    monkeypatch.setenv('ALPACA_SECRET_KEY', 'sec')
+    monkeypatch.delenv('TICKERS', raising=False)
+    s = scanner.Scanner(tickers_override='aa, bB, CC')
+    result = s.scan()
+    assert result == ['AA', 'BB', 'CC']
+
+
+def test_constructor_override_precedence(monkeypatch):
+    # Constructor-provided override should win over TICKERS env var
+    monkeypatch.setenv('ALPACA_API_KEY', 'key')
+    monkeypatch.setenv('ALPACA_SECRET_KEY', 'sec')
+    monkeypatch.setenv('TICKERS', 'DDD,EEE')
+    s = scanner.Scanner(tickers_override=['aaa'])
+    result = s.scan()
+    assert result == ['AAA']
+
 def test_cache_usage(monkeypatch, tmp_path):
     monkeypatch.setenv('ALPACA_API_KEY', 'k')
     monkeypatch.setenv('ALPACA_SECRET_KEY', 's')

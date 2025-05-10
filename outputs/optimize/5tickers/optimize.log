@@ -1,0 +1,20 @@
+nohup: ignoring input
+Running combo: IV=0.2, EndBuffer=5, Capital=100000.0
+Running combo: IV=0.2, EndBuffer=5, Capital=100000.0
+Running combo: IV=0.2, EndBuffer=10, Capital=100000.0
+Running combo: IV=0.2, EndBuffer=10, Capital=100000.0
+Running combo: IV=0.2, EndBuffer=15, Capital=100000.0
+Running combo: IV=0.2, EndBuffer=15, Capital=100000.0
+Running combo: IV=0.25, EndBuffer=5, Capital=100000.0
+Running combo: IV=0.25, EndBuffer=5, Capital=100000.0
+Running combo: IV=0.25, EndBuffer=10, Capital=100000.0
+Running combo: IV=0.25, EndBuffer=10, Capital=100000.0
+Running combo: IV=0.25, EndBuffer=15, Capital=100000.0
+Running combo: IV=0.25, EndBuffer=15, Capital=100000.0
+Running combo: IV=0.3, EndBuffer=5, Capital=100000.0
+Running combo: IV=0.3, EndBuffer=5, Capital=100000.0
+Running combo: IV=0.3, EndBuffer=10, Capital=100000.0
+Running combo: IV=0.3, EndBuffer=10, Capital=100000.0
+Running combo: IV=0.3, EndBuffer=15, Capital=100000.0
+Running combo: IV=0.3, EndBuffer=15, Capital=100000.0
+Optimization complete. Summary written to optimize_5tickers/summary.csv

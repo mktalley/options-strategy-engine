@@ -1,0 +1,5 @@
+entry_date,ticker,symbol,side,qty,strategy,expiration,entry_price,exit_price,iv,trend,momentum,price,days_to_exp,pl,order_count
+2024-04-29,SPY,SPY240503C00510000,buy,1.0,LongCall,2024-05-03,4.04,1.96,0.12695851620774903,bullish,positive,510.06,4.0,-208.0,
+2024-04-29,SPY,,,,LongCall,,,,,,,,,,1.0
+2024-04-30,SPY,SPY240503P00502000,buy,1.0,LongPut,2024-05-03,1.42,0.01,0.13738396023630214,bearish,negative,501.98,3.0,-141.0,
+2024-04-30,SPY,,,,LongPut,,,,,,,,,,1.0

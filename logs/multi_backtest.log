@@ -1,0 +1,535 @@
+CLI_ARGS: {'tickers': 'NVDA,TSLA,AAPL,AMZN,GOOGL', 'start': '2024-01-01', 'time_open': None, 'time_close': None, 'tz_name': 'America/New_York', 'end_buffer_minutes': None, 'scanner_api_key': None, 'scanner_secret_key': None, 'scanner_base_url': None, 'scanner_data_url': None, 'scanner_max_iv': None, 'scanner_top_n': None, 'scanner_cache_ttl': None, 'scanner_cache_file': None, 'scanner_tickers_override': None, 'end': '2025-01-01', 'iv_threshold': 0.25, 'initial_capital': 100000.0, 'results_file': 'backtest_results.csv'}
+2025-05-09 19:46:12,208 ERROR Failed to load model at model.joblib: [Errno 2] No such file or directory: 'model.joblib'
+2025-05-09 19:46:12,208 INFO Fetching bars for NVDA from 2024-01-01 to 2025-01-01
+2025-05-09 19:46:15,547 INFO Selecting strategy: trend=bullish, iv=0.29, momentum=negative
+2025-05-09 19:46:15,547 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:15,547 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:15,548 INFO Selecting strategy: trend=bullish, iv=0.30, momentum=positive
+2025-05-09 19:46:15,548 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:15,548 INFO LongCall: {'symbol': 'NVDA240202C00630000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:17,106 INFO DRY RUN: Single order request: symbol='NVDA240202C00630000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:17,510 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=positive
+2025-05-09 19:46:17,510 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:17,510 INFO LongCall: {'symbol': 'NVDA240209C00662000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:17,758 INFO DRY RUN: Single order request: symbol='NVDA240209C00662000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:24,137 INFO Selecting strategy: trend=bullish, iv=0.29, momentum=positive
+2025-05-09 19:46:24,137 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:24,137 INFO LongCall: {'symbol': 'NVDA240209C00693000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:24,377 INFO DRY RUN: Single order request: symbol='NVDA240209C00693000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:24,574 INFO Selecting strategy: trend=bullish, iv=0.31, momentum=negative
+2025-05-09 19:46:24,574 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:24,574 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:24,574 INFO Selecting strategy: trend=bullish, iv=0.31, momentum=positive
+2025-05-09 19:46:24,574 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:24,574 INFO LongCall: {'symbol': 'NVDA240209C00701000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:24,789 INFO DRY RUN: Single order request: symbol='NVDA240209C00701000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:28,047 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=negative
+2025-05-09 19:46:28,047 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:28,047 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:28,048 INFO Selecting strategy: trend=bullish, iv=0.33, momentum=positive
+2025-05-09 19:46:28,048 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:28,048 INFO LongCall: {'symbol': 'NVDA240216C00721000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:28,288 INFO DRY RUN: Single order request: symbol='NVDA240216C00721000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:28,471 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=positive
+2025-05-09 19:46:28,471 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:28,471 INFO LongCall: {'symbol': 'NVDA240216C00722000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:28,672 INFO DRY RUN: Single order request: symbol='NVDA240216C00722000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:31,940 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=negative
+2025-05-09 19:46:31,941 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:31,941 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:31,941 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=positive
+2025-05-09 19:46:31,941 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:31,941 INFO LongCall: {'symbol': 'NVDA240216C00739000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:32,122 INFO DRY RUN: Single order request: symbol='NVDA240216C00739000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:32,281 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=negative
+2025-05-09 19:46:32,281 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:32,282 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:32,282 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=negative
+2025-05-09 19:46:32,282 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:32,282 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:32,283 INFO Selecting strategy: trend=bullish, iv=0.38, momentum=negative
+2025-05-09 19:46:32,283 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:32,283 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:32,283 INFO Selecting strategy: trend=bearish, iv=0.39, momentum=negative
+2025-05-09 19:46:32,283 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:32,283 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:32,283 INFO LongPut: {'symbol': 'NVDA240223P00675000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:32,460 INFO DRY RUN: Single order request: symbol='NVDA240223P00675000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:32,624 INFO Selecting strategy: trend=bullish, iv=0.65, momentum=positive
+2025-05-09 19:46:32,624 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:32,624 INFO LongCall: {'symbol': 'NVDA240223C00785000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:32,764 INFO DRY RUN: Single order request: symbol='NVDA240223C00785000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:36,096 INFO Selecting strategy: trend=bullish, iv=0.65, momentum=positive
+2025-05-09 19:46:36,096 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:36,096 INFO LongCall: {'symbol': 'NVDA240301C00788000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:36,258 INFO DRY RUN: Single order request: symbol='NVDA240301C00788000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:36,413 INFO Selecting strategy: trend=bullish, iv=0.65, momentum=positive
+2025-05-09 19:46:36,413 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:36,414 INFO LongCall: {'symbol': 'NVDA240301C00791000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:36,593 INFO DRY RUN: Single order request: symbol='NVDA240301C00791000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:39,835 INFO Selecting strategy: trend=bullish, iv=0.65, momentum=negative
+2025-05-09 19:46:39,836 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:39,836 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:39,837 INFO Selecting strategy: trend=bullish, iv=0.65, momentum=negative
+2025-05-09 19:46:39,837 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:39,837 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:39,837 INFO Selecting strategy: trend=bullish, iv=0.65, momentum=positive
+2025-05-09 19:46:39,837 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:39,837 INFO LongCall: {'symbol': 'NVDA240301C00791000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:39,999 INFO DRY RUN: Single order request: symbol='NVDA240301C00791000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:40,169 INFO Selecting strategy: trend=bullish, iv=0.64, momentum=positive
+2025-05-09 19:46:40,169 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:40,169 INFO LongCall: {'symbol': 'NVDA240308C00823000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:40,328 INFO DRY RUN: Single order request: symbol='NVDA240308C00823000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:43,561 INFO Selecting strategy: trend=bullish, iv=0.63, momentum=positive
+2025-05-09 19:46:43,562 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:43,562 INFO LongCall: {'symbol': 'NVDA240308C00852000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:43,763 INFO DRY RUN: Single order request: symbol='NVDA240308C00852000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:43,916 INFO Selecting strategy: trend=bullish, iv=0.62, momentum=positive
+2025-05-09 19:46:43,916 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:43,917 INFO LongCall: {'symbol': 'NVDA240308C00860000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:44,151 INFO DRY RUN: Single order request: symbol='NVDA240308C00860000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:47,472 INFO Selecting strategy: trend=bullish, iv=0.63, momentum=positive
+2025-05-09 19:46:47,473 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:47,473 INFO LongCall: {'symbol': 'NVDA240308C00887000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:47,707 INFO DRY RUN: Single order request: symbol='NVDA240308C00887000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:47,881 INFO Selecting strategy: trend=bullish, iv=0.63, momentum=positive
+2025-05-09 19:46:47,881 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:47,881 INFO LongCall: {'symbol': 'NVDA240308C00927000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:48,064 INFO DRY RUN: Single order request: symbol='NVDA240308C00927000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:48,225 INFO Selecting strategy: trend=bullish, iv=0.68, momentum=negative
+2025-05-09 19:46:48,225 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:48,225 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:48,226 INFO Selecting strategy: trend=bullish, iv=0.68, momentum=negative
+2025-05-09 19:46:48,226 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:48,226 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:48,226 INFO Selecting strategy: trend=bullish, iv=0.71, momentum=positive
+2025-05-09 19:46:48,227 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:48,227 INFO LongCall: {'symbol': 'NVDA240315C00919000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:48,439 INFO DRY RUN: Single order request: symbol='NVDA240315C00919000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:54,758 INFO Selecting strategy: trend=bullish, iv=0.72, momentum=negative
+2025-05-09 19:46:54,759 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:54,759 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:54,759 INFO Selecting strategy: trend=bullish, iv=0.73, momentum=negative
+2025-05-09 19:46:54,759 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:54,759 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:54,759 INFO Selecting strategy: trend=bullish, iv=0.73, momentum=negative
+2025-05-09 19:46:54,760 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:54,760 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:54,760 INFO Selecting strategy: trend=bullish, iv=0.70, momentum=positive
+2025-05-09 19:46:54,760 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:54,760 INFO LongCall: {'symbol': 'NVDA240322C00885000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:54,951 INFO DRY RUN: Single order request: symbol='NVDA240322C00885000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:55,142 INFO Selecting strategy: trend=bullish, iv=0.68, momentum=positive
+2025-05-09 19:46:55,142 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:55,142 INFO LongCall: {'symbol': 'NVDA240322C00894000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:55,329 INFO DRY RUN: Single order request: symbol='NVDA240322C00894000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:58,565 INFO Selecting strategy: trend=bullish, iv=0.45, momentum=positive
+2025-05-09 19:46:58,565 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:58,566 INFO LongCall: {'symbol': 'NVDA240322C00904000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:58,836 INFO DRY RUN: Single order request: symbol='NVDA240322C00904000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,159 INFO Selecting strategy: trend=bullish, iv=0.45, momentum=positive
+2025-05-09 19:47:05,159 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:05,159 INFO LongCall: {'symbol': 'NVDA240322C00914000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,326 INFO DRY RUN: Single order request: symbol='NVDA240322C00914000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,495 INFO Selecting strategy: trend=bullish, iv=0.46, momentum=positive
+2025-05-09 19:47:05,495 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:05,495 INFO LongCall: {'symbol': 'NVDA240329C00943000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,769 INFO DRY RUN: Single order request: symbol='NVDA240329C00943000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,939 INFO Selecting strategy: trend=bullish, iv=0.45, momentum=positive
+2025-05-09 19:47:05,939 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:05,940 INFO LongCall: {'symbol': 'NVDA240329C00950000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:06,161 INFO DRY RUN: Single order request: symbol='NVDA240329C00950000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:09,397 INFO Selecting strategy: trend=bullish, iv=0.46, momentum=negative
+2025-05-09 19:47:09,397 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:09,398 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:09,398 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=negative
+2025-05-09 19:47:09,398 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:09,398 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:09,398 INFO Selecting strategy: trend=bullish, iv=0.46, momentum=positive
+2025-05-09 19:47:09,398 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:09,398 INFO LongCall: {'symbol': 'NVDA240329C00904000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:09,626 INFO DRY RUN: Single order request: symbol='NVDA240329C00904000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:12,877 INFO Selecting strategy: trend=bullish, iv=0.45, momentum=positive
+2025-05-09 19:47:12,877 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:12,877 INFO LongCall: {'symbol': 'NVDA240405C00904000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,090 INFO DRY RUN: Single order request: symbol='NVDA240405C00904000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:13,238 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=negative
+2025-05-09 19:47:13,238 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:13,238 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:13,238 INFO LongPut: {'symbol': 'NVDA240405P00895000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,462 INFO DRY RUN: Single order request: symbol='NVDA240405P00895000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:13,630 INFO Selecting strategy: trend=bearish, iv=0.44, momentum=negative
+2025-05-09 19:47:13,630 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:13,630 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:13,630 INFO LongPut: {'symbol': 'NVDA240405P00890000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,837 INFO DRY RUN: Single order request: symbol='NVDA240405P00890000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:17,202 INFO Selecting strategy: trend=bearish, iv=0.42, momentum=negative
+2025-05-09 19:47:17,202 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:17,202 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:17,202 INFO LongPut: {'symbol': 'NVDA240405P00859000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,380 INFO DRY RUN: Single order request: symbol='NVDA240405P00859000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:17,535 INFO Selecting strategy: trend=bearish, iv=0.38, momentum=positive
+2025-05-09 19:47:17,535 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:47:17,535 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240412P00880000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,535 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240412P00878000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,535 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:47:17,706 INFO DRY RUN: Multi-leg order, symbols=['NVDA240412P00880000', 'NVDA240412P00878000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240412P00880000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240412P00878000'}] take_profit=None stop_loss=None position_intent=None
+ 'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240412P00878000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:24,767 INFO Selecting strategy: trend=bearish, iv=0.38, momentum=negative
+2025-05-09 19:46:24,767 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:24,767 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:24,767 INFO LongPut: {'symbol': 'NVDA240412P00871000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:24,991 INFO DRY RUN: Single order request: symbol='NVDA240412P00871000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:25,166 INFO Selecting strategy: trend=bearish, iv=0.29, momentum=negative
+2025-05-09 19:46:25,166 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:25,166 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:25,166 INFO LongPut: {'symbol': 'NVDA240412P00854000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:25,378 INFO DRY RUN: Single order request: symbol='NVDA240412P00854000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:28,645 INFO Selecting strategy: trend=bearish, iv=0.30, momentum=positive
+2025-05-09 19:46:28,645 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:28,645 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240412P00870000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:28,645 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240412P00868000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:28,645 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:28,796 INFO DRY RUN: Multi-leg order, symbols=['NVDA240412P00870000', 'NVDA240412P00868000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240412P00870000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240412P00868000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:32,316 INFO Selecting strategy: trend=bullish, iv=0.31, momentum=positive
+2025-05-09 19:46:32,316 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:32,316 INFO LongCall: {'symbol': 'NVDA240412C00906000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:32,495 INFO DRY RUN: Single order request: symbol='NVDA240412C00906000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:32,665 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-09 19:46:32,666 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:32,666 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:32,666 INFO LongPut: {'symbol': 'NVDA240419P00882000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:32,879 INFO DRY RUN: Single order request: symbol='NVDA240419P00882000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:36,109 INFO Selecting strategy: trend=bearish, iv=0.34, momentum=negative
+2025-05-09 19:46:36,109 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:36,109 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:36,110 INFO LongPut: {'symbol': 'NVDA240419P00860000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:36,247 INFO DRY RUN: Single order request: symbol='NVDA240419P00860000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:36,419 INFO Selecting strategy: trend=bearish, iv=0.34, momentum=positive
+2025-05-09 19:46:36,419 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:36,419 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240419P00874000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:36,419 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240419P00872000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:36,419 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:36,573 INFO DRY RUN: Multi-leg order, symbols=['NVDA240419P00874000', 'NVDA240419P00872000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240419P00874000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240419P00872000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:39,963 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=negative
+2025-05-09 19:46:39,963 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:39,963 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:39,963 INFO LongPut: {'symbol': 'NVDA240419P00840000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:40,125 INFO DRY RUN: Single order request: symbol='NVDA240419P00840000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:43,506 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=positive
+2025-05-09 19:46:43,506 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:43,506 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240419P00847000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:43,506 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240419P00845000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:43,506 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:43,681 INFO DRY RUN: Multi-leg order, symbols=['NVDA240419P00847000', 'NVDA240419P00845000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240419P00847000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240419P00845000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:47,138 INFO Selecting strategy: trend=bearish, iv=0.49, momentum=negative
+2025-05-09 19:46:47,139 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:47,139 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:47,139 INFO LongPut: {'symbol': 'NVDA240426P00762000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:47,376 INFO DRY RUN: Single order request: symbol='NVDA240426P00762000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:47,566 INFO Selecting strategy: trend=bearish, iv=0.52, momentum=positive
+2025-05-09 19:46:47,566 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:47,566 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240426P00795000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:47,566 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240426P00793000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:47,566 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:47,754 INFO DRY RUN: Multi-leg order, symbols=['NVDA240426P00795000', 'NVDA240426P00793000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240426P00795000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240426P00793000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:51,249 INFO Selecting strategy: trend=bearish, iv=0.54, momentum=positive
+2025-05-09 19:46:51,249 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:51,249 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240426P00824000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:51,250 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240426P00822000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:51,250 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:51,470 INFO DRY RUN: Multi-leg order, symbols=['NVDA240426P00824000', 'NVDA240426P00822000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240426P00824000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240426P00822000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:54,861 INFO Selecting strategy: trend=bearish, iv=0.54, momentum=negative
+2025-05-09 19:46:54,862 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:54,862 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:54,862 INFO LongPut: {'symbol': 'NVDA240426P00797000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:55,080 INFO DRY RUN: Single order request: symbol='NVDA240426P00797000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:55,253 INFO Selecting strategy: trend=bearish, iv=0.56, momentum=positive
+2025-05-09 19:46:55,253 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:55,253 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240426P00826000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:55,253 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240426P00824000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:55,253 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:55,415 INFO DRY RUN: Multi-leg order, symbols=['NVDA240426P00826000', 'NVDA240426P00824000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240426P00826000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240426P00824000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:01,888 INFO Selecting strategy: trend=bullish, iv=0.61, momentum=positive
+2025-05-09 19:47:01,888 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:01,888 INFO LongCall: {'symbol': 'NVDA240503C00877000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:02,110 INFO DRY RUN: Single order request: symbol='NVDA240503C00877000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,334 INFO Selecting strategy: trend=bullish, iv=0.61, momentum=positive
+2025-05-09 19:47:05,334 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:05,334 INFO LongCall: {'symbol': 'NVDA240503C00878000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,537 INFO DRY RUN: Single order request: symbol='NVDA240503C00878000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,701 INFO Selecting strategy: trend=bullish, iv=0.61, momentum=negative
+2025-05-09 19:47:05,701 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:05,701 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:05,702 INFO Selecting strategy: trend=bearish, iv=0.61, momentum=negative
+2025-05-09 19:47:05,702 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:05,702 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:05,702 INFO LongPut: {'symbol': 'NVDA240503P00830000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,887 INFO DRY RUN: Single order request: symbol='NVDA240503P00830000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:09,217 INFO Selecting strategy: trend=bullish, iv=0.62, momentum=positive
+2025-05-09 19:47:09,218 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:09,218 INFO LongCall: {'symbol': 'NVDA240503C00858000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:09,390 INFO DRY RUN: Single order request: symbol='NVDA240503C00858000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:09,552 INFO Selecting strategy: trend=bullish, iv=0.63, momentum=positive
+2025-05-09 19:47:09,553 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:09,553 INFO LongCall: {'symbol': 'NVDA240510C00888000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:09,855 INFO DRY RUN: Single order request: symbol='NVDA240510C00888000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:13,087 INFO Selecting strategy: trend=bullish, iv=0.64, momentum=positive
+2025-05-09 19:47:13,087 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:13,087 INFO LongCall: {'symbol': 'NVDA240510C00921000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,262 INFO DRY RUN: Single order request: symbol='NVDA240510C00921000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:13,415 INFO Selecting strategy: trend=bullish, iv=0.64, momentum=negative
+2025-05-09 19:47:13,415 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:13,415 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:13,415 INFO Selecting strategy: trend=bullish, iv=0.62, momentum=negative
+2025-05-09 19:47:13,415 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:13,415 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:13,415 INFO Selecting strategy: trend=bullish, iv=0.62, momentum=negative
+2025-05-09 19:47:13,415 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:13,415 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:13,415 INFO Selecting strategy: trend=bullish, iv=0.61, momentum=positive
+2025-05-09 19:47:13,416 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:13,416 INFO LongCall: {'symbol': 'NVDA240517C00899000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,579 INFO DRY RUN: Single order request: symbol='NVDA240517C00899000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:16,824 INFO Selecting strategy: trend=bullish, iv=0.61, momentum=positive
+2025-05-09 19:47:16,824 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:16,824 INFO LongCall: {'symbol': 'NVDA240517C00904000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,047 INFO DRY RUN: Single order request: symbol='NVDA240517C00904000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:17,219 INFO Selecting strategy: trend=bullish, iv=0.59, momentum=positive
+2025-05-09 19:47:17,220 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:17,220 INFO LongCall: {'symbol': 'NVDA240517C00914000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,392 INFO DRY RUN: Single order request: symbol='NVDA240517C00914000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:20,634 INFO Selecting strategy: trend=bullish, iv=0.60, momentum=positive
+2025-05-09 19:47:20,636 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:20,636 INFO LongCall: {'symbol': 'NVDA240517C00946000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:20,811 INFO DRY RUN: Single order request: symbol='NVDA240517C00946000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:20,963 INFO Selecting strategy: trend=bullish, iv=0.44, momentum=negative
+2025-05-09 19:47:20,964 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:20,964 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:20,965 INFO Selecting strategy: trend=bullish, iv=0.43, momentum=negative
+2025-05-09 19:47:20,965 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:47:20,965 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:47:20,965 INFO Selecting strategy: trend=bullish, iv=0.43, momentum=positive
+2025-05-09 19:47:20,965 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:47:20,965 INFO LongCall: {'symbol': 'NVDA240524C00948000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:20,236 INFO DRY RUN: Single order request: symbol='NVDA240524C00948000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:20,416 INFO Selecting strategy: trend=bullish, iv=0.40, momentum=positive
+2025-05-09 19:46:20,416 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:20,416 INFO LongCall: {'symbol': 'NVDA240524C00954000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:20,657 INFO DRY RUN: Single order request: symbol='NVDA240524C00954000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:23,948 INFO Selecting strategy: trend=bullish, iv=0.39, momentum=negative
+2025-05-09 19:46:23,948 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:23,948 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:23,949 INFO Selecting strategy: trend=bullish, iv=0.45, momentum=positive
+2025-05-09 19:46:23,949 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:23,949 INFO LongCall: {'symbol': 'NVDA240524C01038000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:24,237 INFO DRY RUN: Single order request: symbol='NVDA240524C01038000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:24,431 INFO Selecting strategy: trend=bullish, iv=0.45, momentum=positive
+2025-05-09 19:46:24,431 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:24,431 INFO LongCall: {'symbol': 'NVDA240531C01065000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:24,657 INFO DRY RUN: Single order request: symbol='NVDA240531C01065000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:27,921 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=positive
+2025-05-09 19:46:27,921 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:27,921 INFO LongCall: {'symbol': 'NVDA240531C01139000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:28,254 INFO DRY RUN: Single order request: symbol='NVDA240531C01139000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:28,436 INFO Selecting strategy: trend=bullish, iv=0.44, momentum=positive
+2025-05-09 19:46:28,436 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:28,436 INFO LongCall: {'symbol': 'NVDA240531C01148000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:28,656 INFO DRY RUN: Single order request: symbol='NVDA240531C01148000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:28,865 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=negative
+2025-05-09 19:46:28,865 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:28,865 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:28,865 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=negative
+2025-05-09 19:46:28,865 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:28,866 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:28,866 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=positive
+2025-05-09 19:46:28,866 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:28,867 INFO LongCall: {'symbol': 'NVDA240607C01150000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:29,055 INFO DRY RUN: Single order request: symbol='NVDA240607C01150000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:32,417 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=positive
+2025-05-09 19:46:32,418 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:32,418 INFO LongCall: {'symbol': 'NVDA240607C01164000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:32,578 INFO DRY RUN: Single order request: symbol='NVDA240607C01164000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:35,838 INFO Selecting strategy: trend=bullish, iv=0.49, momentum=positive
+2025-05-09 19:46:35,838 INFO Chosen strategy: LongCall with score 2.00
+2025-05-09 19:46:35,838 INFO LongCall: {'symbol': 'NVDA240607C01224000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:35,994 INFO DRY RUN: Single order request: symbol='NVDA240607C01224000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:36,182 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=negative
+2025-05-09 19:46:36,182 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:36,182 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:36,183 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=negative
+2025-05-09 19:46:36,183 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-09 19:46:36,183 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-09 19:46:36,184 INFO Selecting strategy: trend=bearish, iv=8.21, momentum=negative
+2025-05-09 19:46:36,184 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:36,184 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:36,184 INFO LongPut: {'symbol': 'NVDA240614P00122000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:36,382 INFO DRY RUN: Single order request: symbol='NVDA240614P00122000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:39,713 INFO Selecting strategy: trend=bearish, iv=8.20, momentum=negative
+2025-05-09 19:46:39,713 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:39,714 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:39,714 INFO LongPut: {'symbol': 'NVDA240614P00121000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:39,867 INFO DRY RUN: Single order request: symbol='NVDA240614P00121000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:40,043 INFO Selecting strategy: trend=bearish, iv=8.20, momentum=positive
+2025-05-09 19:46:40,043 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:40,043 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240614P00125000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:40,043 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240614P00123000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:40,043 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:40,287 INFO DRY RUN: Multi-leg order, symbols=['NVDA240614P00125000', 'NVDA240614P00123000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240614P00125000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240614P00123000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:43,792 INFO Selecting strategy: trend=bearish, iv=8.21, momentum=positive
+2025-05-09 19:46:43,792 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:43,792 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240614P00130000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:43,792 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240614P00128000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:43,792 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:44,049 INFO DRY RUN: Multi-leg order, symbols=['NVDA240614P00130000', 'NVDA240614P00128000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240614P00130000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240614P00128000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:47,575 INFO Selecting strategy: trend=bearish, iv=8.22, momentum=positive
+2025-05-09 19:46:47,575 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:47,575 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240621P00132000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:47,575 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240621P00130000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:47,575 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:47,737 INFO DRY RUN: Multi-leg order, symbols=['NVDA240621P00132000', 'NVDA240621P00130000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240621P00132000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240621P00130000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:51,201 INFO Selecting strategy: trend=bearish, iv=8.21, momentum=negative
+2025-05-09 19:46:51,201 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:51,201 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:51,201 INFO LongPut: {'symbol': 'NVDA240621P00131000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:51,382 INFO DRY RUN: Single order request: symbol='NVDA240621P00131000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:51,556 INFO Selecting strategy: trend=bearish, iv=8.22, momentum=positive
+2025-05-09 19:46:51,556 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:46:51,556 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240621P00136000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:51,556 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240621P00134000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:51,556 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:46:51,762 INFO DRY RUN: Multi-leg order, symbols=['NVDA240621P00136000', 'NVDA240621P00134000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240621P00136000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240621P00134000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:46:55,200 INFO Selecting strategy: trend=bearish, iv=8.21, momentum=negative
+2025-05-09 19:46:55,200 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:46:55,200 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:46:55,200 INFO LongPut: {'symbol': 'NVDA240621P00131000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:46:55,374 INFO DRY RUN: Single order request: symbol='NVDA240621P00131000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:01,795 INFO Selecting strategy: trend=bearish, iv=8.19, momentum=negative
+2025-05-09 19:47:01,796 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:01,796 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:01,797 INFO LongPut: {'symbol': 'NVDA240628P00127000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:01,981 INFO DRY RUN: Single order request: symbol='NVDA240628P00127000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,235 INFO Selecting strategy: trend=bearish, iv=8.17, momentum=negative
+2025-05-09 19:47:05,236 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:05,236 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:05,236 INFO LongPut: {'symbol': 'NVDA240628P00118000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,417 INFO DRY RUN: Single order request: symbol='NVDA240628P00118000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:05,587 INFO Selecting strategy: trend=bearish, iv=8.17, momentum=positive
+2025-05-09 19:47:05,587 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:47:05,587 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240628P00126000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,587 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240628P00124000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:05,587 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:47:05,818 INFO DRY RUN: Multi-leg order, symbols=['NVDA240628P00126000', 'NVDA240628P00124000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240628P00126000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240628P00124000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:09,350 INFO Selecting strategy: trend=bearish, iv=8.17, momentum=positive
+2025-05-09 19:47:09,351 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:47:09,351 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240628P00126000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:09,351 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240628P00124000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:09,351 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:47:09,535 INFO DRY RUN: Multi-leg order, symbols=['NVDA240628P00126000', 'NVDA240628P00124000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240628P00126000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240628P00124000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:13,072 INFO Selecting strategy: trend=bearish, iv=8.17, momentum=negative
+2025-05-09 19:47:13,072 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:13,072 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:13,072 INFO LongPut: {'symbol': 'NVDA240628P00124000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,310 INFO DRY RUN: Single order request: symbol='NVDA240628P00124000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:13,486 INFO Selecting strategy: trend=bearish, iv=8.17, momentum=negative
+2025-05-09 19:47:13,486 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:13,486 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:13,486 INFO LongPut: {'symbol': 'NVDA240705P00124000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:13,694 INFO DRY RUN: Single order request: symbol='NVDA240705P00124000' qty=1.0 notional=None side=<OrderSide.BUY: 'buy'> type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=None extended_hours=None client_order_id=None legs=None take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:17,050 INFO Selecting strategy: trend=bearish, iv=8.16, momentum=positive
+2025-05-09 19:47:17,050 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-09 19:47:17,050 INFO VerticalSpread leg put buy: {'symbol': 'NVDA240705P00124000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,050 INFO VerticalSpread leg put sell: {'symbol': 'NVDA240705P00122000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-09 19:47:17,050 INFO RiskManager: skipping multi-leg orders
+2025-05-09 19:47:17,257 INFO DRY RUN: Multi-leg order, symbols=['NVDA240705P00124000', 'NVDA240705P00122000'], request=symbol=None qty=1.0 notional=None side=None type=<OrderType.MARKET: 'market'> time_in_force=<TimeInForce.DAY: 'day'> order_class=<OrderClass.MLEG: 'mleg'> extended_hours=None client_order_id=None legs=[{   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.BUY: 'buy'>,
+    'symbol': 'NVDA240705P00124000'}, {   'position_intent': None,
+    'ratio_qty': 1.0,
+    'side': <OrderSide.SELL: 'sell'>,
+    'symbol': 'NVDA240705P00122000'}] take_profit=None stop_loss=None position_intent=None
+2025-05-09 19:47:20,839 INFO Selecting strategy: trend=bearish, iv=8.16, momentum=negative
+2025-05-09 19:47:20,839 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-09 19:47:20,839 INFO Chosen strategy: LongPut with score 2.00
+2025-05-09 19:47:20,839 INFO LongPut: {'symbol': 'NVDA240705P00123000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
