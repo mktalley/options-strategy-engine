@@ -9,6 +9,7 @@ load_dotenv()
 import socket
 # Ensure network calls timeout to avoid hanging on DNS errors
 socket.setdefaulttimeout(10)
+import concurrent.futures
 
 
 from simulate_equity import simulate_equity  # integrate equity simulation
@@ -52,11 +53,18 @@ def get_bars(client, ticker: str, start: datetime, end: datetime):
         start=start.isoformat(),
         end=end.isoformat()
     )
-    try:
-        resp = client.get_stock_bars(req)
-    except Exception as e:
-        logging.error(f"Error fetching bars for {ticker}: {e}")
-        return []
+    # Perform data fetch with hard timeout to avoid hangs
+    timeout = float(os.getenv("GET_BARS_TIMEOUT", "15"))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+        future = executor.submit(client.get_stock_bars, req)
+        try:
+            resp = future.result(timeout=timeout)
+        except concurrent.futures.TimeoutError:
+            logging.error(f"Timeout fetching bars for {ticker} after {timeout}s")
+            return []
+        except Exception as e:
+            logging.error(f"Error fetching bars for {ticker}: {e}")
+            return []
     # bars_resp may have .data mapping or be a dict
     if hasattr(resp, 'data'):
         bars = resp.data.get(ticker, [])
