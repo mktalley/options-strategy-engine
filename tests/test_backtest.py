@@ -3,6 +3,10 @@ import pandas as pd
 import pytest
 
 import backtest
+from simulate_equity import simulate_equity
+import os
+import datetime
+
 
 class FakeBar:
     def __init__(self, c, t):

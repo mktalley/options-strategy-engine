@@ -1,0 +1,2 @@
+2025-05-10 08:46:08,921 INFO Backtest logs will be written to backtest_outputs/invalid_to_invalid_AAPL/backtest.log
+2025-05-10 08:46:08,923 ERROR Invalid date format. Use YYYY-MM-DD.

@@ -1,0 +1,2 @@
+2025-05-10 08:46:05,020 INFO Backtest logs will be written to backtest_outputs/invalid_to_invalid_AAPL_msft/backtest.log
+2025-05-10 08:46:05,022 ERROR Invalid date format. Use YYYY-MM-DD.

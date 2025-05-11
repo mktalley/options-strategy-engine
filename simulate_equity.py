@@ -7,8 +7,9 @@ Usage:
 import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-def simulate_equity(csv_path, start_date, end_date, initial_capital):
+def simulate_equity(csv_path, start_date, end_date, initial_capital, output_dir=None):
     # Load detailed trade results
     df = pd.read_csv(csv_path, parse_dates=["entry_date", "expiration"])
 
@@ -50,7 +51,11 @@ def simulate_equity(csv_path, start_date, end_date, initial_capital):
     plt.xlabel("Date")
     plt.ylabel("Equity ($)")
     plt.grid(True)
-    out_png = f"equity_curve_{start_date}_to_{end_date}.png"
+        # Save figure to designated output directory
+    dir_to_use = output_dir if output_dir else os.environ.get("EQUITY_OUTPUT_DIR", ".")
+    os.makedirs(dir_to_use, exist_ok=True)
+    filename = f"equity_curve_{start_date}_to_{end_date}.png"
+    out_png = os.path.join(dir_to_use, filename)
     plt.tight_layout()
     plt.savefig(out_png)
     print(f"Equity curve saved to {out_png}")
@@ -61,5 +66,12 @@ if __name__ == '__main__':
     p.add_argument('--start', required=True, help='Start date YYYY-MM-DD')
     p.add_argument('--end',   required=True, help='End date YYYY-MM-DD')
     p.add_argument('--initial-capital', type=float, default=100000.0, help='Starting capital')
+    p.add_argument('--output-dir', default=None, help='Directory to save equity curve PNG')
     args = p.parse_args()
-    simulate_equity(args.csv, args.start, args.end, args.initial_capital)
+    simulate_equity(
+        args.csv,
+        args.start,
+        args.end,
+        args.initial_capital,
+        args.output_dir
+    )

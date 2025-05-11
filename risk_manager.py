@@ -9,11 +9,11 @@ class RiskManager:
     """
     def __init__(self,
                  atr_period: int = 14,
-                 stop_loss_pct: float = 0.02,
-                 take_profit_pct: float = 0.04,
-                 atr_stop_multiplier: float = 0.0,
-                 atr_take_profit_multiplier: float = 0.0,
-                 trailing_stop_pct: float = 0.0):
+                 stop_loss_pct: float = 0.01,
+                 take_profit_pct: float = 0.08,
+                 atr_stop_multiplier: float = 1.5,
+                 atr_take_profit_multiplier: float = 2.5,
+                 trailing_stop_pct: float = 0.02):
         self.atr_period = atr_period
         self.stop_loss_pct = stop_loss_pct
         self.take_profit_pct = take_profit_pct

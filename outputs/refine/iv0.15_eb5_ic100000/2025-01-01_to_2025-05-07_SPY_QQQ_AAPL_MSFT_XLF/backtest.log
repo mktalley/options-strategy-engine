@@ -1,0 +1,1568 @@
+2025-05-10 04:18:26,534 INFO Backtest logs will be written to refine_iv_buffer/iv0.15_eb5_ic100000/2025-01-01_to_2025-05-07_SPY_QQQ_AAPL_MSFT_XLF/backtest.log
+2025-05-10 04:18:26,560 INFO Loaded ML model from model.joblib
+2025-05-10 04:18:26,560 INFO Fetching bars for SPY from 2025-01-01 to 2025-05-07
+2025-05-10 04:18:26,819 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=negative
+2025-05-10 04:18:26,819 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:18:26,819 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:26,819 INFO LongCall: {'symbol': 'SPY250207C00598000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:28,033 INFO Trade for SPY on 2025-02-03 blocked by news risk manager
+2025-05-10 04:18:28,033 INFO Selecting strategy: trend=bullish, iv=0.14, momentum=positive
+2025-05-10 04:18:28,033 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:28,033 INFO LongCall: {'symbol': 'SPY250207C00602000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:28,197 INFO Trade for SPY on 2025-02-04 blocked by news risk manager
+2025-05-10 04:18:28,197 INFO Selecting strategy: trend=bullish, iv=0.13, momentum=positive
+2025-05-10 04:18:28,197 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:28,197 INFO LongCall: {'symbol': 'SPY250207C00604000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:28,406 INFO Trade for SPY on 2025-02-05 blocked by news risk manager
+2025-05-10 04:18:28,407 INFO Selecting strategy: trend=bullish, iv=0.13, momentum=positive
+2025-05-10 04:18:28,407 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:28,407 INFO LongCall: {'symbol': 'SPY250207C00606000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:28,572 INFO Trade for SPY on 2025-02-06 blocked by news risk manager
+2025-05-10 04:18:28,573 INFO Selecting strategy: trend=bullish, iv=0.12, momentum=negative
+2025-05-10 04:18:28,574 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:18:28,574 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:28,574 INFO LongCall: {'symbol': 'SPY250214C00601000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:28,765 INFO Trade for SPY on 2025-02-07 blocked by news risk manager
+2025-05-10 04:18:28,766 INFO Selecting strategy: trend=bullish, iv=0.12, momentum=positive
+2025-05-10 04:18:28,766 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:28,766 INFO LongCall: {'symbol': 'SPY250214C00605000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:28,951 INFO Trade for SPY on 2025-02-10 blocked by news risk manager
+2025-05-10 04:18:28,952 INFO Selecting strategy: trend=bullish, iv=0.12, momentum=positive
+2025-05-10 04:18:28,953 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:28,953 INFO LongCall: {'symbol': 'SPY250214C00605000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:29,122 INFO Trade for SPY on 2025-02-11 blocked by news risk manager
+2025-05-10 04:18:29,122 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=negative
+2025-05-10 04:18:29,122 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:18:29,122 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:29,122 INFO LongCall: {'symbol': 'SPY250214C00603000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:29,284 INFO Trade for SPY on 2025-02-12 blocked by news risk manager
+2025-05-10 04:18:29,284 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=positive
+2025-05-10 04:18:29,284 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:29,284 INFO LongCall: {'symbol': 'SPY250214C00610000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:29,468 INFO Trade for SPY on 2025-02-13 blocked by news risk manager
+2025-05-10 04:18:29,469 INFO Selecting strategy: trend=bullish, iv=0.11, momentum=negative
+2025-05-10 04:18:29,469 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:18:29,469 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:29,469 INFO LongCall: {'symbol': 'SPY250221C00610000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:29,635 INFO Trade for SPY on 2025-02-14 blocked by news risk manager
+2025-05-10 04:18:29,636 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=positive
+2025-05-10 04:18:29,636 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:29,636 INFO LongCall: {'symbol': 'SPY250221C00611000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:29,791 INFO Trade for SPY on 2025-02-18 blocked by news risk manager
+2025-05-10 04:18:29,792 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=positive
+2025-05-10 04:18:29,792 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:18:29,792 INFO LongCall: {'symbol': 'SPY250221C00613000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:30,003 INFO Trade for SPY on 2025-02-19 blocked by news risk manager
+2025-05-10 04:18:30,003 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=negative
+2025-05-10 04:18:30,003 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:18:30,003 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:30,003 INFO LongCall: {'symbol': 'SPY250221C00610000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:30,159 INFO Trade for SPY on 2025-02-20 blocked by news risk manager
+2025-05-10 04:18:30,159 INFO Selecting strategy: trend=bearish, iv=0.12, momentum=negative
+2025-05-10 04:18:30,160 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:30,160 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:30,160 INFO LongPut: {'symbol': 'SPY250228P00600000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:30,343 INFO Trade for SPY on 2025-02-21 blocked by news risk manager
+2025-05-10 04:18:30,344 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=negative
+2025-05-10 04:18:30,344 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:30,344 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:30,344 INFO LongPut: {'symbol': 'SPY250228P00597000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:30,517 INFO Trade for SPY on 2025-02-24 blocked by news risk manager
+2025-05-10 04:18:30,517 INFO Selecting strategy: trend=bearish, iv=0.10, momentum=negative
+2025-05-10 04:18:30,517 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:30,518 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:30,518 INFO LongPut: {'symbol': 'SPY250228P00594000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:30,699 INFO Trade for SPY on 2025-02-25 blocked by news risk manager
+2025-05-10 04:18:30,700 INFO Selecting strategy: trend=bearish, iv=0.10, momentum=positive
+2025-05-10 04:18:30,700 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 04:18:30,700 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:30,700 INFO LongCall: {'symbol': 'SPY250228C00595000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:30,894 INFO Trade for SPY on 2025-02-26 blocked by news risk manager
+2025-05-10 04:18:30,895 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=negative
+2025-05-10 04:18:30,895 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:30,895 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:30,895 INFO LongPut: {'symbol': 'SPY250228P00585000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,059 INFO Trade for SPY on 2025-02-27 blocked by news risk manager
+2025-05-10 04:18:31,060 INFO Selecting strategy: trend=bearish, iv=0.13, momentum=positive
+2025-05-10 04:18:31,060 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 04:18:31,060 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:31,060 INFO LongCall: {'symbol': 'SPY250307C00594000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,224 INFO Trade for SPY on 2025-02-28 blocked by news risk manager
+2025-05-10 04:18:31,224 INFO Selecting strategy: trend=bearish, iv=0.14, momentum=negative
+2025-05-10 04:18:31,224 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:31,224 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:31,224 INFO LongPut: {'symbol': 'SPY250307P00584000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,385 INFO Trade for SPY on 2025-03-03 blocked by news risk manager
+2025-05-10 04:18:31,385 INFO Selecting strategy: trend=bearish, iv=0.14, momentum=negative
+2025-05-10 04:18:31,386 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:31,386 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:31,386 INFO LongPut: {'symbol': 'SPY250307P00577000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,560 INFO Trade for SPY on 2025-03-04 blocked by news risk manager
+2025-05-10 04:18:31,560 INFO Selecting strategy: trend=bearish, iv=0.15, momentum=positive
+2025-05-10 04:18:31,560 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 04:18:31,560 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:31,560 INFO LongCall: {'symbol': 'SPY250307C00583000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,754 INFO Trade for SPY on 2025-03-05 blocked by news risk manager
+2025-05-10 04:18:31,754 INFO Selecting strategy: trend=bearish, iv=0.16, momentum=negative
+2025-05-10 04:18:31,754 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:31,754 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:31,754 INFO LongPut: {'symbol': 'SPY250307P00573000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,931 INFO Trade for SPY on 2025-03-06 blocked by news risk manager
+2025-05-10 04:18:31,931 INFO Selecting strategy: trend=bearish, iv=0.16, momentum=positive
+2025-05-10 04:18:31,931 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:31,931 INFO VerticalSpread leg put buy: {'symbol': 'SPY250314P00576000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,931 INFO VerticalSpread leg put sell: {'symbol': 'SPY250314P00574000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:31,931 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:32,089 INFO Trade for SPY on 2025-03-07 blocked by news risk manager
+2025-05-10 04:18:32,090 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=negative
+2025-05-10 04:18:32,090 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:32,090 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:32,090 INFO LongPut: {'symbol': 'SPY250314P00561000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,298 INFO Trade for SPY on 2025-03-10 blocked by news risk manager
+2025-05-10 04:18:32,298 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=negative
+2025-05-10 04:18:32,298 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:32,298 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:32,298 INFO LongPut: {'symbol': 'SPY250314P00556000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,505 INFO Trade for SPY on 2025-03-11 blocked by news risk manager
+2025-05-10 04:18:32,506 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=positive
+2025-05-10 04:18:32,506 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:32,506 INFO VerticalSpread leg put buy: {'symbol': 'SPY250314P00559000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,506 INFO VerticalSpread leg put sell: {'symbol': 'SPY250314P00557000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,506 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:32,704 INFO Trade for SPY on 2025-03-12 blocked by news risk manager
+2025-05-10 04:18:32,704 INFO Selecting strategy: trend=bearish, iv=0.17, momentum=negative
+2025-05-10 04:18:32,704 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:32,704 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:32,704 INFO LongPut: {'symbol': 'SPY250314P00551000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,878 INFO Trade for SPY on 2025-03-13 blocked by news risk manager
+2025-05-10 04:18:32,879 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:18:32,879 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:32,879 INFO VerticalSpread leg put buy: {'symbol': 'SPY250321P00563000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,879 INFO VerticalSpread leg put sell: {'symbol': 'SPY250321P00561000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:32,879 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:33,057 INFO Trade for SPY on 2025-03-14 blocked by news risk manager
+2025-05-10 04:18:33,057 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:18:33,058 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:33,058 INFO VerticalSpread leg put buy: {'symbol': 'SPY250321P00567000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,058 INFO VerticalSpread leg put sell: {'symbol': 'SPY250321P00565000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,058 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:33,244 INFO Trade for SPY on 2025-03-17 blocked by news risk manager
+2025-05-10 04:18:33,244 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:33,244 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:33,244 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:33,244 INFO LongPut: {'symbol': 'SPY250321P00561000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,451 INFO Trade for SPY on 2025-03-18 blocked by news risk manager
+2025-05-10 04:18:33,452 INFO Selecting strategy: trend=bearish, iv=0.21, momentum=positive
+2025-05-10 04:18:33,452 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:33,452 INFO VerticalSpread leg put buy: {'symbol': 'SPY250321P00567000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,452 INFO VerticalSpread leg put sell: {'symbol': 'SPY250321P00565000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,452 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:33,606 INFO Trade for SPY on 2025-03-19 blocked by news risk manager
+2025-05-10 04:18:33,607 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:33,607 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:33,607 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:33,607 INFO LongPut: {'symbol': 'SPY250321P00565000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,782 INFO Trade for SPY on 2025-03-20 blocked by news risk manager
+2025-05-10 04:18:33,782 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:33,782 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:33,782 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:33,782 INFO LongPut: {'symbol': 'SPY250328P00564000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:33,970 INFO Trade for SPY on 2025-03-21 blocked by news risk manager
+2025-05-10 04:18:33,971 INFO Selecting strategy: trend=bullish, iv=0.21, momentum=positive
+2025-05-10 04:18:33,971 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:33,971 INFO LongCall: {'symbol': 'SPY250328C00574000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,152 INFO Trade for SPY on 2025-03-24 blocked by news risk manager
+2025-05-10 04:18:34,152 INFO Selecting strategy: trend=bullish, iv=0.21, momentum=positive
+2025-05-10 04:18:34,152 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:34,153 INFO LongCall: {'symbol': 'SPY250328C00575000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,305 INFO Trade for SPY on 2025-03-25 blocked by news risk manager
+2025-05-10 04:18:34,305 INFO Selecting strategy: trend=bearish, iv=0.21, momentum=negative
+2025-05-10 04:18:34,305 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:34,306 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:34,306 INFO LongPut: {'symbol': 'SPY250328P00569000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,476 INFO Trade for SPY on 2025-03-26 blocked by news risk manager
+2025-05-10 04:18:34,477 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:34,477 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:34,477 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:34,477 INFO LongPut: {'symbol': 'SPY250328P00567000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,646 INFO Trade for SPY on 2025-03-27 blocked by news risk manager
+2025-05-10 04:18:34,646 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:34,646 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:34,646 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:34,646 INFO LongPut: {'symbol': 'SPY250404P00556000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,826 INFO Trade for SPY on 2025-03-28 blocked by news risk manager
+2025-05-10 04:18:34,828 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:18:34,828 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:34,828 INFO VerticalSpread leg put buy: {'symbol': 'SPY250404P00559000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,828 INFO VerticalSpread leg put sell: {'symbol': 'SPY250404P00557000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:34,828 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:35,145 INFO Trade for SPY on 2025-03-31 blocked by news risk manager
+2025-05-10 04:18:35,146 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:18:35,146 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:35,146 INFO VerticalSpread leg put buy: {'symbol': 'SPY250404P00561000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:35,146 INFO VerticalSpread leg put sell: {'symbol': 'SPY250404P00559000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:35,146 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:35,330 INFO Trade for SPY on 2025-04-01 blocked by news risk manager
+2025-05-10 04:18:35,331 INFO Selecting strategy: trend=bullish, iv=0.19, momentum=positive
+2025-05-10 04:18:35,331 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:35,332 INFO LongCall: {'symbol': 'SPY250404C00565000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:35,506 INFO Trade for SPY on 2025-04-02 blocked by news risk manager
+2025-05-10 04:18:35,507 INFO Selecting strategy: trend=bearish, iv=0.26, momentum=negative
+2025-05-10 04:18:35,507 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:35,507 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:35,507 INFO LongPut: {'symbol': 'SPY250404P00537000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:35,700 INFO Trade for SPY on 2025-04-03 blocked by news risk manager
+2025-05-10 04:18:35,701 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:18:35,701 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:35,701 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:35,701 INFO LongPut: {'symbol': 'SPY250411P00505000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:35,890 INFO Trade for SPY on 2025-04-04 blocked by news risk manager
+2025-05-10 04:18:35,890 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:18:35,890 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:35,890 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:35,890 INFO LongPut: {'symbol': 'SPY250411P00504000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,054 INFO Trade for SPY on 2025-04-07 blocked by news risk manager
+2025-05-10 04:18:36,054 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:18:36,054 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:36,054 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:36,054 INFO LongPut: {'symbol': 'SPY250411P00496000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,233 INFO Trade for SPY on 2025-04-08 blocked by news risk manager
+2025-05-10 04:18:36,234 INFO Selecting strategy: trend=bearish, iv=0.49, momentum=positive
+2025-05-10 04:18:36,234 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:36,234 INFO VerticalSpread leg put buy: {'symbol': 'SPY250411P00549000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,234 INFO VerticalSpread leg put sell: {'symbol': 'SPY250411P00547000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,234 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:36,418 INFO Trade for SPY on 2025-04-09 blocked by news risk manager
+2025-05-10 04:18:36,419 INFO Selecting strategy: trend=bearish, iv=0.51, momentum=negative
+2025-05-10 04:18:36,419 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:36,419 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:36,419 INFO LongPut: {'symbol': 'SPY250411P00525000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,576 INFO Trade for SPY on 2025-04-10 blocked by news risk manager
+2025-05-10 04:18:36,576 INFO Selecting strategy: trend=bearish, iv=0.51, momentum=positive
+2025-05-10 04:18:36,576 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:36,576 INFO VerticalSpread leg put buy: {'symbol': 'SPY250418P00534000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,576 INFO VerticalSpread leg put sell: {'symbol': 'SPY250418P00532000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,576 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:36,781 INFO Trade for SPY on 2025-04-11 blocked by news risk manager
+2025-05-10 04:18:36,781 INFO Selecting strategy: trend=bearish, iv=0.51, momentum=positive
+2025-05-10 04:18:36,781 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:36,781 INFO VerticalSpread leg put buy: {'symbol': 'SPY250418P00539000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,781 INFO VerticalSpread leg put sell: {'symbol': 'SPY250418P00537000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:36,781 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:36,936 INFO ML filtered out SPY (p=0.00 < 0.5)
+2025-05-10 04:18:36,937 INFO Selecting strategy: trend=bearish, iv=0.51, momentum=negative
+2025-05-10 04:18:36,937 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:36,937 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:36,937 INFO LongPut: {'symbol': 'SPY250418P00538000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,108 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:37,108 INFO Selecting strategy: trend=bearish, iv=0.52, momentum=negative
+2025-05-10 04:18:37,108 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:37,108 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:37,109 INFO LongPut: {'symbol': 'SPY250418P00526000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,269 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:37,269 INFO Selecting strategy: trend=bearish, iv=0.52, momentum=positive
+2025-05-10 04:18:37,269 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:37,269 INFO VerticalSpread leg put buy: {'symbol': 'SPY250418P00526000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,270 INFO VerticalSpread leg put sell: {'symbol': 'SPY250418P00524000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,270 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:37,440 INFO ML filtered out SPY (p=0.00 < 0.5)
+2025-05-10 04:18:37,440 INFO Selecting strategy: trend=bearish, iv=0.51, momentum=negative
+2025-05-10 04:18:37,440 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:37,440 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:37,440 INFO LongPut: {'symbol': 'SPY250425P00514000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,619 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:37,619 INFO Selecting strategy: trend=bearish, iv=0.53, momentum=positive
+2025-05-10 04:18:37,619 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:37,619 INFO VerticalSpread leg put buy: {'symbol': 'SPY250425P00527000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,619 INFO VerticalSpread leg put sell: {'symbol': 'SPY250425P00525000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,619 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:37,769 INFO ML filtered out SPY (p=0.00 < 0.5)
+2025-05-10 04:18:37,770 INFO Selecting strategy: trend=bearish, iv=0.53, momentum=positive
+2025-05-10 04:18:37,770 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:37,770 INFO VerticalSpread leg put buy: {'symbol': 'SPY250425P00535000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,770 INFO VerticalSpread leg put sell: {'symbol': 'SPY250425P00533000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:37,770 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:38,020 INFO ML filtered out SPY (p=0.00 < 0.5)
+2025-05-10 04:18:38,021 INFO Selecting strategy: trend=bullish, iv=0.54, momentum=positive
+2025-05-10 04:18:38,021 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:38,021 INFO LongCall: {'symbol': 'SPY250425C00547000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:38,201 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:38,201 INFO Selecting strategy: trend=bullish, iv=0.53, momentum=positive
+2025-05-10 04:18:38,201 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:38,201 INFO LongCall: {'symbol': 'SPY250502C00551000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:38,431 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:38,432 INFO Selecting strategy: trend=bullish, iv=0.53, momentum=positive
+2025-05-10 04:18:38,432 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:38,432 INFO LongCall: {'symbol': 'SPY250502C00551000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:38,624 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:38,625 INFO Selecting strategy: trend=bullish, iv=0.53, momentum=positive
+2025-05-10 04:18:38,625 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:38,625 INFO LongCall: {'symbol': 'SPY250502C00554000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:38,817 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:38,818 INFO Selecting strategy: trend=bullish, iv=0.53, momentum=positive
+2025-05-10 04:18:38,818 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:38,818 INFO LongCall: {'symbol': 'SPY250502C00555000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:39,125 INFO ML filtered out SPY (p=0.01 < 0.5)
+2025-05-10 04:18:39,126 INFO Selecting strategy: trend=bullish, iv=0.50, momentum=positive
+2025-05-10 04:18:39,126 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:39,126 INFO LongCall: {'symbol': 'SPY250502C00558000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:39,262 INFO ML filtered out SPY (p=0.02 < 0.5)
+2025-05-10 04:18:39,262 INFO Selecting strategy: trend=bullish, iv=0.44, momentum=positive
+2025-05-10 04:18:39,262 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:39,262 INFO LongCall: {'symbol': 'SPY250509C00567000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:39,496 INFO ML filtered out SPY (p=0.00 < 0.5)
+2025-05-10 04:18:39,496 INFO Selecting strategy: trend=bullish, iv=0.44, momentum=negative
+2025-05-10 04:18:39,496 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:39,496 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:39,497 INFO Selecting strategy: trend=bullish, iv=0.44, momentum=negative
+2025-05-10 04:18:39,497 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:39,497 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:39,497 INFO Fetching bars for QQQ from 2025-01-01 to 2025-05-07
+2025-05-10 04:18:39,630 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:39,630 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:39,630 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:39,630 INFO LongPut: {'symbol': 'QQQ250207P00518000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:39,820 INFO ML filtered out QQQ (p=0.17 < 0.5)
+2025-05-10 04:18:39,821 INFO Selecting strategy: trend=bullish, iv=0.20, momentum=positive
+2025-05-10 04:18:39,821 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:39,821 INFO LongCall: {'symbol': 'QQQ250207C00524000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:40,048 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:40,049 INFO Selecting strategy: trend=bullish, iv=0.19, momentum=positive
+2025-05-10 04:18:40,049 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:40,049 INFO LongCall: {'symbol': 'QQQ250207C00527000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:40,349 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:40,349 INFO Selecting strategy: trend=bullish, iv=0.19, momentum=positive
+2025-05-10 04:18:40,350 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:40,350 INFO LongCall: {'symbol': 'QQQ250207C00530000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:40,537 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:40,538 INFO Selecting strategy: trend=bullish, iv=0.18, momentum=negative
+2025-05-10 04:18:40,538 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:40,538 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:40,538 INFO Selecting strategy: trend=bullish, iv=0.19, momentum=positive
+2025-05-10 04:18:40,538 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:40,538 INFO LongCall: {'symbol': 'QQQ250214C00529000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:40,823 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:40,823 INFO Selecting strategy: trend=bullish, iv=0.19, momentum=negative
+2025-05-10 04:18:40,823 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:40,823 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:40,824 INFO Selecting strategy: trend=bullish, iv=0.17, momentum=positive
+2025-05-10 04:18:40,824 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:40,824 INFO LongCall: {'symbol': 'QQQ250214C00528000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:41,065 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:41,066 INFO Selecting strategy: trend=bullish, iv=0.17, momentum=positive
+2025-05-10 04:18:41,066 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:41,066 INFO LongCall: {'symbol': 'QQQ250214C00536000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:41,324 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:41,325 INFO Selecting strategy: trend=bullish, iv=0.17, momentum=positive
+2025-05-10 04:18:41,325 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:41,325 INFO LongCall: {'symbol': 'QQQ250221C00538000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:41,481 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:41,481 INFO Selecting strategy: trend=bullish, iv=0.17, momentum=positive
+2025-05-10 04:18:41,481 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:41,481 INFO LongCall: {'symbol': 'QQQ250221C00539000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:41,645 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:41,646 INFO Selecting strategy: trend=bullish, iv=0.16, momentum=positive
+2025-05-10 04:18:41,646 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:41,646 INFO LongCall: {'symbol': 'QQQ250221C00540000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:41,822 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:41,822 INFO Selecting strategy: trend=bullish, iv=0.16, momentum=negative
+2025-05-10 04:18:41,822 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:41,822 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:41,822 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=negative
+2025-05-10 04:18:41,822 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:41,822 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:41,822 INFO LongPut: {'symbol': 'QQQ250228P00526000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:41,979 INFO ML filtered out QQQ (p=0.17 < 0.5)
+2025-05-10 04:18:41,980 INFO Selecting strategy: trend=bearish, iv=0.15, momentum=negative
+2025-05-10 04:18:41,980 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:41,980 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:41,980 INFO LongPut: {'symbol': 'QQQ250228P00520000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:42,195 INFO ML filtered out QQQ (p=0.17 < 0.5)
+2025-05-10 04:18:42,196 INFO Selecting strategy: trend=bearish, iv=0.14, momentum=negative
+2025-05-10 04:18:42,196 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:42,196 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:18:42,196 INFO LongPut: {'symbol': 'QQQ250228P00513000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:42,354 INFO ML filtered out QQQ (p=0.16 < 0.5)
+2025-05-10 04:18:42,355 INFO Selecting strategy: trend=bearish, iv=0.14, momentum=positive
+2025-05-10 04:18:42,355 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 04:18:42,355 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:18:42,355 INFO LongCall: {'symbol': 'QQQ250228C00515000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:42,504 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:42,505 INFO Selecting strategy: trend=bearish, iv=0.17, momentum=negative
+2025-05-10 04:18:42,505 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:42,505 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:42,505 INFO LongPut: {'symbol': 'QQQ250228P00500000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:42,651 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:42,651 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=positive
+2025-05-10 04:18:42,651 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:42,651 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250307P00508000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:42,651 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250307P00506000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:42,651 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:42,813 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:42,813 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:18:42,813 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:42,813 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:42,813 INFO LongPut: {'symbol': 'QQQ250307P00497000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,001 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:43,002 INFO Selecting strategy: trend=bearish, iv=0.19, momentum=negative
+2025-05-10 04:18:43,002 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:43,002 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:43,002 INFO LongPut: {'symbol': 'QQQ250307P00496000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,154 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:43,154 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:18:43,154 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:43,154 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250307P00502000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,154 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250307P00500000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,154 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:43,330 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:43,330 INFO Selecting strategy: trend=bearish, iv=0.21, momentum=negative
+2025-05-10 04:18:43,331 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:43,331 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:43,331 INFO LongPut: {'symbol': 'QQQ250307P00488000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,489 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:43,489 INFO Selecting strategy: trend=bearish, iv=0.21, momentum=positive
+2025-05-10 04:18:43,489 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:43,489 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250314P00492000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,489 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250314P00490000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,489 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:43,691 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:43,692 INFO Selecting strategy: trend=bearish, iv=0.24, momentum=negative
+2025-05-10 04:18:43,692 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:43,692 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:43,692 INFO LongPut: {'symbol': 'QQQ250314P00473000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:43,864 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:43,864 INFO Selecting strategy: trend=bearish, iv=0.24, momentum=negative
+2025-05-10 04:18:43,865 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:43,865 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:43,865 INFO LongPut: {'symbol': 'QQQ250314P00472000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,014 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:44,014 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=positive
+2025-05-10 04:18:44,014 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:44,014 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250314P00477000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,014 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250314P00475000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,014 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:44,151 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:44,152 INFO Selecting strategy: trend=bearish, iv=0.24, momentum=negative
+2025-05-10 04:18:44,152 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:44,152 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:44,152 INFO LongPut: {'symbol': 'QQQ250314P00468000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,316 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:44,317 INFO Selecting strategy: trend=bearish, iv=0.26, momentum=positive
+2025-05-10 04:18:44,317 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:44,317 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250321P00480000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,317 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250321P00478000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,317 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:44,478 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:44,478 INFO Selecting strategy: trend=bearish, iv=0.26, momentum=positive
+2025-05-10 04:18:44,478 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:44,478 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250321P00483000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,478 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250321P00481000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,478 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:44,665 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:44,665 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=negative
+2025-05-10 04:18:44,666 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:44,666 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:44,666 INFO LongPut: {'symbol': 'QQQ250321P00475000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,855 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:44,855 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=positive
+2025-05-10 04:18:44,855 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:44,855 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250321P00481000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,855 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250321P00479000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:44,855 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:45,013 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:45,013 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=negative
+2025-05-10 04:18:45,014 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:45,014 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:45,014 INFO LongPut: {'symbol': 'QQQ250321P00479000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:45,164 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:45,165 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=positive
+2025-05-10 04:18:45,165 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:45,165 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250328P00481000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:45,165 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250328P00479000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:45,165 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:45,329 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:45,329 INFO Selecting strategy: trend=bullish, iv=0.28, momentum=positive
+2025-05-10 04:18:45,329 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:45,329 INFO LongCall: {'symbol': 'QQQ250328C00491000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:45,507 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:45,507 INFO Selecting strategy: trend=bullish, iv=0.28, momentum=positive
+2025-05-10 04:18:45,508 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:45,508 INFO LongCall: {'symbol': 'QQQ250328C00493000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:45,688 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:45,689 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=negative
+2025-05-10 04:18:45,689 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:45,689 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:45,689 INFO LongPut: {'symbol': 'QQQ250328P00484000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:45,845 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:45,845 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=negative
+2025-05-10 04:18:45,845 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:45,845 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:45,845 INFO LongPut: {'symbol': 'QQQ250328P00482000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,003 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:46,003 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=negative
+2025-05-10 04:18:46,003 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:46,003 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:46,004 INFO LongPut: {'symbol': 'QQQ250404P00469000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,161 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:46,161 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=negative
+2025-05-10 04:18:46,161 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:46,161 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:46,161 INFO LongPut: {'symbol': 'QQQ250404P00469000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,312 INFO ML filtered out QQQ (p=0.15 < 0.5)
+2025-05-10 04:18:46,313 INFO Selecting strategy: trend=bearish, iv=0.27, momentum=positive
+2025-05-10 04:18:46,313 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:46,313 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250404P00473000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,313 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250404P00471000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,313 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:46,480 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:46,481 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=positive
+2025-05-10 04:18:46,481 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:46,481 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250404P00476000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,481 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250404P00474000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,481 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:46,625 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:46,626 INFO Selecting strategy: trend=bearish, iv=0.31, momentum=negative
+2025-05-10 04:18:46,626 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:46,626 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:46,626 INFO LongPut: {'symbol': 'QQQ250404P00451000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,798 INFO ML filtered out QQQ (p=0.16 < 0.5)
+2025-05-10 04:18:46,798 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=negative
+2025-05-10 04:18:46,798 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:46,798 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:46,798 INFO LongPut: {'symbol': 'QQQ250411P00423000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,966 INFO ML filtered out QQQ (p=0.33 < 0.5)
+2025-05-10 04:18:46,967 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=positive
+2025-05-10 04:18:46,967 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:46,967 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250411P00424000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,967 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250411P00422000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:46,967 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:47,144 INFO ML filtered out QQQ (p=0.08 < 0.5)
+2025-05-10 04:18:47,144 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=negative
+2025-05-10 04:18:47,144 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:47,144 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:47,144 INFO LongPut: {'symbol': 'QQQ250411P00416000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,334 INFO ML filtered out QQQ (p=0.33 < 0.5)
+2025-05-10 04:18:47,334 INFO Selecting strategy: trend=bearish, iv=0.55, momentum=positive
+2025-05-10 04:18:47,334 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:47,334 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250411P00466000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,334 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250411P00464000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,334 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:47,493 INFO ML filtered out QQQ (p=0.04 < 0.5)
+2025-05-10 04:18:47,493 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=negative
+2025-05-10 04:18:47,493 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:47,493 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:47,493 INFO LongPut: {'symbol': 'QQQ250411P00446000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,661 INFO ML filtered out QQQ (p=0.01 < 0.5)
+2025-05-10 04:18:47,662 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=positive
+2025-05-10 04:18:47,662 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:47,662 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250418P00454000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,662 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250418P00452000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,662 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:47,833 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:47,834 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=positive
+2025-05-10 04:18:47,834 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:47,834 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250418P00457000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,834 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250418P00455000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,834 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:47,991 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:47,991 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=positive
+2025-05-10 04:18:47,991 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:47,991 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250418P00458000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,991 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250418P00456000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:47,991 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:48,145 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:48,145 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=negative
+2025-05-10 04:18:48,145 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:48,145 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:48,145 INFO LongPut: {'symbol': 'QQQ250418P00444000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:48,299 INFO ML filtered out QQQ (p=0.01 < 0.5)
+2025-05-10 04:18:48,299 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=negative
+2025-05-10 04:18:48,300 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:48,300 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:48,300 INFO LongPut: {'symbol': 'QQQ250418P00444000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:48,466 INFO ML filtered out QQQ (p=0.01 < 0.5)
+2025-05-10 04:18:48,467 INFO Selecting strategy: trend=bearish, iv=0.57, momentum=negative
+2025-05-10 04:18:48,467 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:48,467 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:48,467 INFO LongPut: {'symbol': 'QQQ250425P00433000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:48,701 INFO ML filtered out QQQ (p=0.01 < 0.5)
+2025-05-10 04:18:48,701 INFO Selecting strategy: trend=bearish, iv=0.58, momentum=positive
+2025-05-10 04:18:48,701 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:48,701 INFO VerticalSpread leg put buy: {'symbol': 'QQQ250425P00444000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:48,701 INFO VerticalSpread leg put sell: {'symbol': 'QQQ250425P00442000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:48,701 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:48,867 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:48,867 INFO Selecting strategy: trend=bullish, iv=0.59, momentum=positive
+2025-05-10 04:18:48,868 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:48,868 INFO LongCall: {'symbol': 'QQQ250425C00455000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:49,068 INFO ML filtered out QQQ (p=0.01 < 0.5)
+2025-05-10 04:18:49,068 INFO Selecting strategy: trend=bullish, iv=0.60, momentum=positive
+2025-05-10 04:18:49,068 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:49,068 INFO LongCall: {'symbol': 'QQQ250425C00467000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:49,232 INFO ML filtered out QQQ (p=0.00 < 0.5)
+2025-05-10 04:18:49,232 INFO Selecting strategy: trend=bullish, iv=0.59, momentum=positive
+2025-05-10 04:18:49,232 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:49,232 INFO LongCall: {'symbol': 'QQQ250502C00473000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:49,392 INFO ML filtered out QQQ (p=0.00 < 0.5)
+2025-05-10 04:18:49,392 INFO Selecting strategy: trend=bullish, iv=0.59, momentum=negative
+2025-05-10 04:18:49,392 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:49,392 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:49,392 INFO Selecting strategy: trend=bullish, iv=0.59, momentum=positive
+2025-05-10 04:18:49,392 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:49,392 INFO LongCall: {'symbol': 'QQQ250502C00476000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:49,571 INFO ML filtered out QQQ (p=0.00 < 0.5)
+2025-05-10 04:18:49,571 INFO Selecting strategy: trend=bullish, iv=0.59, momentum=negative
+2025-05-10 04:18:49,571 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:49,571 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:49,571 INFO Selecting strategy: trend=bullish, iv=0.55, momentum=positive
+2025-05-10 04:18:49,571 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:49,571 INFO LongCall: {'symbol': 'QQQ250502C00482000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:49,749 INFO ML filtered out QQQ (p=0.01 < 0.5)
+2025-05-10 04:18:49,750 INFO Selecting strategy: trend=bullish, iv=0.49, momentum=positive
+2025-05-10 04:18:49,750 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:49,750 INFO LongCall: {'symbol': 'QQQ250509C00489000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:49,910 INFO ML filtered out QQQ (p=0.02 < 0.5)
+2025-05-10 04:18:49,911 INFO Selecting strategy: trend=bullish, iv=0.50, momentum=negative
+2025-05-10 04:18:49,911 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:49,911 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:49,911 INFO Selecting strategy: trend=bullish, iv=0.49, momentum=negative
+2025-05-10 04:18:49,911 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:49,911 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:49,911 INFO Fetching bars for AAPL from 2025-01-01 to 2025-05-07
+2025-05-10 04:18:49,992 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:18:49,992 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:49,992 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:49,992 INFO LongPut: {'symbol': 'AAPL250207P00228000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,169 INFO ML filtered out AAPL (p=0.17 < 0.5)
+2025-05-10 04:18:50,169 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=positive
+2025-05-10 04:18:50,170 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:50,170 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250207P00233000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,170 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250207P00231000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,170 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:50,347 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:50,347 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:18:50,347 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:50,347 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:50,347 INFO LongPut: {'symbol': 'AAPL250207P00232000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,531 INFO ML filtered out AAPL (p=0.18 < 0.5)
+2025-05-10 04:18:50,531 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=positive
+2025-05-10 04:18:50,531 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:50,531 INFO LongCall: {'symbol': 'AAPL250207C00233000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,699 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:50,699 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:18:50,699 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:50,699 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:50,699 INFO LongPut: {'symbol': 'AAPL250214P00228000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,869 INFO ML filtered out AAPL (p=0.18 < 0.5)
+2025-05-10 04:18:50,869 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=positive
+2025-05-10 04:18:50,869 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:50,870 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250214P00228000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,870 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250214P00226000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:50,870 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:51,027 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:51,028 INFO Selecting strategy: trend=bullish, iv=0.33, momentum=positive
+2025-05-10 04:18:51,028 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:51,028 INFO LongCall: {'symbol': 'AAPL250214C00233000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:51,206 INFO ML filtered out AAPL (p=0.10 < 0.5)
+2025-05-10 04:18:51,206 INFO Selecting strategy: trend=bullish, iv=0.33, momentum=positive
+2025-05-10 04:18:51,207 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:51,207 INFO LongCall: {'symbol': 'AAPL250214C00237000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:51,368 INFO ML filtered out AAPL (p=0.09 < 0.5)
+2025-05-10 04:18:51,368 INFO Selecting strategy: trend=bullish, iv=0.30, momentum=positive
+2025-05-10 04:18:51,368 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:51,368 INFO LongCall: {'symbol': 'AAPL250214C00242000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:51,530 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:51,530 INFO Selecting strategy: trend=bullish, iv=0.30, momentum=positive
+2025-05-10 04:18:51,531 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:51,531 INFO LongCall: {'symbol': 'AAPL250221C00245000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:51,696 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:51,697 INFO Selecting strategy: trend=bullish, iv=0.27, momentum=negative
+2025-05-10 04:18:51,697 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:51,697 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:51,697 INFO Selecting strategy: trend=bullish, iv=0.27, momentum=positive
+2025-05-10 04:18:51,697 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:51,697 INFO LongCall: {'symbol': 'AAPL250221C00245000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:51,854 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:51,855 INFO Selecting strategy: trend=bullish, iv=0.27, momentum=positive
+2025-05-10 04:18:51,855 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:51,855 INFO LongCall: {'symbol': 'AAPL250221C00246000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,020 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:52,021 INFO Selecting strategy: trend=bullish, iv=0.27, momentum=negative
+2025-05-10 04:18:52,021 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:52,021 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:52,021 INFO Selecting strategy: trend=bullish, iv=0.25, momentum=positive
+2025-05-10 04:18:52,021 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:52,021 INFO LongCall: {'symbol': 'AAPL250228C00247000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,185 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:52,185 INFO Selecting strategy: trend=bullish, iv=0.22, momentum=negative
+2025-05-10 04:18:52,185 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:52,185 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:52,185 INFO Selecting strategy: trend=bullish, iv=0.24, momentum=negative
+2025-05-10 04:18:52,186 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:52,186 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:52,186 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:18:52,186 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:52,186 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:52,186 INFO LongPut: {'symbol': 'AAPL250228P00237000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,330 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:52,330 INFO Selecting strategy: trend=bullish, iv=0.25, momentum=positive
+2025-05-10 04:18:52,330 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:52,330 INFO LongCall: {'symbol': 'AAPL250307C00242000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,475 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:52,476 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=negative
+2025-05-10 04:18:52,476 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:52,476 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:52,476 INFO LongPut: {'symbol': 'AAPL250307P00238000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,620 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:52,620 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=negative
+2025-05-10 04:18:52,620 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:52,620 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:52,620 INFO LongPut: {'symbol': 'AAPL250307P00236000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,772 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:52,772 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=negative
+2025-05-10 04:18:52,772 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:52,772 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:52,772 INFO LongPut: {'symbol': 'AAPL250307P00236000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:52,927 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:52,927 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=negative
+2025-05-10 04:18:52,927 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:52,927 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:52,927 INFO LongPut: {'symbol': 'AAPL250307P00235000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,088 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:53,088 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:18:53,088 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:53,088 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250314P00239000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,088 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250314P00237000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,088 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:53,240 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:53,240 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=negative
+2025-05-10 04:18:53,240 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:53,240 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:53,240 INFO LongPut: {'symbol': 'AAPL250314P00227000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,420 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:53,420 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=negative
+2025-05-10 04:18:53,420 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:53,420 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:53,420 INFO LongPut: {'symbol': 'AAPL250314P00221000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,580 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:53,581 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=negative
+2025-05-10 04:18:53,581 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:53,581 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:53,581 INFO LongPut: {'symbol': 'AAPL250314P00217000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,736 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:53,737 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=negative
+2025-05-10 04:18:53,737 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:53,737 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:53,737 INFO LongPut: {'symbol': 'AAPL250314P00210000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,896 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:53,896 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=positive
+2025-05-10 04:18:53,896 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:53,896 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250321P00213000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,896 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250321P00211000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:53,896 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:54,094 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:54,095 INFO Selecting strategy: trend=bearish, iv=0.29, momentum=positive
+2025-05-10 04:18:54,095 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:54,095 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250321P00214000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,095 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250321P00212000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,095 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:54,262 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:54,262 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=negative
+2025-05-10 04:18:54,262 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:54,262 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:54,262 INFO LongPut: {'symbol': 'AAPL250321P00213000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,411 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:54,411 INFO Selecting strategy: trend=bearish, iv=0.29, momentum=positive
+2025-05-10 04:18:54,411 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:54,412 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250321P00215000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,412 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250321P00213000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,412 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:54,560 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:54,561 INFO Selecting strategy: trend=bearish, iv=0.29, momentum=negative
+2025-05-10 04:18:54,561 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:54,561 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:54,561 INFO LongPut: {'symbol': 'AAPL250321P00214000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,712 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:54,712 INFO Selecting strategy: trend=bearish, iv=0.30, momentum=positive
+2025-05-10 04:18:54,712 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:54,712 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250328P00218000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,712 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250328P00216000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,712 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:54,893 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:54,893 INFO Selecting strategy: trend=bearish, iv=0.31, momentum=positive
+2025-05-10 04:18:54,893 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:54,893 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250328P00221000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,893 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250328P00219000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:54,893 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:55,046 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:55,046 INFO Selecting strategy: trend=bearish, iv=0.30, momentum=positive
+2025-05-10 04:18:55,047 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:55,047 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250328P00224000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,047 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250328P00222000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,047 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:55,207 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:55,207 INFO Selecting strategy: trend=bearish, iv=0.30, momentum=negative
+2025-05-10 04:18:55,207 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:55,207 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:55,207 INFO LongPut: {'symbol': 'AAPL250328P00222000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,385 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:55,386 INFO Selecting strategy: trend=bearish, iv=0.29, momentum=positive
+2025-05-10 04:18:55,386 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:55,386 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250328P00224000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,386 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250328P00222000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,386 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:55,561 INFO ML filtered out AAPL (p=0.08 < 0.5)
+2025-05-10 04:18:55,561 INFO Selecting strategy: trend=bearish, iv=0.30, momentum=negative
+2025-05-10 04:18:55,561 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:55,561 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:55,561 INFO LongPut: {'symbol': 'AAPL250404P00218000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,723 INFO ML filtered out AAPL (p=0.15 < 0.5)
+2025-05-10 04:18:55,724 INFO Selecting strategy: trend=bullish, iv=0.31, momentum=positive
+2025-05-10 04:18:55,724 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:55,724 INFO LongCall: {'symbol': 'AAPL250404C00222000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:55,880 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:55,881 INFO Selecting strategy: trend=bullish, iv=0.31, momentum=positive
+2025-05-10 04:18:55,881 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:55,881 INFO LongCall: {'symbol': 'AAPL250404C00223000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,065 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:56,066 INFO Selecting strategy: trend=bullish, iv=0.32, momentum=positive
+2025-05-10 04:18:56,066 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:56,066 INFO LongCall: {'symbol': 'AAPL250404C00224000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,230 INFO ML filtered out AAPL (p=0.04 < 0.5)
+2025-05-10 04:18:56,231 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=negative
+2025-05-10 04:18:56,231 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:56,231 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:56,231 INFO LongPut: {'symbol': 'AAPL250404P00203000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,407 INFO ML filtered out AAPL (p=0.01 < 0.5)
+2025-05-10 04:18:56,408 INFO Selecting strategy: trend=bearish, iv=0.49, momentum=negative
+2025-05-10 04:18:56,408 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:56,408 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:56,408 INFO LongPut: {'symbol': 'AAPL250411P00188000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,570 INFO ML filtered out AAPL (p=0.01 < 0.5)
+2025-05-10 04:18:56,571 INFO Selecting strategy: trend=bearish, iv=0.50, momentum=negative
+2025-05-10 04:18:56,571 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:56,571 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:56,571 INFO LongPut: {'symbol': 'AAPL250411P00181000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,718 INFO ML filtered out AAPL (p=0.01 < 0.5)
+2025-05-10 04:18:56,719 INFO Selecting strategy: trend=bearish, iv=0.52, momentum=negative
+2025-05-10 04:18:56,719 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:56,719 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:56,719 INFO LongPut: {'symbol': 'AAPL250411P00172000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,866 INFO ML filtered out AAPL (p=0.33 < 0.5)
+2025-05-10 04:18:56,867 INFO Selecting strategy: trend=bearish, iv=0.75, momentum=positive
+2025-05-10 04:18:56,867 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:56,867 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250411P00199000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,867 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250411P00197000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:56,867 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:57,019 INFO ML filtered out AAPL (p=0.20 < 0.5)
+2025-05-10 04:18:57,019 INFO Selecting strategy: trend=bearish, iv=0.75, momentum=negative
+2025-05-10 04:18:57,019 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:57,019 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:57,019 INFO LongPut: {'symbol': 'AAPL250411P00190000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,203 INFO ML filtered out AAPL (p=0.18 < 0.5)
+2025-05-10 04:18:57,204 INFO Selecting strategy: trend=bearish, iv=0.77, momentum=positive
+2025-05-10 04:18:57,204 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:57,204 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250418P00198000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,204 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250418P00196000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,204 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:57,382 INFO ML filtered out AAPL (p=0.20 < 0.5)
+2025-05-10 04:18:57,383 INFO Selecting strategy: trend=bearish, iv=0.78, momentum=positive
+2025-05-10 04:18:57,383 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:57,383 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250418P00203000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,383 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250418P00201000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,383 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:57,562 INFO ML filtered out AAPL (p=0.20 < 0.5)
+2025-05-10 04:18:57,562 INFO Selecting strategy: trend=bearish, iv=0.77, momentum=negative
+2025-05-10 04:18:57,562 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:57,562 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:57,562 INFO LongPut: {'symbol': 'AAPL250418P00202000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,705 INFO ML filtered out AAPL (p=0.18 < 0.5)
+2025-05-10 04:18:57,705 INFO Selecting strategy: trend=bearish, iv=0.79, momentum=negative
+2025-05-10 04:18:57,705 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:57,705 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:57,705 INFO LongPut: {'symbol': 'AAPL250418P00194000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,862 INFO ML filtered out AAPL (p=0.18 < 0.5)
+2025-05-10 04:18:57,863 INFO Selecting strategy: trend=bearish, iv=0.78, momentum=positive
+2025-05-10 04:18:57,863 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:57,863 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250418P00197000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,863 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250418P00195000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:57,863 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:58,020 INFO ML filtered out AAPL (p=0.20 < 0.5)
+2025-05-10 04:18:58,021 INFO Selecting strategy: trend=bearish, iv=0.78, momentum=negative
+2025-05-10 04:18:58,021 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:58,021 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:58,021 INFO LongPut: {'symbol': 'AAPL250425P00193000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:58,194 INFO ML filtered out AAPL (p=0.18 < 0.5)
+2025-05-10 04:18:58,194 INFO Selecting strategy: trend=bearish, iv=0.79, momentum=positive
+2025-05-10 04:18:58,194 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:18:58,194 INFO VerticalSpread leg put buy: {'symbol': 'AAPL250425P00200000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:58,194 INFO VerticalSpread leg put sell: {'symbol': 'AAPL250425P00198000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:58,194 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:18:58,347 INFO ML filtered out AAPL (p=0.21 < 0.5)
+2025-05-10 04:18:58,347 INFO Selecting strategy: trend=bullish, iv=0.80, momentum=positive
+2025-05-10 04:18:58,347 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:58,347 INFO LongCall: {'symbol': 'AAPL250425C00205000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:58,505 INFO ML filtered out AAPL (p=0.23 < 0.5)
+2025-05-10 04:18:58,506 INFO Selecting strategy: trend=bullish, iv=0.80, momentum=positive
+2025-05-10 04:18:58,506 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:58,506 INFO LongCall: {'symbol': 'AAPL250425C00208000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:58,683 INFO ML filtered out AAPL (p=0.23 < 0.5)
+2025-05-10 04:18:58,683 INFO Selecting strategy: trend=bullish, iv=0.80, momentum=positive
+2025-05-10 04:18:58,683 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:58,683 INFO LongCall: {'symbol': 'AAPL250502C00209000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:58,853 INFO ML filtered out AAPL (p=0.23 < 0.5)
+2025-05-10 04:18:58,854 INFO Selecting strategy: trend=bullish, iv=0.79, momentum=positive
+2025-05-10 04:18:58,854 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:58,854 INFO LongCall: {'symbol': 'AAPL250502C00210000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:59,018 INFO ML filtered out AAPL (p=0.23 < 0.5)
+2025-05-10 04:18:59,018 INFO Selecting strategy: trend=bullish, iv=0.79, momentum=positive
+2025-05-10 04:18:59,018 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:59,018 INFO LongCall: {'symbol': 'AAPL250502C00211000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:59,167 INFO ML filtered out AAPL (p=0.23 < 0.5)
+2025-05-10 04:18:59,168 INFO Selecting strategy: trend=bullish, iv=0.79, momentum=positive
+2025-05-10 04:18:59,168 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:59,168 INFO LongCall: {'symbol': 'AAPL250502C00212000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:59,322 INFO ML filtered out AAPL (p=0.23 < 0.5)
+2025-05-10 04:18:59,323 INFO Selecting strategy: trend=bullish, iv=0.71, momentum=positive
+2025-05-10 04:18:59,323 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:18:59,323 INFO LongCall: {'symbol': 'AAPL250502C00213000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:59,519 INFO ML filtered out AAPL (p=0.20 < 0.5)
+2025-05-10 04:18:59,520 INFO Selecting strategy: trend=bullish, iv=0.67, momentum=negative
+2025-05-10 04:18:59,520 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:18:59,520 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:18:59,520 INFO Selecting strategy: trend=bearish, iv=0.66, momentum=negative
+2025-05-10 04:18:59,520 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:59,520 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:59,520 INFO LongPut: {'symbol': 'AAPL250509P00199000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:59,670 INFO ML filtered out AAPL (p=0.11 < 0.5)
+2025-05-10 04:18:59,670 INFO Selecting strategy: trend=bearish, iv=0.63, momentum=negative
+2025-05-10 04:18:59,670 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:59,670 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:59,670 INFO LongPut: {'symbol': 'AAPL250509P00199000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:18:59,857 INFO ML filtered out AAPL (p=0.03 < 0.5)
+2025-05-10 04:18:59,857 INFO Fetching bars for MSFT from 2025-01-01 to 2025-05-07
+2025-05-10 04:18:59,939 INFO Selecting strategy: trend=bearish, iv=0.34, momentum=negative
+2025-05-10 04:18:59,939 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:18:59,939 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:18:59,939 INFO LongPut: {'symbol': 'MSFT250207P00411000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,134 INFO ML filtered out MSFT (p=0.34 < 0.5)
+2025-05-10 04:19:00,134 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=positive
+2025-05-10 04:19:00,134 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:00,135 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250207P00412000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,135 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250207P00410000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,135 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:00,291 INFO ML filtered out MSFT (p=0.14 < 0.5)
+2025-05-10 04:19:00,292 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=positive
+2025-05-10 04:19:00,292 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:00,292 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250207P00413000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,292 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250207P00411000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,292 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:00,471 INFO ML filtered out MSFT (p=0.13 < 0.5)
+2025-05-10 04:19:00,472 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=positive
+2025-05-10 04:19:00,472 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:00,472 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250207P00416000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,472 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250207P00414000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,472 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:00,631 INFO ML filtered out MSFT (p=0.13 < 0.5)
+2025-05-10 04:19:00,632 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=negative
+2025-05-10 04:19:00,632 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:00,632 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:00,632 INFO LongPut: {'symbol': 'MSFT250214P00410000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,786 INFO ML filtered out MSFT (p=0.31 < 0.5)
+2025-05-10 04:19:00,787 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=positive
+2025-05-10 04:19:00,787 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:00,787 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250214P00412000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,787 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250214P00410000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:00,787 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:01,005 INFO ML filtered out MSFT (p=0.14 < 0.5)
+2025-05-10 04:19:01,005 INFO Selecting strategy: trend=bearish, iv=0.33, momentum=negative
+2025-05-10 04:19:01,005 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:01,005 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:01,005 INFO LongPut: {'symbol': 'MSFT250214P00411000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,143 INFO ML filtered out MSFT (p=0.33 < 0.5)
+2025-05-10 04:19:01,144 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:19:01,144 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:01,144 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:01,144 INFO LongPut: {'symbol': 'MSFT250214P00409000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,351 INFO ML filtered out MSFT (p=0.16 < 0.5)
+2025-05-10 04:19:01,351 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=positive
+2025-05-10 04:19:01,352 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:01,352 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250214P00411000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,352 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250214P00409000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,352 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:01,530 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:01,531 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=negative
+2025-05-10 04:19:01,531 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:01,531 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:01,531 INFO LongPut: {'symbol': 'MSFT250221P00408000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,722 INFO ML filtered out MSFT (p=0.16 < 0.5)
+2025-05-10 04:19:01,722 INFO Selecting strategy: trend=bearish, iv=0.32, momentum=positive
+2025-05-10 04:19:01,722 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:01,722 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250221P00410000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,722 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250221P00408000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,722 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:01,879 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:01,879 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=positive
+2025-05-10 04:19:01,879 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:01,879 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250221P00415000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,879 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250221P00413000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:01,879 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:02,034 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:02,034 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=positive
+2025-05-10 04:19:02,034 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:02,035 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250221P00416000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,035 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250221P00414000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,035 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:02,198 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:02,199 INFO Selecting strategy: trend=bearish, iv=0.29, momentum=negative
+2025-05-10 04:19:02,199 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:02,199 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:02,199 INFO LongPut: {'symbol': 'MSFT250228P00408000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,370 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:02,370 INFO Selecting strategy: trend=bearish, iv=0.28, momentum=negative
+2025-05-10 04:19:02,370 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:02,370 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:02,370 INFO LongPut: {'symbol': 'MSFT250228P00404000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,528 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:02,528 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:02,528 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:02,528 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:02,528 INFO LongPut: {'symbol': 'MSFT250228P00398000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,683 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:02,684 INFO Selecting strategy: trend=bearish, iv=0.26, momentum=positive
+2025-05-10 04:19:02,684 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:02,684 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250228P00400000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,684 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250228P00398000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:02,684 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:02,852 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:02,852 INFO Selecting strategy: trend=bearish, iv=0.14, momentum=negative
+2025-05-10 04:19:02,853 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:02,853 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:19:02,853 INFO LongPut: {'symbol': 'MSFT250228P00393000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,022 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:03,022 INFO Selecting strategy: trend=bearish, iv=0.15, momentum=positive
+2025-05-10 04:19:03,022 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:03,022 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250307P00397000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,022 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250307P00395000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,022 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:03,181 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:03,181 INFO Selecting strategy: trend=bearish, iv=0.16, momentum=negative
+2025-05-10 04:19:03,181 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:03,181 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:03,182 INFO LongPut: {'symbol': 'MSFT250307P00388000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,344 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:03,345 INFO Selecting strategy: trend=bearish, iv=0.16, momentum=positive
+2025-05-10 04:19:03,345 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:03,345 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250307P00389000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,345 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250307P00387000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,345 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:03,534 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:03,534 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:19:03,534 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:03,534 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250307P00401000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,534 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250307P00399000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,534 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:03,718 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:03,719 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:19:03,719 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:03,719 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:03,719 INFO LongPut: {'symbol': 'MSFT250307P00397000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:03,884 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:03,884 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:19:03,885 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:03,885 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:03,885 INFO LongPut: {'symbol': 'MSFT250314P00393000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,021 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:04,021 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=negative
+2025-05-10 04:19:04,021 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:04,021 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:04,021 INFO LongPut: {'symbol': 'MSFT250314P00380000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,207 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:04,207 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=positive
+2025-05-10 04:19:04,207 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:04,208 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250314P00380000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,208 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250314P00378000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,208 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:04,379 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:04,379 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=positive
+2025-05-10 04:19:04,379 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:04,379 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250314P00383000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,379 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250314P00381000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,379 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:04,549 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:04,549 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=negative
+2025-05-10 04:19:04,550 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:04,550 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:04,550 INFO LongPut: {'symbol': 'MSFT250314P00379000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,703 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:04,703 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=positive
+2025-05-10 04:19:04,704 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:04,704 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250321P00389000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,704 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250321P00387000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,704 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:04,859 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:04,860 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=positive
+2025-05-10 04:19:04,860 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:04,860 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250321P00389000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,860 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250321P00387000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:04,860 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:05,031 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:05,032 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:05,032 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:05,032 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:05,032 INFO LongPut: {'symbol': 'MSFT250321P00384000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,178 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:05,178 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=positive
+2025-05-10 04:19:05,178 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:05,178 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250321P00388000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,178 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250321P00386000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,178 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:05,331 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:05,331 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:05,331 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:05,331 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:05,332 INFO LongPut: {'symbol': 'MSFT250321P00387000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,473 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:05,473 INFO Selecting strategy: trend=bullish, iv=0.25, momentum=positive
+2025-05-10 04:19:05,473 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:05,473 INFO LongCall: {'symbol': 'MSFT250328C00391000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,624 INFO ML filtered out MSFT (p=0.02 < 0.5)
+2025-05-10 04:19:05,625 INFO Selecting strategy: trend=bullish, iv=0.25, momentum=positive
+2025-05-10 04:19:05,625 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:05,625 INFO LongCall: {'symbol': 'MSFT250328C00393000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,804 INFO ML filtered out MSFT (p=0.02 < 0.5)
+2025-05-10 04:19:05,804 INFO Selecting strategy: trend=bullish, iv=0.25, momentum=positive
+2025-05-10 04:19:05,805 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:05,805 INFO LongCall: {'symbol': 'MSFT250328C00395000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:05,951 INFO ML filtered out MSFT (p=0.02 < 0.5)
+2025-05-10 04:19:05,951 INFO Selecting strategy: trend=bullish, iv=0.24, momentum=negative
+2025-05-10 04:19:05,951 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:05,951 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:05,951 INFO Selecting strategy: trend=bullish, iv=0.24, momentum=positive
+2025-05-10 04:19:05,951 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:05,952 INFO LongCall: {'symbol': 'MSFT250328C00391000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:06,118 INFO ML filtered out MSFT (p=0.02 < 0.5)
+2025-05-10 04:19:06,118 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:06,118 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:06,119 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:06,119 INFO LongPut: {'symbol': 'MSFT250404P00379000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:06,304 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:06,304 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:06,305 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:06,305 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:06,305 INFO LongPut: {'symbol': 'MSFT250404P00375000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:06,509 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:06,509 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=positive
+2025-05-10 04:19:06,509 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:06,509 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250404P00382000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:06,509 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250404P00380000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:06,509 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:06,668 INFO ML filtered out MSFT (p=0.08 < 0.5)
+2025-05-10 04:19:06,668 INFO Selecting strategy: trend=bearish, iv=0.23, momentum=negative
+2025-05-10 04:19:06,668 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:06,668 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:06,668 INFO LongPut: {'symbol': 'MSFT250404P00382000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:06,864 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:06,865 INFO Selecting strategy: trend=bearish, iv=0.24, momentum=negative
+2025-05-10 04:19:06,865 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:06,865 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:06,865 INFO LongPut: {'symbol': 'MSFT250404P00373000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:07,079 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:07,079 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:07,079 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:07,079 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:07,079 INFO LongPut: {'symbol': 'MSFT250411P00360000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:07,237 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:07,237 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:07,237 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:07,237 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:07,237 INFO LongPut: {'symbol': 'MSFT250411P00358000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:07,402 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:07,403 INFO Selecting strategy: trend=bearish, iv=0.24, momentum=negative
+2025-05-10 04:19:07,403 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:07,403 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:07,403 INFO LongPut: {'symbol': 'MSFT250411P00355000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:07,582 INFO ML filtered out MSFT (p=0.15 < 0.5)
+2025-05-10 04:19:07,582 INFO Selecting strategy: trend=bullish, iv=0.43, momentum=positive
+2025-05-10 04:19:07,582 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:07,582 INFO LongCall: {'symbol': 'MSFT250411C00390000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:07,746 INFO ML filtered out MSFT (p=0.00 < 0.5)
+2025-05-10 04:19:07,747 INFO Selecting strategy: trend=bearish, iv=0.43, momentum=negative
+2025-05-10 04:19:07,747 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:07,747 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:07,747 INFO LongPut: {'symbol': 'MSFT250411P00381000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:07,908 INFO ML filtered out MSFT (p=0.01 < 0.5)
+2025-05-10 04:19:07,908 INFO Selecting strategy: trend=bullish, iv=0.43, momentum=positive
+2025-05-10 04:19:07,908 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:07,908 INFO LongCall: {'symbol': 'MSFT250418C00388000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,099 INFO ML filtered out MSFT (p=0.00 < 0.5)
+2025-05-10 04:19:08,099 INFO Selecting strategy: trend=bullish, iv=0.43, momentum=negative
+2025-05-10 04:19:08,099 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:08,099 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:08,099 INFO Selecting strategy: trend=bullish, iv=0.43, momentum=negative
+2025-05-10 04:19:08,099 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:08,099 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:08,100 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=negative
+2025-05-10 04:19:08,100 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:08,100 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:08,100 INFO LongPut: {'symbol': 'MSFT250418P00372000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,266 INFO ML filtered out MSFT (p=0.01 < 0.5)
+2025-05-10 04:19:08,266 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=negative
+2025-05-10 04:19:08,266 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:08,266 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:08,266 INFO LongPut: {'symbol': 'MSFT250418P00368000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,478 INFO ML filtered out MSFT (p=0.01 < 0.5)
+2025-05-10 04:19:08,478 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=negative
+2025-05-10 04:19:08,478 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:08,478 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:08,478 INFO LongPut: {'symbol': 'MSFT250425P00359000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,646 INFO ML filtered out MSFT (p=0.01 < 0.5)
+2025-05-10 04:19:08,647 INFO Selecting strategy: trend=bearish, iv=0.46, momentum=positive
+2025-05-10 04:19:08,647 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:08,647 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250425P00367000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,647 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250425P00365000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,647 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:08,791 INFO ML filtered out MSFT (p=0.00 < 0.5)
+2025-05-10 04:19:08,791 INFO Selecting strategy: trend=bearish, iv=0.47, momentum=positive
+2025-05-10 04:19:08,792 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:08,792 INFO VerticalSpread leg put buy: {'symbol': 'MSFT250425P00374000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,792 INFO VerticalSpread leg put sell: {'symbol': 'MSFT250425P00372000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:08,792 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:08,971 INFO ML filtered out MSFT (p=0.00 < 0.5)
+2025-05-10 04:19:08,971 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=positive
+2025-05-10 04:19:08,971 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:08,971 INFO LongCall: {'symbol': 'MSFT250425C00387000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:09,159 INFO ML filtered out MSFT (p=0.04 < 0.5)
+2025-05-10 04:19:09,159 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=positive
+2025-05-10 04:19:09,160 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:09,160 INFO LongCall: {'symbol': 'MSFT250502C00392000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:09,335 INFO ML filtered out MSFT (p=0.01 < 0.5)
+2025-05-10 04:19:09,336 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=negative
+2025-05-10 04:19:09,336 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:09,336 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:09,336 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=positive
+2025-05-10 04:19:09,336 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:09,336 INFO LongCall: {'symbol': 'MSFT250502C00394000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:09,518 INFO ML filtered out MSFT (p=0.00 < 0.5)
+2025-05-10 04:19:09,518 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=positive
+2025-05-10 04:19:09,518 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:09,518 INFO LongCall: {'symbol': 'MSFT250502C00395000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:09,688 INFO ML filtered out MSFT (p=0.00 < 0.5)
+2025-05-10 04:19:09,688 INFO Selecting strategy: trend=bullish, iv=0.52, momentum=positive
+2025-05-10 04:19:09,688 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:09,688 INFO LongCall: {'symbol': 'MSFT250502C00425000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:09,832 INFO ML filtered out MSFT (p=0.01 < 0.5)
+2025-05-10 04:19:09,832 INFO Selecting strategy: trend=bullish, iv=0.50, momentum=positive
+2025-05-10 04:19:09,833 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:09,833 INFO LongCall: {'symbol': 'MSFT250509C00435000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:09,997 INFO ML filtered out MSFT (p=0.02 < 0.5)
+2025-05-10 04:19:09,998 INFO Selecting strategy: trend=bullish, iv=0.50, momentum=positive
+2025-05-10 04:19:09,998 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:09,998 INFO LongCall: {'symbol': 'MSFT250509C00436000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:10,172 INFO ML filtered out MSFT (p=0.02 < 0.5)
+2025-05-10 04:19:10,173 INFO Selecting strategy: trend=bullish, iv=0.49, momentum=negative
+2025-05-10 04:19:10,173 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:10,173 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:10,173 INFO Fetching bars for XLF from 2025-01-01 to 2025-05-07
+2025-05-10 04:19:10,255 INFO Selecting strategy: trend=bullish, iv=0.16, momentum=negative
+2025-05-10 04:19:10,255 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:10,255 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:10,255 INFO Selecting strategy: trend=bullish, iv=0.16, momentum=negative
+2025-05-10 04:19:10,256 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:10,256 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:10,256 INFO Selecting strategy: trend=bullish, iv=0.16, momentum=positive
+2025-05-10 04:19:10,256 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:10,256 INFO LongCall: {'symbol': 'XLF250207C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:10,417 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:10,417 INFO Selecting strategy: trend=bullish, iv=0.16, momentum=positive
+2025-05-10 04:19:10,417 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:10,417 INFO LongCall: {'symbol': 'XLF250207C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:10,564 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:10,564 INFO Selecting strategy: trend=bullish, iv=0.12, momentum=negative
+2025-05-10 04:19:10,564 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:19:10,564 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:19:10,564 INFO LongCall: {'symbol': 'XLF250214C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:10,703 INFO ML filtered out XLF (p=0.18 < 0.5)
+2025-05-10 04:19:10,704 INFO Selecting strategy: trend=bullish, iv=0.13, momentum=negative
+2025-05-10 04:19:10,704 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:19:10,704 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:19:10,704 INFO LongCall: {'symbol': 'XLF250214C00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:10,888 INFO ML filtered out XLF (p=0.18 < 0.5)
+2025-05-10 04:19:10,888 INFO Selecting strategy: trend=bullish, iv=0.13, momentum=positive
+2025-05-10 04:19:10,888 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:19:10,888 INFO LongCall: {'symbol': 'XLF250214C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:11,035 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:11,035 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=negative
+2025-05-10 04:19:11,035 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:19:11,035 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:19:11,035 INFO LongCall: {'symbol': 'XLF250214C00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:11,189 INFO ML filtered out XLF (p=0.18 < 0.5)
+2025-05-10 04:19:11,190 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=positive
+2025-05-10 04:19:11,190 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:19:11,190 INFO LongCall: {'symbol': 'XLF250214C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:11,398 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:11,399 INFO Selecting strategy: trend=bullish, iv=0.10, momentum=positive
+2025-05-10 04:19:11,399 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:19:11,399 INFO LongCall: {'symbol': 'XLF250221C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:11,558 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:11,559 INFO Selecting strategy: trend=bullish, iv=0.09, momentum=positive
+2025-05-10 04:19:11,559 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:19:11,559 INFO LongCall: {'symbol': 'XLF250221C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:11,715 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:11,715 INFO Selecting strategy: trend=bullish, iv=0.09, momentum=positive
+2025-05-10 04:19:11,715 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:19:11,715 INFO LongCall: {'symbol': 'XLF250221C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:11,876 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:11,876 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=negative
+2025-05-10 04:19:11,876 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:11,876 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:19:11,876 INFO LongPut: {'symbol': 'XLF250221P00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:12,028 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:12,028 INFO Selecting strategy: trend=bearish, iv=0.12, momentum=negative
+2025-05-10 04:19:12,028 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:12,028 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:19:12,028 INFO LongPut: {'symbol': 'XLF250228P00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:12,198 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:12,199 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=positive
+2025-05-10 04:19:12,199 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 04:19:12,199 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:19:12,199 INFO LongCall: {'symbol': 'XLF250228C00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:12,368 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:12,369 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=negative
+2025-05-10 04:19:12,369 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:12,369 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:19:12,369 INFO LongPut: {'symbol': 'XLF250228P00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:12,585 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:12,586 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=negative
+2025-05-10 04:19:12,586 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:12,586 INFO Chosen strategy: LongPut with score 3.00
+2025-05-10 04:19:12,586 INFO LongPut: {'symbol': 'XLF250228P00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:12,733 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:12,734 INFO Selecting strategy: trend=bearish, iv=0.11, momentum=positive
+2025-05-10 04:19:12,734 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread', 'IronButterfly'], selecting LongCall
+2025-05-10 04:19:12,734 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:19:12,734 INFO LongCall: {'symbol': 'XLF250228C00051000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:12,883 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:12,883 INFO Selecting strategy: trend=bullish, iv=0.13, momentum=positive
+2025-05-10 04:19:12,884 INFO Chosen strategy: LongCall with score 3.00
+2025-05-10 04:19:12,884 INFO LongCall: {'symbol': 'XLF250307C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,062 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:13,062 INFO Selecting strategy: trend=bullish, iv=0.13, momentum=negative
+2025-05-10 04:19:13,062 INFO Tie between ['LongCall', 'LongPut', 'BearPutSpread'], selecting LongCall
+2025-05-10 04:19:13,063 INFO Chosen strategy: LongCall with score 1.00
+2025-05-10 04:19:13,063 INFO LongCall: {'symbol': 'XLF250307C00052000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,226 INFO ML filtered out XLF (p=0.18 < 0.5)
+2025-05-10 04:19:13,227 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=negative
+2025-05-10 04:19:13,227 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:13,227 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:13,227 INFO LongPut: {'symbol': 'XLF250307P00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,382 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:13,382 INFO Selecting strategy: trend=bearish, iv=0.18, momentum=positive
+2025-05-10 04:19:13,383 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:13,383 INFO VerticalSpread leg put buy: {'symbol': 'XLF250307P00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,383 INFO VerticalSpread leg put sell: {'symbol': 'XLF250307P00048000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,383 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:13,541 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:13,541 INFO Selecting strategy: trend=bearish, iv=0.19, momentum=negative
+2025-05-10 04:19:13,541 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:13,541 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:13,541 INFO LongPut: {'symbol': 'XLF250307P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,695 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:13,695 INFO Selecting strategy: trend=bearish, iv=0.19, momentum=negative
+2025-05-10 04:19:13,695 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:13,695 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:13,695 INFO LongPut: {'symbol': 'XLF250314P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:13,854 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:13,855 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:19:13,855 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:13,855 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:13,855 INFO LongPut: {'symbol': 'XLF250314P00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,016 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:14,016 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=negative
+2025-05-10 04:19:14,016 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:14,016 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:14,016 INFO LongPut: {'symbol': 'XLF250314P00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,169 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:14,169 INFO Selecting strategy: trend=bearish, iv=0.20, momentum=positive
+2025-05-10 04:19:14,169 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:14,169 INFO VerticalSpread leg put buy: {'symbol': 'XLF250314P00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,169 INFO VerticalSpread leg put sell: {'symbol': 'XLF250314P00046000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,169 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:14,337 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:14,337 INFO Selecting strategy: trend=bearish, iv=0.19, momentum=negative
+2025-05-10 04:19:14,337 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:14,337 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:14,337 INFO LongPut: {'symbol': 'XLF250314P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,489 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:14,489 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=positive
+2025-05-10 04:19:14,490 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:14,490 INFO VerticalSpread leg put buy: {'symbol': 'XLF250321P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,490 INFO VerticalSpread leg put sell: {'symbol': 'XLF250321P00047000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,490 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:14,645 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:14,645 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=positive
+2025-05-10 04:19:14,645 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:14,645 INFO VerticalSpread leg put buy: {'symbol': 'XLF250321P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,645 INFO VerticalSpread leg put sell: {'symbol': 'XLF250321P00047000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,645 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:14,803 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:14,803 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=negative
+2025-05-10 04:19:14,803 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:14,803 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:14,803 INFO LongPut: {'symbol': 'XLF250321P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,960 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:14,961 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=positive
+2025-05-10 04:19:14,961 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:14,961 INFO VerticalSpread leg put buy: {'symbol': 'XLF250321P00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,961 INFO VerticalSpread leg put sell: {'symbol': 'XLF250321P00048000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:14,961 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:15,115 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:15,116 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=positive
+2025-05-10 04:19:15,116 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:15,116 INFO VerticalSpread leg put buy: {'symbol': 'XLF250321P00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:15,116 INFO VerticalSpread leg put sell: {'symbol': 'XLF250321P00048000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:15,116 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:15,306 INFO ML filtered out XLF (p=0.31 < 0.5)
+2025-05-10 04:19:15,306 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=negative
+2025-05-10 04:19:15,306 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:15,307 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:15,307 INFO LongPut: {'symbol': 'XLF250328P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:15,484 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:15,485 INFO Selecting strategy: trend=bullish, iv=0.22, momentum=positive
+2025-05-10 04:19:15,485 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:15,485 INFO LongCall: {'symbol': 'XLF250328C00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:15,641 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:15,642 INFO Selecting strategy: trend=bullish, iv=0.22, momentum=positive
+2025-05-10 04:19:15,642 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:15,642 INFO LongCall: {'symbol': 'XLF250328C00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:15,785 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:15,785 INFO Selecting strategy: trend=bullish, iv=0.22, momentum=negative
+2025-05-10 04:19:15,785 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:15,785 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:15,785 INFO Selecting strategy: trend=bullish, iv=0.21, momentum=negative
+2025-05-10 04:19:15,785 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:15,785 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:15,785 INFO Selecting strategy: trend=bearish, iv=0.22, momentum=negative
+2025-05-10 04:19:15,785 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:15,785 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:15,785 INFO LongPut: {'symbol': 'XLF250404P00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:15,947 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:15,947 INFO Selecting strategy: trend=bullish, iv=0.18, momentum=positive
+2025-05-10 04:19:15,947 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:15,947 INFO LongCall: {'symbol': 'XLF250404C00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,119 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:16,119 INFO Selecting strategy: trend=bullish, iv=0.18, momentum=negative
+2025-05-10 04:19:16,119 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:16,119 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:16,119 INFO Selecting strategy: trend=bullish, iv=0.17, momentum=positive
+2025-05-10 04:19:16,119 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:16,119 INFO LongCall: {'symbol': 'XLF250404C00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,278 INFO ML filtered out XLF (p=0.33 < 0.5)
+2025-05-10 04:19:16,278 INFO Selecting strategy: trend=bearish, iv=0.25, momentum=negative
+2025-05-10 04:19:16,279 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:16,279 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:16,279 INFO LongPut: {'symbol': 'XLF250404P00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,449 INFO ML filtered out XLF (p=0.15 < 0.5)
+2025-05-10 04:19:16,449 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=negative
+2025-05-10 04:19:16,449 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:16,449 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:16,449 INFO LongPut: {'symbol': 'XLF250411P00044000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,633 INFO ML filtered out XLF (p=0.26 < 0.5)
+2025-05-10 04:19:16,633 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=negative
+2025-05-10 04:19:16,634 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:16,634 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:16,634 INFO LongPut: {'symbol': 'XLF250411P00044000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,794 INFO ML filtered out XLF (p=0.26 < 0.5)
+2025-05-10 04:19:16,794 INFO Selecting strategy: trend=bearish, iv=0.36, momentum=negative
+2025-05-10 04:19:16,795 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:16,795 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:16,795 INFO LongPut: {'symbol': 'XLF250411P00044000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,945 INFO ML filtered out XLF (p=0.26 < 0.5)
+2025-05-10 04:19:16,946 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=positive
+2025-05-10 04:19:16,946 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:16,946 INFO VerticalSpread leg put buy: {'symbol': 'XLF250411P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,946 INFO VerticalSpread leg put sell: {'symbol': 'XLF250411P00045000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:16,946 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:17,195 INFO ML filtered out XLF (p=0.47 < 0.5)
+2025-05-10 04:19:17,195 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=negative
+2025-05-10 04:19:17,195 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:17,195 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:17,196 INFO LongPut: {'symbol': 'XLF250411P00046000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,356 INFO ML filtered out XLF (p=0.26 < 0.5)
+2025-05-10 04:19:17,357 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=positive
+2025-05-10 04:19:17,357 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:17,357 INFO VerticalSpread leg put buy: {'symbol': 'XLF250418P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,357 INFO VerticalSpread leg put sell: {'symbol': 'XLF250418P00045000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,357 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:17,530 INFO ML filtered out XLF (p=0.47 < 0.5)
+2025-05-10 04:19:17,530 INFO Selecting strategy: trend=bearish, iv=0.46, momentum=positive
+2025-05-10 04:19:17,531 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:17,531 INFO VerticalSpread leg put buy: {'symbol': 'XLF250418P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,531 INFO VerticalSpread leg put sell: {'symbol': 'XLF250418P00045000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,531 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:17,679 INFO ML filtered out XLF (p=0.47 < 0.5)
+2025-05-10 04:19:17,680 INFO Selecting strategy: trend=bearish, iv=0.45, momentum=positive
+2025-05-10 04:19:17,680 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:17,680 INFO VerticalSpread leg put buy: {'symbol': 'XLF250418P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,680 INFO VerticalSpread leg put sell: {'symbol': 'XLF250418P00045000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:17,680 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:17,871 INFO ML filtered out XLF (p=0.47 < 0.5)
+2025-05-10 04:19:17,871 INFO Selecting strategy: trend=bearish, iv=0.46, momentum=negative
+2025-05-10 04:19:17,872 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:17,872 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:17,872 INFO LongPut: {'symbol': 'XLF250418P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,044 INFO ML filtered out XLF (p=0.26 < 0.5)
+2025-05-10 04:19:18,044 INFO Selecting strategy: trend=bearish, iv=0.46, momentum=positive
+2025-05-10 04:19:18,044 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:18,044 INFO VerticalSpread leg put buy: {'symbol': 'XLF250418P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,044 INFO VerticalSpread leg put sell: {'symbol': 'XLF250418P00045000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,044 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:18,198 INFO ML filtered out XLF (p=0.47 < 0.5)
+2025-05-10 04:19:18,198 INFO Selecting strategy: trend=bearish, iv=0.46, momentum=negative
+2025-05-10 04:19:18,198 INFO Tie between ['LongPut', 'BearPutSpread'], selecting LongPut
+2025-05-10 04:19:18,198 INFO Chosen strategy: LongPut with score 2.00
+2025-05-10 04:19:18,198 INFO LongPut: {'symbol': 'XLF250425P00046000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,388 INFO ML filtered out XLF (p=0.26 < 0.5)
+2025-05-10 04:19:18,388 INFO Selecting strategy: trend=bearish, iv=0.47, momentum=positive
+2025-05-10 04:19:18,388 INFO Chosen strategy: VerticalSpread with score 0.50
+2025-05-10 04:19:18,388 INFO VerticalSpread leg put buy: {'symbol': 'XLF250425P00047000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,389 INFO VerticalSpread leg put sell: {'symbol': 'XLF250425P00045000', 'qty': 1, 'side': 'sell', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,389 INFO RiskManager: skipping multi-leg orders
+2025-05-10 04:19:18,571 INFO ML filtered out XLF (p=0.46 < 0.5)
+2025-05-10 04:19:18,572 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=positive
+2025-05-10 04:19:18,572 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:18,572 INFO LongCall: {'symbol': 'XLF250425C00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,741 INFO ML filtered out XLF (p=0.50 < 0.5)
+2025-05-10 04:19:18,741 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=positive
+2025-05-10 04:19:18,741 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:18,741 INFO LongCall: {'symbol': 'XLF250425C00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:18,918 INFO ML filtered out XLF (p=0.50 < 0.5)
+2025-05-10 04:19:18,918 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=negative
+2025-05-10 04:19:18,918 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:18,918 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:18,918 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=positive
+2025-05-10 04:19:18,918 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:18,918 INFO LongCall: {'symbol': 'XLF250502C00048000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:19,091 INFO ML filtered out XLF (p=0.50 < 0.5)
+2025-05-10 04:19:19,092 INFO Selecting strategy: trend=bullish, iv=0.48, momentum=positive
+2025-05-10 04:19:19,092 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:19,092 INFO LongCall: {'symbol': 'XLF250502C00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:19,255 INFO ML filtered out XLF (p=0.50 < 0.5)
+2025-05-10 04:19:19,256 INFO Selecting strategy: trend=bullish, iv=0.47, momentum=positive
+2025-05-10 04:19:19,256 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:19,256 INFO LongCall: {'symbol': 'XLF250502C00049000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:19,426 INFO ML filtered out XLF (p=0.50 < 0.5)
+2025-05-10 04:19:19,427 INFO Selecting strategy: trend=bullish, iv=0.44, momentum=negative
+2025-05-10 04:19:19,427 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:19,427 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:19,427 INFO Selecting strategy: trend=bullish, iv=0.33, momentum=positive
+2025-05-10 04:19:19,427 INFO Chosen strategy: LongCall with score 2.00
+2025-05-10 04:19:19,427 INFO LongCall: {'symbol': 'XLF250509C00050000', 'qty': 1, 'side': 'buy', 'type': 'market', 'time_in_force': 'day'}
+2025-05-10 04:19:19,594 INFO ML filtered out XLF (p=0.39 < 0.5)
+2025-05-10 04:19:19,594 INFO Selecting strategy: trend=bullish, iv=0.33, momentum=negative
+2025-05-10 04:19:19,594 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:19,594 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:19,594 INFO Selecting strategy: trend=bullish, iv=0.34, momentum=negative
+2025-05-10 04:19:19,595 INFO Chosen strategy: IronButterfly with score 1.00
+2025-05-10 04:19:19,595 INFO IronButterfly: trend not neutral (bullish); no orders.
+2025-05-10 04:19:19,596 INFO No orders were generated during backtest.

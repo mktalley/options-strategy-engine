@@ -4,6 +4,18 @@ import time
 from collections import deque
 import requests
 
+
+# Utility to get clean environment variables (ignore blank or commented values)
+def _get_env_clean(varname):
+    raw = os.getenv(varname)
+    if raw is None:
+        return None
+    val = raw.strip()
+    # Treat empty or commented values as unset
+    if not val or val.startswith('#'):
+        return None
+    return val
+
 class AlertManager:
     """
     Alerting module: send real-time notifications for trading events via multiple channels (Slack, Telegram, webhooks).
@@ -18,10 +30,11 @@ class AlertManager:
     """
 
     def __init__(self):
-        self.webhook_url = (os.getenv('ALERT_WEBHOOK_URL') or '').strip() or None
-        self.tg_token = os.getenv('ALERT_TELEGRAM_BOT_TOKEN')
-        self.tg_chat_id = os.getenv('ALERT_TELEGRAM_CHAT_ID')
-        self.min_notional = float(os.getenv('ALERT_MIN_NOTIONAL', 0))
+        self.webhook_url = _get_env_clean('ALERT_WEBHOOK_URL')
+        self.tg_token = _get_env_clean('ALERT_TELEGRAM_BOT_TOKEN')
+        self.tg_chat_id = _get_env_clean('ALERT_TELEGRAM_CHAT_ID')
+        raw_min = _get_env_clean('ALERT_MIN_NOTIONAL')
+        self.min_notional = float(raw_min) if raw_min is not None else 0.0
         self.rate_limit = int(os.getenv('ALERT_RATE_LIMIT_PER_MIN', 60))
         self.window = int(os.getenv('ALERT_RATE_LIMIT_WINDOW', 60))
         self.alert_timestamps = deque()
